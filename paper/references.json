@@ -1,0 +1,1770 @@
+{
+ "bbs2026": {
+  "type": "report",
+  "authors": [
+   {
+    "family": "Bangladesh Bureau of Statistics",
+    "given": ""
+   }
+  ],
+  "year": 2026,
+  "title": "Yearbook of Agricultural Statistics-2025 (37th series)",
+  "publisher": "Statistics and Informatics Division, Ministry of Planning, Dhaka"
+ },
+ "gadm2022": {
+  "type": "dataset",
+  "authors": [
+   {
+    "family": "GADM",
+    "given": ""
+   }
+  ],
+  "year": 2022,
+  "title": "Database of Global Administrative Areas, version 4.1",
+  "publisher": "https://gadm.org"
+ },
+ "oecd2008": {
+  "type": "book",
+  "authors": [
+   {
+    "family": "OECD",
+    "given": ""
+   },
+   {
+    "family": "European Commission Joint Research Centre",
+    "given": ""
+   }
+  ],
+  "year": 2008,
+  "title": "Handbook on Constructing Composite Indicators: Methodology and User Guide",
+  "publisher": "OECD Publishing, Paris",
+  "doi": "10.1787/9789264043466-en"
+ },
+ "hassan2019": {
+  "type": "report",
+  "authors": [
+   {
+    "family": "Hassan",
+    "given": "S. M. Kamrul"
+   }
+  ],
+  "year": 2019,
+  "title": "Impacts of flooding on the rice production of Bangladesh: a panel data study",
+  "publisher": "Thesis, Colorado State University. https://mountainscholar.org/handle/10217/197396"
+ },
+ "ahmed2017": {
+  "type": "journal-article",
+  "doi": "10.3390/s17102347",
+  "authors": [
+   {
+    "family": "Ahmed",
+    "given": "M."
+   },
+   {
+    "family": "Rahaman",
+    "given": "Khan"
+   },
+   {
+    "family": "Kok",
+    "given": "Aaron"
+   },
+   {
+    "family": "Hassan",
+    "given": "Quazi"
+   }
+  ],
+  "year": 2017,
+  "title": "Remote Sensing-Based Quantification of the Impact of Flash Flooding on the Rice Production: A Case Study over Northeastern Bangladesh",
+  "container": "Sensors",
+  "volume": "17",
+  "issue": "10",
+  "pages": "2347",
+  "publisher": "MDPI AG"
+ },
+ "dey2021": {
+  "type": "journal-article",
+  "doi": "10.1016/j.ijdrr.2021.102247",
+  "authors": [
+   {
+    "family": "Dey",
+    "given": "Nepal C."
+   },
+   {
+    "family": "Parvez",
+    "given": "Mahmood"
+   },
+   {
+    "family": "Islam",
+    "given": "Mir Raihanul"
+   }
+  ],
+  "year": 2021,
+  "title": "A study on the impact of the 2017 early monsoon flash flood: Potential measures to safeguard livelihoods from extreme climate events in the haor area of Bangladesh",
+  "container": "International Journal of Disaster Risk Reduction",
+  "volume": "59",
+  "issue": null,
+  "pages": "102247",
+  "publisher": "Elsevier BV"
+ },
+ "mondal2021": {
+  "type": "journal-article",
+  "doi": "10.3329/jesnr.v12i1-2.52007",
+  "authors": [
+   {
+    "family": "Mondal",
+    "given": "S"
+   },
+   {
+    "family": "Akter",
+    "given": "L"
+   },
+   {
+    "family": "Hiya",
+    "given": "HJ"
+   },
+   {
+    "family": "Farukh",
+    "given": "MA"
+   }
+  ],
+  "year": 2021,
+  "title": "Effects of 2017 Early Flash Flooding on Agriculture in Haor Areas of Sunamganj",
+  "container": "Journal of Environmental Science and Natural Resources",
+  "volume": "12",
+  "issue": "1-2",
+  "pages": "117-125",
+  "publisher": "Bangladesh Academy of Sciences"
+ },
+ "khan2012": {
+  "type": "journal-article",
+  "doi": "10.3329/jesnr.v5i1.11581",
+  "authors": [
+   {
+    "family": "Khan",
+    "given": "MNH"
+   },
+   {
+    "family": "Mia",
+    "given": "MY"
+   },
+   {
+    "family": "Hossain",
+    "given": "MR"
+   }
+  ],
+  "year": 2012,
+  "title": "Impacts of Flood on Crop Production in Haor Areas of Two Upazillas in Kishoregonj",
+  "container": "Journal of Environmental Science and Natural Resources",
+  "volume": "5",
+  "issue": "1",
+  "pages": "193-198",
+  "publisher": "Bangladesh Academy of Sciences"
+ },
+ "rashid2018": {
+  "type": "journal-article",
+  "doi": "10.3329/brj.v21i1.37360",
+  "authors": [
+   {
+    "family": "Rashid",
+    "given": "MM"
+   },
+   {
+    "family": "Yasmeen",
+    "given": "R"
+   }
+  ],
+  "year": 2018,
+  "title": "Cold Injury and Flash Flood Damage in Boro Rice Cultivation in Bangladesh: A Review",
+  "container": "Bangladesh Rice Journal",
+  "volume": "21",
+  "issue": "1",
+  "pages": "13-25",
+  "publisher": "Bangladesh Journals Online (JOL)"
+ },
+ "kamruzzaman2018": {
+  "type": "journal-article",
+  "doi": "10.13189/ujar.2018.060106",
+  "authors": [
+   {
+    "family": "Kamruzzaman",
+    "given": "Md."
+   },
+   {
+    "family": "Shaw",
+    "given": "Rajib"
+   }
+  ],
+  "year": 2018,
+  "title": "Flood and Sustainable Agriculture in the Haor Basin of Bangladesh: A Review Paper",
+  "container": "Universal Journal of Agricultural Research",
+  "volume": "6",
+  "issue": "1",
+  "pages": "40-49",
+  "publisher": "Horizon Research Publishing Co., Ltd."
+ },
+ "hossain2023": {
+  "type": "journal-article",
+  "doi": "10.3390/su152416873",
+  "authors": [
+   {
+    "family": "Hossain",
+    "given": "Mobarak"
+   },
+   {
+    "family": "Biswas",
+    "given": "Partha"
+   },
+   {
+    "family": "Islam",
+    "given": "Mohammad Rafiqul"
+   }
+  ],
+  "year": 2023,
+  "title": "Cold-Tolerant and Short-Duration Rice (Oryza sativa L.) for Sustainable Food Security of the Flash Flood-Prone Haor Wetlands of Bangladesh",
+  "container": "Sustainability",
+  "volume": "15",
+  "issue": "24",
+  "pages": "16873",
+  "publisher": "MDPI AG"
+ },
+ "ahmed2024": {
+  "type": "journal-article",
+  "doi": "10.1002/fes3.70028",
+  "authors": [
+   {
+    "family": "Ahmed",
+    "given": "Md. Rashid"
+   }
+  ],
+  "year": 2024,
+  "title": "How to Enhance Resilience Against the Adverse Effects of Climate Change: Evidence from Boro Rice Farmers in Northeast Bangladesh",
+  "container": "Food and Energy Security",
+  "volume": "13",
+  "issue": "6",
+  "pages": "e70028",
+  "publisher": "Wiley"
+ },
+ "baishakhy2023": {
+  "type": "journal-article",
+  "doi": "10.1016/j.heliyon.2023.e14011",
+  "authors": [
+   {
+    "family": "Baishakhy",
+    "given": "Smita Dash"
+   },
+   {
+    "family": "Islam",
+    "given": "Mohammad Ashraful"
+   },
+   {
+    "family": "Kamruzzaman",
+    "given": "Md."
+   }
+  ],
+  "year": 2023,
+  "title": "Overcoming barriers to adapt rice farming to recurring flash floods in haor wetlands of Bangladesh",
+  "container": "Heliyon",
+  "volume": "9",
+  "issue": "3",
+  "pages": "e14011",
+  "publisher": "Elsevier BV"
+ },
+ "kamruzzaman2024": {
+  "type": "journal-article",
+  "doi": "10.1007/s00704-024-05270-5",
+  "authors": [
+   {
+    "family": "Kamruzzaman",
+    "given": "Mohammad"
+   },
+   {
+    "family": "Islam",
+    "given": "H. M. Touhidul"
+   },
+   {
+    "family": "Rahman",
+    "given": "Md. Sazzadur"
+   },
+   {
+    "family": "Ahmed",
+    "given": "Sharif"
+   },
+   {
+    "family": "Lipi",
+    "given": "Liala Ferdousi"
+   },
+   {
+    "family": "Khan",
+    "given": "Md. Arifur Rahman"
+   },
+   {
+    "family": "Tran",
+    "given": "Lam-Son Phan"
+   },
+   {
+    "family": "Hossain",
+    "given": "A. M. K. Zakir"
+   }
+  ],
+  "year": 2025,
+  "title": "Assessing the impacts of future climate extremes on boro rice cultivation in the northeastern Haor region of Bangladesh: insights from CMIP6 multi-model ensemble projections",
+  "container": "Theoretical and Applied Climatology",
+  "volume": "156",
+  "issue": "1",
+  "pages": "3",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "banerjee2010": {
+  "type": "journal-article",
+  "doi": "10.1080/13600818.2010.505681",
+  "authors": [
+   {
+    "family": "Banerjee",
+    "given": "Lopamudra"
+   }
+  ],
+  "year": 2010,
+  "title": "Effects of Flood on Agricultural Productivity in Bangladesh",
+  "container": "Oxford Development Studies",
+  "volume": "38",
+  "issue": "3",
+  "pages": "339-356",
+  "publisher": "Informa UK Limited"
+ },
+ "asada2005": {
+  "type": "journal-article",
+  "doi": "10.4157/grj.78.783",
+  "authors": [
+   {
+    "family": "ASADA",
+    "given": "Haruhisa"
+   },
+   {
+    "family": "MATSUMOTO",
+    "given": "Jun"
+   },
+   {
+    "family": "RAHMAN",
+    "given": "Rezaur"
+   }
+  ],
+  "year": 2005,
+  "title": "Impact of Recent Severe Floods on Rice Production in Bangladesh",
+  "container": "Geographical Review of Japan",
+  "volume": "78",
+  "issue": "12",
+  "pages": "783-793",
+  "publisher": "The Association of Japanese Geographers"
+ },
+ "rahman2025": {
+  "type": "journal-article",
+  "doi": "10.1016/j.ijdrr.2025.105401",
+  "authors": [
+   {
+    "family": "Rahman",
+    "given": "Md Ashikur"
+   },
+   {
+    "family": "Alam",
+    "given": "Md Shafiul"
+   },
+   {
+    "family": "Sultana",
+    "given": "Rumana"
+   },
+   {
+    "family": "Sultana",
+    "given": "Razia"
+   }
+  ],
+  "year": 2025,
+  "title": "Assessing the interrelationship between monsoon flood disasters and major crop production in Bangladesh",
+  "container": "International Journal of Disaster Risk Reduction",
+  "volume": "121",
+  "issue": null,
+  "pages": "105401",
+  "publisher": "Elsevier BV"
+ },
+ "guiteras2015": {
+  "type": "journal-article",
+  "doi": "10.1257/aer.p20151095",
+  "authors": [
+   {
+    "family": "Guiteras",
+    "given": "Raymond"
+   },
+   {
+    "family": "Jina",
+    "given": "Amir"
+   },
+   {
+    "family": "Mobarak",
+    "given": "A. Mushfiq"
+   }
+  ],
+  "year": 2015,
+  "title": "Satellites, Self-reports, and Submersion: Exposure to Floods in Bangladesh",
+  "container": "American Economic Review",
+  "volume": "105",
+  "issue": "5",
+  "pages": "232-236",
+  "publisher": "American Economic Association"
+ },
+ "amin2015": {
+  "type": "journal-article",
+  "doi": "10.3390/su7010898",
+  "authors": [
+   {
+    "family": "Amin",
+    "given": "Md."
+   },
+   {
+    "family": "Zhang",
+    "given": "Junbiao"
+   },
+   {
+    "family": "Yang",
+    "given": "Mingmei"
+   }
+  ],
+  "year": 2015,
+  "title": "Effects of Climate Change on the Yield and Cropping Area of Major Food Crops: A Case of Bangladesh",
+  "container": "Sustainability",
+  "volume": "7",
+  "issue": "1",
+  "pages": "898-915",
+  "publisher": "MDPI AG"
+ },
+ "sarker2014": {
+  "type": "journal-article",
+  "doi": "10.1016/j.eap.2014.11.004",
+  "authors": [
+   {
+    "family": "Sarker",
+    "given": "Md. Abdur Rashid"
+   },
+   {
+    "family": "Alam",
+    "given": "Khorshed"
+   },
+   {
+    "family": "Gow",
+    "given": "Jeff"
+   }
+  ],
+  "year": 2014,
+  "title": "Assessing the effects of climate change on rice yields: An econometric investigation using Bangladeshi panel data",
+  "container": "Economic Analysis and Policy",
+  "volume": "44",
+  "issue": "4",
+  "pages": "405-416",
+  "publisher": "Elsevier BV"
+ },
+ "hasan2016": {
+  "type": "journal-article",
+  "doi": "10.1142/s2010007816500081",
+  "authors": [
+   {
+    "family": "HASAN",
+    "given": "M. MEHEDI"
+   },
+   {
+    "family": "SARKER",
+    "given": "Md. ABDUR RASHID"
+   },
+   {
+    "family": "GOW",
+    "given": "JEFF"
+   }
+  ],
+  "year": 2016,
+  "title": "ASSESSMENT OF CLIMATE CHANGE IMPACTS ON AMAN AND BORO RICE YIELDS IN BANGLADESH",
+  "container": "Climate Change Economics",
+  "volume": "07",
+  "issue": "03",
+  "pages": "1650008",
+  "publisher": "World Scientific Pub Co Pte Ltd"
+ },
+ "rahman2017": {
+  "type": "journal-article",
+  "doi": "10.1186/s40066-017-0089-5",
+  "authors": [
+   {
+    "family": "Rahman",
+    "given": "Md Abiar"
+   },
+   {
+    "family": "Kang",
+    "given": "SuChul"
+   },
+   {
+    "family": "Nagabhatla",
+    "given": "Nidhi"
+   },
+   {
+    "family": "Macnee",
+    "given": "Robert"
+   }
+  ],
+  "year": 2017,
+  "title": "Impacts of temperature and rainfall variation on rice productivity in major ecosystems of Bangladesh",
+  "container": "Agriculture &amp; Food Security",
+  "volume": "6",
+  "issue": "1",
+  "pages": "10",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "dasgupta2017": {
+  "type": "journal-article",
+  "doi": "10.1017/age.2017.14",
+  "authors": [
+   {
+    "family": "Dasgupta",
+    "given": "Susmita"
+   },
+   {
+    "family": "Hossain",
+    "given": "Md. Moqbul"
+   },
+   {
+    "family": "Huq",
+    "given": "Mainul"
+   },
+   {
+    "family": "Wheeler",
+    "given": "David"
+   }
+  ],
+  "year": 2018,
+  "title": "Climate Change, Salinization and High-Yield Rice Production in Coastal Bangladesh",
+  "container": "Agricultural and Resource Economics Review",
+  "volume": "47",
+  "issue": "1",
+  "pages": "66-89",
+  "publisher": "Cambridge University Press (CUP)"
+ },
+ "lesk2016": {
+  "type": "journal-article",
+  "doi": "10.1038/nature16467",
+  "authors": [
+   {
+    "family": "Lesk",
+    "given": "Corey"
+   },
+   {
+    "family": "Rowhani",
+    "given": "Pedram"
+   },
+   {
+    "family": "Ramankutty",
+    "given": "Navin"
+   }
+  ],
+  "year": 2016,
+  "title": "Influence of extreme weather disasters on global crop production",
+  "container": "Nature",
+  "volume": "529",
+  "issue": "7584",
+  "pages": "84-87",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "li2025": {
+  "type": "journal-article",
+  "doi": "10.1126/sciadv.adx7799",
+  "authors": [
+   {
+    "family": "Li",
+    "given": "Zhi"
+   },
+   {
+    "family": "Rosa",
+    "given": "Lorenzo"
+   },
+   {
+    "family": "Gorelick",
+    "given": "Steven"
+   }
+  ],
+  "year": 2025,
+  "title": "Severe floods significantly reduce global rice yields",
+  "container": "Science Advances",
+  "volume": "11",
+  "issue": "46",
+  "pages": "eadx7799",
+  "publisher": "American Association for the Advancement of Science (AAAS)"
+ },
+ "cui2020": {
+  "type": "journal-article",
+  "doi": "10.1086/709859",
+  "authors": [
+   {
+    "family": "Cui",
+    "given": "Xiaomeng"
+   }
+  ],
+  "year": 2020,
+  "title": "Beyond Yield Response: Weather Shocks and Crop Abandonment",
+  "container": "Journal of the Association of Environmental and Resource Economists",
+  "volume": "7",
+  "issue": "5",
+  "pages": "901-932",
+  "publisher": "University of Chicago Press"
+ },
+ "obembe2021": {
+  "type": "journal-article",
+  "doi": "10.1371/journal.pone.0252067",
+  "authors": [
+   {
+    "family": "Obembe",
+    "given": "Oladipo S."
+   },
+   {
+    "family": "Hendricks",
+    "given": "Nathan P."
+   },
+   {
+    "family": "Tack",
+    "given": "Jesse"
+   }
+  ],
+  "year": 2021,
+  "title": "Decreased wheat production in the USA from climate change driven by yield losses rather than crop abandonment",
+  "container": "PLOS ONE",
+  "volume": "16",
+  "issue": "6",
+  "pages": "e0252067",
+  "publisher": "Public Library of Science (PLoS)"
+ },
+ "wei2022": {
+  "type": "posted-content",
+  "doi": "10.1002/essoar.10510446.1",
+  "authors": [
+   {
+    "family": "Wei",
+    "given": "Dongyang"
+   },
+   {
+    "family": "Davis",
+    "given": "Kyle"
+   }
+  ],
+  "year": 2022,
+  "title": "Majority of production shocks for major US crops explained by fluctuations in planted and harvested area",
+  "container": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Wiley"
+ },
+ "blanc2016": {
+  "type": "journal-article",
+  "doi": "10.1175/jamc-d-15-0214.1",
+  "authors": [
+   {
+    "family": "Blanc",
+    "given": "Elodie"
+   },
+   {
+    "family": "Strobl",
+    "given": "Eric"
+   }
+  ],
+  "year": 2016,
+  "title": "Assessing the Impact of Typhoons on Rice Production in the Philippines",
+  "container": "Journal of Applied Meteorology and Climatology",
+  "volume": "55",
+  "issue": "4",
+  "pages": "993-1007",
+  "publisher": "American Meteorological Society"
+ },
+ "uddin2019": {
+  "type": "journal-article",
+  "doi": "10.3390/rs11131581",
+  "authors": [
+   {
+    "family": "Uddin",
+    "given": "Kabir"
+   },
+   {
+    "family": "Matin",
+    "given": "Mir A."
+   },
+   {
+    "family": "Meyer",
+    "given": "Franz J."
+   }
+  ],
+  "year": 2019,
+  "title": "Operational Flood Mapping Using Multi-Temporal Sentinel-1 SAR Images: A Case Study from Bangladesh",
+  "container": "Remote Sensing",
+  "volume": "11",
+  "issue": "13",
+  "pages": "1581",
+  "publisher": "MDPI AG"
+ },
+ "rahman2020a": {
+  "type": "journal-article",
+  "doi": "10.3390/agriculture10040131",
+  "authors": [
+   {
+    "family": "Rahman",
+    "given": "Md Shahinoor"
+   },
+   {
+    "family": "Di",
+    "given": "Liping"
+   }
+  ],
+  "year": 2020,
+  "title": "A Systematic Review on Case Studies of Remote-Sensing-Based Flood Crop Loss Assessment",
+  "container": "Agriculture",
+  "volume": "10",
+  "issue": "4",
+  "pages": "131",
+  "publisher": "MDPI AG"
+ },
+ "rahman2020b": {
+  "type": "journal-article",
+  "doi": "10.1007/s13753-020-00305-7",
+  "authors": [
+   {
+    "family": "Rahman",
+    "given": "Md. Shahinoor"
+   },
+   {
+    "family": "Di",
+    "given": "Liping"
+   },
+   {
+    "family": "Yu",
+    "given": "Eugene"
+   },
+   {
+    "family": "Lin",
+    "given": "Li"
+   },
+   {
+    "family": "Yu",
+    "given": "Zhiqi"
+   }
+  ],
+  "year": 2021,
+  "title": "Remote Sensing Based Rapid Assessment of Flood Crop Damage Using Novel Disaster Vegetation Damage Index (DVDI)",
+  "container": "International Journal of Disaster Risk Science",
+  "volume": "12",
+  "issue": "1",
+  "pages": "90-110",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "qamer2023": {
+  "type": "journal-article",
+  "doi": "10.1038/s41598-023-30347-y",
+  "authors": [
+   {
+    "family": "Qamer",
+    "given": "Faisal Mueen"
+   },
+   {
+    "family": "Abbas",
+    "given": "Sawaid"
+   },
+   {
+    "family": "Ahmad",
+    "given": "Bashir"
+   },
+   {
+    "family": "Hussain",
+    "given": "Abid"
+   },
+   {
+    "family": "Salman",
+    "given": "Aneel"
+   },
+   {
+    "family": "Muhammad",
+    "given": "Sher"
+   },
+   {
+    "family": "Nawaz",
+    "given": "Muhammad"
+   },
+   {
+    "family": "Shrestha",
+    "given": "Sravan"
+   },
+   {
+    "family": "Iqbal",
+    "given": "Bilal"
+   },
+   {
+    "family": "Thapa",
+    "given": "Sunil"
+   }
+  ],
+  "year": 2023,
+  "title": "A framework for multi-sensor satellite data to evaluate crop production losses: the case study of 2022 Pakistan floods",
+  "container": "Scientific Reports",
+  "volume": "13",
+  "issue": "1",
+  "pages": "4240",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "singha2019": {
+  "type": "journal-article",
+  "doi": "10.1038/s41597-019-0036-3",
+  "authors": [
+   {
+    "family": "Singha",
+    "given": "Mrinal"
+   },
+   {
+    "family": "Dong",
+    "given": "Jinwei"
+   },
+   {
+    "family": "Zhang",
+    "given": "Geli"
+   },
+   {
+    "family": "Xiao",
+    "given": "Xiangming"
+   }
+  ],
+  "year": 2019,
+  "title": "High resolution paddy rice maps in cloud-prone Bangladesh and Northeast India using Sentinel-1 data",
+  "container": "Scientific Data",
+  "volume": "6",
+  "issue": "1",
+  "pages": "26",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "shew2019": {
+  "type": "journal-article",
+  "doi": "10.3390/rs11101235",
+  "authors": [
+   {
+    "family": "Shew",
+    "given": "Aaron M."
+   },
+   {
+    "family": "Ghosh",
+    "given": "Aniruddha"
+   }
+  ],
+  "year": 2019,
+  "title": "Identifying Dry-Season Rice-Planting Patterns in Bangladesh Using the Landsat Archive",
+  "container": "Remote Sensing",
+  "volume": "11",
+  "issue": "10",
+  "pages": "1235",
+  "publisher": "MDPI AG"
+ },
+ "mosleh2014": {
+  "type": "journal-article",
+  "doi": "10.3390/rs6031938",
+  "authors": [
+   {
+    "family": "Mosleh",
+    "given": "Mostafa"
+   },
+   {
+    "family": "Hassan",
+    "given": "Quazi"
+   }
+  ],
+  "year": 2014,
+  "title": "Development of a Remote Sensing-Based “Boro” Rice Mapping System",
+  "container": "Remote Sensing",
+  "volume": "6",
+  "issue": "3",
+  "pages": "1938-1953",
+  "publisher": "MDPI AG"
+ },
+ "pekel2016": {
+  "type": "journal-article",
+  "doi": "10.1038/nature20584",
+  "authors": [
+   {
+    "family": "Pekel",
+    "given": "Jean-François"
+   },
+   {
+    "family": "Cottam",
+    "given": "Andrew"
+   },
+   {
+    "family": "Gorelick",
+    "given": "Noel"
+   },
+   {
+    "family": "Belward",
+    "given": "Alan S."
+   }
+  ],
+  "year": 2016,
+  "title": "High-resolution mapping of global surface water and its long-term changes",
+  "container": "Nature",
+  "volume": "540",
+  "issue": "7633",
+  "pages": "418-422",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "mosleh2016": {
+  "type": "journal-article",
+  "doi": "10.5424/sjar/2016143-8347",
+  "authors": [
+   {
+    "family": "Mosleh",
+    "given": "Mostafa K."
+   },
+   {
+    "family": "Hassan",
+    "given": "Quazi K."
+   },
+   {
+    "family": "Chowdhury",
+    "given": "Ehsan H."
+   }
+  ],
+  "year": 2016,
+  "title": "Development of a remote sensing-based rice yield forecasting model",
+  "container": "Spanish Journal of Agricultural Research",
+  "volume": "14",
+  "issue": "3",
+  "pages": "e0907",
+  "publisher": "Editorial CSIC"
+ },
+ "alam2019": {
+  "type": "proceedings-article",
+  "doi": "10.1109/igarss.2019.8899084",
+  "authors": [
+   {
+    "family": "Alam",
+    "given": "Md. Samiul"
+   },
+   {
+    "family": "KALPOMA",
+    "given": "KAZI"
+   },
+   {
+    "family": "Karim",
+    "given": "Md. Sanaul"
+   },
+   {
+    "family": "Al Sefat",
+    "given": "Abdullah"
+   },
+   {
+    "family": "Kudoh",
+    "given": "Jun-ichi"
+   }
+  ],
+  "year": 2019,
+  "title": "Boro Rice Yield Estimation Model Using Modis Ndvi Data for Bangladesh",
+  "container": "IGARSS 2019 - 2019 IEEE International Geoscience and Remote Sensing Symposium",
+  "volume": null,
+  "issue": null,
+  "pages": "7330-7333",
+  "publisher": "IEEE"
+ },
+ "saisana2005": {
+  "type": "journal-article",
+  "doi": "10.1111/j.1467-985X.2005.00350.x",
+  "authors": [
+   {
+    "family": "Saisana",
+    "given": "M."
+   },
+   {
+    "family": "Saltelli",
+    "given": "A."
+   },
+   {
+    "family": "Tarantola",
+    "given": "S."
+   }
+  ],
+  "year": 2005,
+  "title": "Uncertainty and Sensitivity Analysis Techniques as Tools for the Quality Assessment of Composite Indicators",
+  "container": "Journal of the Royal Statistical Society Series A: Statistics in Society",
+  "volume": "168",
+  "issue": "2",
+  "pages": "307-323",
+  "publisher": "Oxford University Press (OUP)"
+ },
+ "tate2012": {
+  "type": "journal-article",
+  "doi": "10.1007/s11069-012-0152-2",
+  "authors": [
+   {
+    "family": "Tate",
+    "given": "Eric"
+   }
+  ],
+  "year": 2012,
+  "title": "Social vulnerability indices: a comparative assessment using uncertainty and sensitivity analysis",
+  "container": "Natural Hazards",
+  "volume": "63",
+  "issue": "2",
+  "pages": "325-347",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "hinkel2011": {
+  "type": "journal-article",
+  "doi": "10.1016/j.gloenvcha.2010.08.002",
+  "authors": [
+   {
+    "family": "Hinkel",
+    "given": "Jochen"
+   }
+  ],
+  "year": 2011,
+  "title": "“Indicators of vulnerability and adaptive capacity”: Towards a clarification of the science–policy interface",
+  "container": "Global Environmental Change",
+  "volume": "21",
+  "issue": "1",
+  "pages": "198-208",
+  "publisher": "Elsevier BV"
+ },
+ "anselin1995": {
+  "type": "journal-article",
+  "doi": "10.1111/j.1538-4632.1995.tb00338.x",
+  "authors": [
+   {
+    "family": "Anselin",
+    "given": "Luc"
+   }
+  ],
+  "year": 1995,
+  "title": "Local Indicators of Spatial Association—LISA",
+  "container": "Geographical Analysis",
+  "volume": "27",
+  "issue": "2",
+  "pages": "93-115",
+  "publisher": "Wiley"
+ },
+ "conley1999": {
+  "type": "journal-article",
+  "doi": "10.1016/s0304-4076(98)00084-0",
+  "authors": [
+   {
+    "family": "Conley",
+    "given": "T.G."
+   }
+  ],
+  "year": 1999,
+  "title": "GMM estimation with cross sectional dependence",
+  "container": "Journal of Econometrics",
+  "volume": "92",
+  "issue": "1",
+  "pages": "1-45",
+  "publisher": "Elsevier BV"
+ },
+ "driscoll1998": {
+  "type": "journal-article",
+  "doi": "10.1162/003465398557825",
+  "authors": [
+   {
+    "family": "Driscoll",
+    "given": "John C."
+   },
+   {
+    "family": "Kraay",
+    "given": "Aart C."
+   }
+  ],
+  "year": 1998,
+  "title": "Consistent Covariance Matrix Estimation with Spatially Dependent Panel Data",
+  "container": "Review of Economics and Statistics",
+  "volume": "80",
+  "issue": "4",
+  "pages": "549-560",
+  "publisher": "MIT Press"
+ },
+ "cameron2008": {
+  "type": "journal-article",
+  "doi": "10.1162/rest.90.3.414",
+  "authors": [
+   {
+    "family": "Cameron",
+    "given": "A. Colin"
+   },
+   {
+    "family": "Gelbach",
+    "given": "Jonah B."
+   },
+   {
+    "family": "Miller",
+    "given": "Douglas L."
+   }
+  ],
+  "year": 2008,
+  "title": "Bootstrap-Based Improvements for Inference with Clustered Errors",
+  "container": "Review of Economics and Statistics",
+  "volume": "90",
+  "issue": "3",
+  "pages": "414-427",
+  "publisher": "MIT Press"
+ },
+ "mackinnon2017": {
+  "type": "journal-article",
+  "doi": "10.1002/jae.2508",
+  "authors": [
+   {
+    "family": "MacKinnon",
+    "given": "James G."
+   },
+   {
+    "family": "Webb",
+    "given": "Matthew D."
+   }
+  ],
+  "year": 2017,
+  "title": "Wild Bootstrap Inference for Wildly Different Cluster Sizes",
+  "container": "Journal of Applied Econometrics",
+  "volume": "32",
+  "issue": "2",
+  "pages": "233-254",
+  "publisher": "Wiley"
+ },
+ "mackinnon2018": {
+  "type": "journal-article",
+  "doi": "10.1111/ectj.12107",
+  "authors": [
+   {
+    "family": "MacKinnon",
+    "given": "James G."
+   },
+   {
+    "family": "Webb",
+    "given": "Matthew D."
+   }
+  ],
+  "year": 2018,
+  "title": "The wild bootstrap for few (treated) clusters",
+  "container": "The Econometrics Journal",
+  "volume": "21",
+  "issue": "2",
+  "pages": "114-135",
+  "publisher": "Oxford University Press (OUP)"
+ },
+ "mackinnon2020": {
+  "type": "journal-article",
+  "doi": "10.1016/j.jeconom.2020.04.024",
+  "authors": [
+   {
+    "family": "MacKinnon",
+    "given": "James G."
+   },
+   {
+    "family": "Webb",
+    "given": "Matthew D."
+   }
+  ],
+  "year": 2020,
+  "title": "Randomization inference for difference-in-differences with few treated clusters",
+  "container": "Journal of Econometrics",
+  "volume": "218",
+  "issue": "2",
+  "pages": "435-450",
+  "publisher": "Elsevier BV"
+ },
+ "conley2011": {
+  "type": "journal-article",
+  "doi": "10.1162/REST_a_00049",
+  "authors": [
+   {
+    "family": "Conley",
+    "given": "Timothy G."
+   },
+   {
+    "family": "Taber",
+    "given": "Christopher R."
+   }
+  ],
+  "year": 2011,
+  "title": "Inference with “Difference in Differences” with a Small Number of Policy Changes",
+  "container": "Review of Economics and Statistics",
+  "volume": "93",
+  "issue": "1",
+  "pages": "113-125",
+  "publisher": "MIT Press"
+ },
+ "abadie2021": {
+  "type": "journal-article",
+  "doi": "10.1257/jel.20191450",
+  "authors": [
+   {
+    "family": "Abadie",
+    "given": "Alberto"
+   }
+  ],
+  "year": 2021,
+  "title": "Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects",
+  "container": "Journal of Economic Literature",
+  "volume": "59",
+  "issue": "2",
+  "pages": "391-425",
+  "publisher": "American Economic Association"
+ },
+ "hsiang2016": {
+  "type": "report",
+  "doi": "10.3386/w22181",
+  "authors": [
+   {
+    "family": "Hsiang",
+    "given": "Solomon"
+   }
+  ],
+  "year": 2016,
+  "title": "Climate Econometrics",
+  "container": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research"
+ },
+ "blanc2017": {
+  "type": "journal-article",
+  "doi": "10.1093/reep/rex016",
+  "authors": [
+   {
+    "family": "Blanc",
+    "given": "Elodie"
+   },
+   {
+    "family": "Schlenker",
+    "given": "Wolfram"
+   }
+  ],
+  "year": 2017,
+  "title": "The Use of Panel Models in Assessments of Climate Impacts on           Agriculture",
+  "container": "Review of Environmental Economics and Policy",
+  "volume": "11",
+  "issue": "2",
+  "pages": "258-279",
+  "publisher": "University of Chicago Press"
+ },
+ "auffhammer2013": {
+  "type": "journal-article",
+  "doi": "10.1093/reep/ret016",
+  "authors": [
+   {
+    "family": "Auffhammer",
+    "given": "Maximilian"
+   },
+   {
+    "family": "Hsiang",
+    "given": "Solomon M."
+   },
+   {
+    "family": "Schlenker",
+    "given": "Wolfram"
+   },
+   {
+    "family": "Sobel",
+    "given": "Adam"
+   }
+  ],
+  "year": 2013,
+  "title": "Using Weather Data and Climate Model Output in Economic Analyses of Climate Change",
+  "container": "Review of Environmental Economics and Policy",
+  "volume": "7",
+  "issue": "2",
+  "pages": "181-198",
+  "publisher": "University of Chicago Press"
+ },
+ "santos2006": {
+  "type": "journal-article",
+  "doi": "10.1162/rest.88.4.641",
+  "authors": [
+   {
+    "family": "Silva",
+    "given": "J. M. C. Santos"
+   },
+   {
+    "family": "Tenreyro",
+    "given": "Silvana"
+   }
+  ],
+  "year": 2006,
+  "title": "The Log of Gravity",
+  "container": "The Review of Economics and Statistics",
+  "volume": "88",
+  "issue": "4",
+  "pages": "641-658",
+  "publisher": "MIT Press"
+ },
+ "benjamini1995": {
+  "type": "journal-article",
+  "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+  "authors": [
+   {
+    "family": "Benjamini",
+    "given": "Yoav"
+   },
+   {
+    "family": "Hochberg",
+    "given": "Yosef"
+   }
+  ],
+  "year": 1995,
+  "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+  "container": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+  "volume": "57",
+  "issue": "1",
+  "pages": "289-300",
+  "publisher": "Oxford University Press (OUP)"
+ },
+ "bairagi2021": {
+  "type": "journal-article",
+  "doi": "10.1016/j.foodpol.2021.102183",
+  "authors": [
+   {
+    "family": "Bairagi",
+    "given": "Subir"
+   },
+   {
+    "family": "Bhandari",
+    "given": "Humnath"
+   },
+   {
+    "family": "Kumar Das",
+    "given": "Subrata"
+   },
+   {
+    "family": "Mohanty",
+    "given": "Samarendu"
+   }
+  ],
+  "year": 2021,
+  "title": "Flood-tolerant rice improves climate resilience, profitability, and household consumption in Bangladesh",
+  "container": "Food Policy",
+  "volume": "105",
+  "issue": null,
+  "pages": "102183",
+  "publisher": "Elsevier BV"
+ },
+ "islam2021": {
+  "type": "journal-article",
+  "doi": "10.22434/ifamr2019.0190",
+  "authors": [
+   {
+    "family": "Islam",
+    "given": "Din Il"
+   },
+   {
+    "family": "Rahman",
+    "given": "Airin"
+   },
+   {
+    "family": "Sarker",
+    "given": "M. Sazzadur Rahman"
+   },
+   {
+    "family": "Luo",
+    "given": "Jianchao"
+   },
+   {
+    "family": "Liang",
+    "given": "Hu"
+   }
+  ],
+  "year": 2021,
+  "title": "Factors affecting farmers’ willingness to adopt crop insurance to manage disaster risk: evidence from Bangladesh",
+  "container": "International Food and Agribusiness Management Review",
+  "volume": "24",
+  "issue": "3",
+  "pages": "463-480",
+  "publisher": "Walter de Gruyter GmbH"
+ },
+ "didan2021": {
+  "type": "dataset",
+  "doi": "10.5067/MODIS/MOD13Q1.061",
+  "authors": [
+   {
+    "family": "Didan",
+    "given": "Kamel"
+   }
+  ],
+  "year": 2021,
+  "title": "MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061",
+  "publisher": "NASA Land Processes Distributed Active Archive Center"
+ },
+ "zanaga2022": {
+  "type": "dataset",
+  "doi": "10.5281/zenodo.7254221",
+  "authors": [
+   {
+    "family": "Zanaga",
+    "given": "Daniele"
+   },
+   {
+    "family": "Van De Kerchove",
+    "given": "Ruben"
+   },
+   {
+    "family": "Daems",
+    "given": "Dirk"
+   },
+   {
+    "family": "De Keersmaecker",
+    "given": "Wanda"
+   },
+   {
+    "family": "Brockmann",
+    "given": "Carsten"
+   },
+   {
+    "family": "Kirches",
+    "given": "Grit"
+   },
+   {
+    "family": "Wevers",
+    "given": "Jan"
+   },
+   {
+    "family": "Cartus",
+    "given": "Oliver"
+   },
+   {
+    "family": "Santoro",
+    "given": "Maurizio"
+   },
+   {
+    "family": "Fritz",
+    "given": "Steffen"
+   },
+   {
+    "family": "Lesiv",
+    "given": "Myroslava"
+   },
+   {
+    "family": "Herold",
+    "given": "Martin"
+   },
+   {
+    "family": "Tsendbazar",
+    "given": "Nandin-Erdene"
+   },
+   {
+    "family": "Xu",
+    "given": "Panpan"
+   },
+   {
+    "family": "Ramoino",
+    "given": "Fabrizio"
+   },
+   {
+    "family": "Arino",
+    "given": "Olivier"
+   }
+  ],
+  "year": 2022,
+  "title": "ESA WorldCover 10 m 2021 v200",
+  "publisher": "Zenodo"
+ },
+ "munozsabater2021": {
+  "type": "journal-article",
+  "doi": "10.5194/essd-13-4349-2021",
+  "authors": [
+   {
+    "family": "Muñoz-Sabater",
+    "given": "Joaquín"
+   },
+   {
+    "family": "Dutra",
+    "given": "Emanuel"
+   },
+   {
+    "family": "Agustí-Panareda",
+    "given": "Anna"
+   },
+   {
+    "family": "Albergel",
+    "given": "Clément"
+   },
+   {
+    "family": "Arduini",
+    "given": "Gabriele"
+   },
+   {
+    "family": "Balsamo",
+    "given": "Gianpaolo"
+   },
+   {
+    "family": "Boussetta",
+    "given": "Souhail"
+   },
+   {
+    "family": "Choulga",
+    "given": "Margarita"
+   },
+   {
+    "family": "Harrigan",
+    "given": "Shaun"
+   },
+   {
+    "family": "Hersbach",
+    "given": "Hans"
+   },
+   {
+    "family": "Martens",
+    "given": "Brecht"
+   },
+   {
+    "family": "Miralles",
+    "given": "Diego G."
+   },
+   {
+    "family": "Piles",
+    "given": "María"
+   },
+   {
+    "family": "Rodríguez-Fernández",
+    "given": "Nemesio J."
+   },
+   {
+    "family": "Zsoter",
+    "given": "Ervin"
+   },
+   {
+    "family": "Buontempo",
+    "given": "Carlo"
+   },
+   {
+    "family": "Thépaut",
+    "given": "Jean-Noël"
+   }
+  ],
+  "year": 2021,
+  "title": "ERA5-Land: a state-of-the-art global reanalysis dataset for land applications",
+  "container": "Earth System Science Data",
+  "volume": "13",
+  "issue": "9",
+  "pages": "4349-4383",
+  "publisher": "Copernicus GmbH"
+ },
+ "torres2012": {
+  "type": "journal-article",
+  "doi": "10.1016/j.rse.2011.05.028",
+  "authors": [
+   {
+    "family": "Torres",
+    "given": "Ramon"
+   },
+   {
+    "family": "Snoeij",
+    "given": "Paul"
+   },
+   {
+    "family": "Geudtner",
+    "given": "Dirk"
+   },
+   {
+    "family": "Bibby",
+    "given": "David"
+   },
+   {
+    "family": "Davidson",
+    "given": "Malcolm"
+   },
+   {
+    "family": "Attema",
+    "given": "Evert"
+   },
+   {
+    "family": "Potin",
+    "given": "Pierre"
+   },
+   {
+    "family": "Rommen",
+    "given": "BjÖrn"
+   },
+   {
+    "family": "Floury",
+    "given": "Nicolas"
+   },
+   {
+    "family": "Brown",
+    "given": "Mike"
+   },
+   {
+    "family": "Traver",
+    "given": "Ignacio Navas"
+   },
+   {
+    "family": "Deghaye",
+    "given": "Patrick"
+   },
+   {
+    "family": "Duesmann",
+    "given": "Berthyl"
+   },
+   {
+    "family": "Rosich",
+    "given": "Betlem"
+   },
+   {
+    "family": "Miranda",
+    "given": "Nuno"
+   },
+   {
+    "family": "Bruno",
+    "given": "Claudio"
+   },
+   {
+    "family": "L'Abbate",
+    "given": "Michelangelo"
+   },
+   {
+    "family": "Croci",
+    "given": "Renato"
+   },
+   {
+    "family": "Pietropaolo",
+    "given": "Andrea"
+   },
+   {
+    "family": "Huchler",
+    "given": "Markus"
+   },
+   {
+    "family": "Rostan",
+    "given": "Friedhelm"
+   }
+  ],
+  "year": 2012,
+  "title": "GMES Sentinel-1 mission",
+  "container": "Remote Sensing of Environment",
+  "volume": "120",
+  "issue": null,
+  "pages": "9-24",
+  "publisher": "Elsevier BV"
+ },
+ "gorelick2017": {
+  "type": "journal-article",
+  "doi": "10.1016/j.rse.2017.06.031",
+  "authors": [
+   {
+    "family": "Gorelick",
+    "given": "Noel"
+   },
+   {
+    "family": "Hancher",
+    "given": "Matt"
+   },
+   {
+    "family": "Dixon",
+    "given": "Mike"
+   },
+   {
+    "family": "Ilyushchenko",
+    "given": "Simon"
+   },
+   {
+    "family": "Thau",
+    "given": "David"
+   },
+   {
+    "family": "Moore",
+    "given": "Rebecca"
+   }
+  ],
+  "year": 2017,
+  "title": "Google Earth Engine: Planetary-scale geospatial analysis for everyone",
+  "container": "Remote Sensing of Environment",
+  "volume": "202",
+  "issue": null,
+  "pages": "18-27",
+  "publisher": "Elsevier BV"
+ },
+ "jagadish2007": {
+  "type": "journal-article",
+  "doi": "10.1093/jxb/erm003",
+  "authors": [
+   {
+    "family": "Jagadish",
+    "given": "SVK"
+   },
+   {
+    "family": "Craufurd",
+    "given": "PQ"
+   },
+   {
+    "family": "Wheeler",
+    "given": "TR"
+   }
+  ],
+  "year": 2007,
+  "title": "High temperature stress and spikelet fertility in rice (Oryza sativa L.)",
+  "container": "Journal of Experimental Botany",
+  "volume": "58",
+  "issue": "7",
+  "pages": "1627-1635",
+  "publisher": "Oxford University Press (OUP)"
+ },
+ "twele2016": {
+  "type": "journal-article",
+  "doi": "10.1080/01431161.2016.1192304",
+  "authors": [
+   {
+    "family": "Twele",
+    "given": "André"
+   },
+   {
+    "family": "Cao",
+    "given": "Wenxi"
+   },
+   {
+    "family": "Plank",
+    "given": "Simon"
+   },
+   {
+    "family": "Martinis",
+    "given": "Sandro"
+   }
+  ],
+  "year": 2016,
+  "title": "Sentinel-1-based flood mapping: a fully automated processing chain",
+  "container": "International Journal of Remote Sensing",
+  "volume": "37",
+  "issue": "13",
+  "pages": "2990-3004",
+  "publisher": "Informa UK Limited"
+ },
+ "moran1950": {
+  "type": "journal-article",
+  "doi": "10.1093/biomet/37.1-2.17",
+  "authors": [
+   {
+    "family": "MORAN",
+    "given": "P. A. P."
+   }
+  ],
+  "year": 1950,
+  "title": "NOTES ON CONTINUOUS STOCHASTIC PHENOMENA",
+  "container": "Biometrika",
+  "volume": "37",
+  "issue": "1-2",
+  "pages": "17-23",
+  "publisher": "Oxford University Press (OUP)"
+ },
+ "mumu2026": {
+  "type": "software",
+  "doi": "10.5281/zenodo.23795046",
+  "authors": [
+   {
+    "family": "Mumu",
+    "given": "Tasnim Ahmad"
+   },
+   {
+    "family": "Karim",
+    "given": "Rezaul"
+   }
+  ],
+  "year": 2026,
+  "title": "bd-boro-data-framework: an open, tested data engineering framework for integrating official crop statistics with satellite and climate data, district-level Boro rice in Bangladesh",
+  "publisher": "Zenodo"
+ }
+}

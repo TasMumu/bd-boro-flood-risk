@@ -1,0 +1,125 @@
+{
+ "pca_weights": {
+  "flash_flood": 0.181,
+  "monsoon_flood": 0.157,
+  "heat": 0.133,
+  "cold": 0.086,
+  "production_instability": 0.134,
+  "worst_area_drop": 0.173,
+  "low_yield": 0.136
+ },
+ "index": {
+  "combinations": 6018,
+  "top10": [
+   "Sunamganj",
+   "Sylhet",
+   "Patuakhali",
+   "Barguna",
+   "Kishoreganj",
+   "Moulvibazar",
+   "Rangamati",
+   "Habiganj",
+   "Meherpur",
+   "Netrokona"
+  ],
+  "always_top10": [],
+  "spearman_median": 0.6589514652014651,
+  "spearman_p05": 0.37721382783882784,
+  "tier_stability_median": 0.3496178132269857,
+  "haor_in_top10": 6
+ },
+ "yield_view": {
+  "spearman": 0.6123168498168498,
+  "haor_mean_rank_yield": 27.285714285714285,
+  "haor_mean_rank_production": 21.285714285714285,
+  "sunamganj_rank_yield": 25,
+  "sunamganj_rank_production": 3
+ },
+ "spatial": {
+  "rows": [
+   {
+    "neighbours": "Contiguity",
+    "moran_i": 0.45081310471318503,
+    "z": 5.953277829532099,
+    "p": 0.0001,
+    "hh_005": [
+     "Habiganj",
+     "Kishoreganj",
+     "Moulvibazar",
+     "Netrokona",
+     "Sunamganj",
+     "Sylhet"
+    ],
+    "hh_fdr": [
+     "Habiganj",
+     "Sunamganj",
+     "Sylhet"
+    ]
+   },
+   {
+    "neighbours": "4 nearest",
+    "moran_i": 0.41888099333318374,
+    "z": 5.765962590632101,
+    "p": 0.0001,
+    "hh_005": [
+     "Habiganj",
+     "Moulvibazar",
+     "Netrokona",
+     "Sunamganj",
+     "Sylhet"
+    ],
+    "hh_fdr": [
+     "Habiganj",
+     "Moulvibazar",
+     "Sunamganj",
+     "Sylhet"
+    ]
+   },
+   {
+    "neighbours": "6 nearest",
+    "moran_i": 0.3127411521969079,
+    "z": 5.401493767518175,
+    "p": 0.0002,
+    "hh_005": [
+     "Habiganj",
+     "Moulvibazar",
+     "Netrokona",
+     "Sunamganj",
+     "Sylhet"
+    ],
+    "hh_fdr": [
+     "Habiganj",
+     "Moulvibazar",
+     "Sunamganj",
+     "Sylhet"
+    ]
+   },
+   {
+    "neighbours": "100 km band",
+    "moran_i": 0.3233367164947395,
+    "z": 6.070450915448714,
+    "p": 0.0008,
+    "hh_005": [
+     "Habiganj",
+     "Moulvibazar",
+     "Netrokona",
+     "Sunamganj",
+     "Sylhet"
+    ],
+    "hh_fdr": [
+     "Habiganj",
+     "Moulvibazar",
+     "Sunamganj",
+     "Sylhet"
+    ]
+   }
+  ],
+  "hh_all_definitions": [
+   "Habiganj",
+   "Moulvibazar",
+   "Netrokona",
+   "Sunamganj",
+   "Sylhet"
+  ]
+ }
+}

@@ -1,0 +1,24 @@
+Bangladesh
+  2015 Apr-May {'A': 78} | Jan-Mar {'A': 93}
+  2016 Apr-May {'A': 87} | Jan-Mar {'A': 103}
+  2017 Apr-May {'A': 176} | Jan-Mar {'A': 168, 'B': 6}
+  2018 Apr-May {'A': 166} | Jan-Mar {'A': 264}
+  2019 Apr-May {'A': 137, 'B': 15} | Jan-Mar {'A': 246, 'B': 14}
+  2020 Apr-May {'A': 181, 'B': 25} | Jan-Mar {'A': 277, 'B': 8}
+  2021 Apr-May {'A': 186} | Jan-Mar {'A': 291}
+  2022 Apr-May {'A': 179} | Jan-Mar {'A': 279}
+  2023 Apr-May {'A': 185} | Jan-Mar {'A': 270}
+  2024 Apr-May {'A': 164} | Jan-Mar {'A': 275}
+  2025 Apr-May {'A': 184, 'C': 6} | Jan-Mar {'A': 277}
+Haor basin
+  2015 Apr-May {'A': 22} | Jan-Mar {'A': 25}
+  2016 Apr-May {'A': 17} | Jan-Mar {'A': 20}
+  2017 Apr-May {'A': 28} | Jan-Mar {'A': 41}
+  2018 Apr-May {'A': 27} | Jan-Mar {'A': 41}
+  2019 Apr-May {'A': 24} | Jan-Mar {'A': 39}
+  2020 Apr-May {'A': 29, 'B': 4} | Jan-Mar {'A': 44}
+  2021 Apr-May {'A': 29} | Jan-Mar {'A': 45}
+  2022 Apr-May {'A': 28} | Jan-Mar {'A': 45}
+  2023 Apr-May {'A': 30} | Jan-Mar {'A': 46}
+  2024 Apr-May {'A': 24} | Jan-Mar {'A': 44}
+  2025 Apr-May {'A': 32} | Jan-Mar {'A': 42}

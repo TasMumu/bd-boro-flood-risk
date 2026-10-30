@@ -1,0 +1,35 @@
+
+=== s1_flash_flood: 2015-2025, n=704
+percent of district: median 0.53, p90 3.07, p99 13.62, max 44.71
+district-years at or above 1/5/10/20 %: [209, 31, 12, 5]
+share of identifying variation: top 1 25%, top 5 57%, top 10 71%, top 20 82%; effective obs 11
+haor seven districts carry 88%
+by year: {2017: 0.436, 2016: 0.24, 2022: 0.079, 2021: 0.048}
+top: [('Sunamganj', 2017, 44.7, 0.247), ('Sunamganj', 2016, 34.4, 0.111), ('Kishoreganj', 2017, 27.0, 0.094), ('Sylhet', 2022, 22.0, 0.06), ('Kishoreganj', 2016, 22.6, 0.056), ('Netrokona', 2017, 17.4, 0.036)]
+
+=== jrc_flash_flood: 2011-2021, n=704
+percent of district: median 0.26, p90 2.56, p99 21.34, max 43.90
+district-years at or above 1/5/10/20 %: [171, 39, 23, 8]
+share of identifying variation: top 1 11%, top 5 40%, top 10 58%, top 20 73%; effective obs 23
+haor seven districts carry 90%
+by year: {2016: 0.346, 2017: 0.214, 2020: 0.091, 2011: 0.089}
+top: [('Sunamganj', 2016, 43.9, 0.114), ('Kishoreganj', 2016, 37.9, 0.093), ('Sunamganj', 2017, 37.2, 0.068), ('Sylhet', 2016, 27.8, 0.06), ('Sylhet', 2017, 26.7, 0.06), ('Kishoreganj', 2017, 30.0, 0.046)]
+
+=== s1_monsoon_flood: 2016-2025, n=640
+percent of district: median 5.20, p90 18.02, p99 53.15, max 64.60
+district-years at or above 1/5/10/20 %: [566, 335, 133, 60]
+share of identifying variation: top 1 7%, top 5 25%, top 10 36%, top 20 48%; effective obs 52
+haor seven districts carry 47%
+by year: {2023: 0.201, 2021: 0.198, 2025: 0.127, 2022: 0.104}
+top: [('Sylhet', 2023, 42.4, 0.074), ('Sylhet', 2025, 42.3, 0.061), ('Habiganj', 2023, 32.2, 0.044), ('Jamalpur', 2021, 24.5, 0.036), ("Cox's Bazar", 2018, 20.9, 0.031), ('Manikganj', 2021, 23.7, 0.03)]
+
+=== jrc_monsoon_flood: 2011-2022, n=768
+percent of district: median 4.29, p90 20.07, p99 48.31, max 64.60
+district-years at or above 1/5/10/20 %: [615, 359, 187, 78]
+share of identifying variation: top 1 5%, top 5 13%, top 10 21%, top 20 34%; effective obs 103
+haor seven districts carry 41%
+by year: {2022: 0.145, 2012: 0.125, 2016: 0.123, 2018: 0.079}
+top: [('Sunamganj', 2016, 64.6, 0.052), ('Sunamganj', 2012, 37.4, 0.025), ('Netrokona', 2016, 39.6, 0.019), ('Brahmanbaria', 2015, 38.1, 0.019), ('Sylhet', 2022, 9.6, 0.018), ('Manikganj', 2021, 26.2, 0.018)]
+
+JRC valid observations, share of area: flash min 0.27 median 1.00; monsoon min 0.72 median 1.00
+flash obs by year: {2011: 0.97, 2012: 0.95, 2013: 0.93, 2014: 1.0, 2015: 1.0, 2016: 0.99, 2017: 0.99, 2018: 1.0, 2019: 1.0, 2020: 0.99, 2021: 1.0}

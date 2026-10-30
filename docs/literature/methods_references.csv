@@ -1,0 +1,20 @@
+query,first_author,year,title,journal,doi
+Lesk Rowhani Ramankutty Influence of extreme weather disasters on global crop production,Lesk,2016,Influence of extreme weather disasters on global crop production,Nature,10.1038/nature16467
+Conley GMM estimation with cross sectional dependence,Conley,1999,GMM estimation with cross sectional dependence,Journal of Econometrics,10.1016/s0304-4076(98)00084-0
+Driscoll Kraay Consistent covariance matrix estimation with spatially dependent panel data,Driscoll,1998,Consistent Covariance Matrix Estimation with Spatially Dependent Panel Data,Review of Economics and Statistics,10.1162/003465398557825
+Cameron Gelbach Miller Bootstrap-based improvements for inference with clustered errors,Cameron,2007,Bootstrap-Based Improvements for Inference with Clustered Errors,,10.3386/t0344
+MacKinnon Webb Wild bootstrap inference for wildly different cluster sizes,MacKinnon,2013,Wild Bootstrap Inference for Wildly Different Cluster Sizes,,10.1920/ps.ifs.2024.0794
+MacKinnon Webb The wild bootstrap for few (treated) clusters,MacKinnon,2018,The wild bootstrap for few (treated) clusters,The Econometrics Journal,10.1111/ectj.12107
+MacKinnon Webb Randomization inference for difference-in-differences with few treated clusters,MacKinnon,2020,Randomization inference for difference-in-differences with few treated clusters,Journal of Econometrics,10.1016/j.jeconom.2020.04.024
+Conley Taber Inference with difference in differences with a small number of policy changes,Conley,2005,"Inference with ""Difference in Differences"" with a Small Number of Policy Changes",,10.3386/t0312
+Arkhangelsky Athey Hirshberg Imbens Wager Synthetic difference-in-differences,Arkhangelsky,2019,Synthetic Difference In Differences,,10.3386/w25532
+"Abadie Using synthetic controls: feasibility, data requirements, and methodological aspects",Abadie,2021,"Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects",Journal of Economic Literature,10.1257/jel.20191450
+Hsiang Climate econometrics,Hsiang,2016,Climate Econometrics,,10.3386/w22181
+Blanc Schlenker The use of panel models in climate impacts studies,Blanc,2017,The Use of Panel Models in Assessments of Climate Impacts on           Agriculture,Review of Environmental Economics and Policy,10.1093/reep/rex016
+Auffhammer Hsiang Schlenker Sobel Using weather data and climate model output in economic analyses of climate change,Auffhammer,2013,Using Weather Data and Climate Model Output in Economic Analyses of Climate Change,,10.3386/w19087
+Anselin Local indicators of spatial association LISA,Anselin,1995,Local Indicators of Spatial Association—LISA,Geographical Analysis,10.1111/j.1538-4632.1995.tb00338.x
+Benjamini Hochberg Controlling the false discovery rate,Koner,2024,False discovery rate control: Moving beyond the Benjamini–Hochberg method,,10.21203/rs.3.rs-3861673/v1
+Santos Silva Tenreyro The log of gravity,Santos Silva,2003,The Log of Gravity,,10.2139/ssrn.380442
+Pekel Cottam Gorelick Belward High-resolution mapping of global surface water and its long-term changes,Pekel,2016,High-resolution mapping of global surface water and its long-term changes,Nature,10.1038/nature20584
+Hinkel Indicators of vulnerability and adaptive capacity: towards a clarification of the science-policy interface,Hinkel,2011,“Indicators of vulnerability and adaptive capacity”: Towards a clarification of the science–policy interface,Global Environmental Change,10.1016/j.gloenvcha.2010.08.002
+"Barrios Diamond Imbens Kolesar Clustering, spatial correlations, and randomization inference",Barrios,2010,"Clustering, Spatial Correlations and Randomization Inference",,10.3386/w15760

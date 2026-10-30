@@ -1,0 +1,13 @@
+{
+ "peak_ndvi": 0.5,
+ "rise_ndvi": 0.2,
+ "stable_years": 5,
+ "loss_drop": 0.2,
+ "hot_c": 35,
+ "cold_c": 20,
+ "reference_years": [
+  2011,
+  2025
+ ],
+ "date_utc": "2026-10-30"
+}

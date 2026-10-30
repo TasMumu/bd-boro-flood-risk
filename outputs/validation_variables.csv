@@ -1,0 +1,19 @@
+check,observed,status
+Gold panel matches the archived Paper 1 panel,5cbaeb1edaef,PASS
+"modis: 64 districts in every year, no missing value",960 rows,PASS
+"weather: 64 districts in every year, no missing value",960 rows,PASS
+"ndviwin: 64 districts in every year, no missing value",960 rows,PASS
+"scenes: 64 districts in every year, no missing value",704 rows,PASS
+"s1: 64 districts in every year, no missing value",704 rows,PASS
+"jrc: 64 districts in every year, no missing value",704 rows,PASS
+"s1thr: 64 districts in every year, no missing value",704 rows,PASS
+s1_flash_wd reproduces Paper 1's s1_flash_flood,"max difference 1.11e-16, n=704",PASS
+s1_monsoon_wd reproduces Paper 1's s1_monsoon_flood,"max difference 1.11e-16, n=640",PASS
+jrc_flash_wd reproduces Paper 1's jrc_flash_flood,"max difference 4.08e-10, n=704",PASS
+jrc_monsoon_wd reproduces Paper 1's jrc_monsoon_flood,"max difference 7.75e-10, n=704",PASS
+all fractions lie between 0 and 1,0.0000 to 1.0000,PASS
+Boro land never exceeds district area,largest share 0.74,PASS
+Sentinel-1 scenes exist in every district-year,minimum 5 in Apr-May,PASS
+satellite crop loss is observed on most Boro land,minimum valid share 0.67,PASS
+yearly mask agrees with BBS area between districts,r = 0.914,PASS
+stable mask agrees with BBS area between districts,r = 0.909,PASS

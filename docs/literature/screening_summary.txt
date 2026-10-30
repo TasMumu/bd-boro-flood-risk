@@ -1,0 +1,9 @@
+queries: 52
+records retrieved: 1870
+unique records: 1383
+with abstract: 1232
+Bangladesh or haor, and crops: 421
+  and flood: 182
+  and an area term: 5
+  and yield: 4
+  and a statistical model: 1

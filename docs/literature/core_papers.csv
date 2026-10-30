@@ -1,0 +1,58 @@
+theme,first_author,n_authors,year,title,journal,doi,read
+Haor flooding,Ahmed,4,2017,Remote Sensing-Based Quantification of the Impact of Flash Flooding on the Rice Production: A Case Study over Northeastern Bangladesh,Sensors,10.3390/s17102347,"abstract, key"
+Haor flooding,Dey,3,2021,A study on the impact of the 2017 early monsoon flash flood: Potential measures to safeguard livelihoods from extreme climate events in the haor area of Bangladesh,International Journal of Disaster Risk Reduction,10.1016/j.ijdrr.2021.102247,abstract
+Haor flooding,Mondal,4,2021,Effects of 2017 Early Flash Flooding on Agriculture in Haor Areas of Sunamganj,Journal of Environmental Science and Natural Resources,10.3329/jesnr.v12i1-2.52007,abstract
+Haor flooding,Khan,3,2012,Impacts of Flood on Crop Production in Haor Areas of Two Upazillas in Kishoregonj,Journal of Environmental Science and Natural Resources,10.3329/jesnr.v5i1.11581,abstract
+Haor flooding,Rashid,2,2018,Cold Injury and Flash Flood Damage in Boro Rice Cultivation in Bangladesh: A Review,Bangladesh Rice Journal,10.3329/brj.v21i1.37360,abstract
+Haor flooding,Kamruzzaman,2,2018,Flood and Sustainable Agriculture in the Haor Basin of Bangladesh: A Review Paper,Universal Journal of Agricultural Research,10.13189/ujar.2018.060106,abstract
+Haor flooding,Hossain,3,2023,Cold-Tolerant and Short-Duration Rice (Oryza sativa L.) for Sustainable Food Security of the Flash Flood-Prone Haor Wetlands of Bangladesh,Sustainability,10.3390/su152416873,abstract
+Haor flooding,Ahmed,1,2024,How to Enhance Resilience Against the Adverse Effects of Climate Change: Evidence from Boro Rice Farmers in Northeast Bangladesh,Food and Energy Security,10.1002/fes3.70028,abstract
+Haor flooding,Baishakhy,3,2023,Overcoming barriers to adapt rice farming to recurring flash floods in haor wetlands of Bangladesh,Heliyon,10.1016/j.heliyon.2023.e14011,abstract
+Haor flooding,Kamruzzaman,8,2024,Assessing the impacts of future climate extremes on boro rice cultivation in the northeastern Haor region of Bangladesh: insights from CMIP6 multi-model ensemble projections,Theoretical and Applied Climatology,10.1007/s00704-024-05270-5,abstract
+Floods and rice in Bangladesh,Banerjee,1,2010,Effects of Flood on Agricultural Productivity in Bangladesh,Oxford Development Studies,10.1080/13600818.2010.505681,"abstract, key"
+Floods and rice in Bangladesh,ASADA,3,2005,Impact of Recent Severe Floods on Rice Production in Bangladesh,Geographical Review of Japan,10.4157/grj.78.783,"abstract, key"
+Floods and rice in Bangladesh,Rahman,4,2025,Assessing the interrelationship between monsoon flood disasters and major crop production in Bangladesh,International Journal of Disaster Risk Reduction,10.1016/j.ijdrr.2025.105401,partial abstract
+Floods and rice in Bangladesh,Guiteras,3,2015,"Satellites, Self-reports, and Submersion: Exposure to Floods in Bangladesh",American Economic Review,10.1257/aer.p20151095,"abstract, key"
+Climate and yield in Bangladesh,Amin,3,2015,Effects of Climate Change on the Yield and Cropping Area of Major Food Crops: A Case of Bangladesh,Sustainability,10.3390/su7010898,"abstract, key"
+Climate and yield in Bangladesh,Sarker,3,2014,Assessing the effects of climate change on rice yields: An econometric investigation using Bangladeshi panel data,Economic Analysis and Policy,10.1016/j.eap.2014.11.004,title only
+Climate and yield in Bangladesh,HASAN,3,2016,ASSESSMENT OF CLIMATE CHANGE IMPACTS ON AMAN AND BORO RICE YIELDS IN BANGLADESH,Climate Change Economics,10.1142/s2010007816500081,abstract
+Climate and yield in Bangladesh,Rahman,4,2017,Impacts of temperature and rainfall variation on rice productivity in major ecosystems of Bangladesh,Agriculture &amp; Food Security,10.1186/s40066-017-0089-5,abstract
+Climate and yield in Bangladesh,Dasgupta,4,2017,"Climate Change, Salinization and High-Yield Rice Production in Coastal Bangladesh",Agricultural and Resource Economics Review,10.1017/age.2017.14,abstract
+Area and yield margins,Lesk,3,2016,Influence of extreme weather disasters on global crop production,Nature,10.1038/nature16467,"abstract, key"
+Area and yield margins,Li,3,2025,Severe floods significantly reduce global rice yields,Science Advances,10.1126/sciadv.adx7799,"abstract, key"
+Area and yield margins,Cui,1,2020,Beyond Yield Response: Weather Shocks and Crop Abandonment,Journal of the Association of Environmental and Resource Economists,10.1086/709859,"abstract, key"
+Area and yield margins,Obembe,3,2021,Decreased wheat production in the USA from climate change driven by yield losses rather than crop abandonment,PLOS ONE,10.1371/journal.pone.0252067,"abstract, key"
+Area and yield margins,Wei,2,2022,Majority of production shocks for major US crops explained by fluctuations in planted and harvested area,,10.1002/essoar.10510446.1,"abstract, key"
+Area and yield margins,Blanc,2,2016,Assessing the Impact of Typhoons on Rice Production in the Philippines,Journal of Applied Meteorology and Climatology,10.1175/jamc-d-15-0214.1,"abstract, key"
+Satellite flood and rice mapping,Uddin,3,2019,Operational Flood Mapping Using Multi-Temporal Sentinel-1 SAR Images: A Case Study from Bangladesh,Remote Sensing,10.3390/rs11131581,title only
+Satellite flood and rice mapping,Rahman,2,2020,A Systematic Review on Case Studies of Remote-Sensing-Based Flood Crop Loss Assessment,Agriculture,10.3390/agriculture10040131,abstract
+Satellite flood and rice mapping,Rahman,5,2020,Remote Sensing Based Rapid Assessment of Flood Crop Damage Using Novel Disaster Vegetation Damage Index (DVDI),International Journal of Disaster Risk Science,10.1007/s13753-020-00305-7,abstract
+Satellite flood and rice mapping,Qamer,10,2023,A framework for multi-sensor satellite data to evaluate crop production losses: the case study of 2022 Pakistan floods,Scientific Reports,10.1038/s41598-023-30347-y,"abstract, key"
+Satellite flood and rice mapping,Singha,4,2019,High resolution paddy rice maps in cloud-prone Bangladesh and Northeast India using Sentinel-1 data,Scientific Data,10.1038/s41597-019-0036-3,"abstract, key"
+Satellite flood and rice mapping,Shew,2,2019,Identifying Dry-Season Rice-Planting Patterns in Bangladesh Using the Landsat Archive,Remote Sensing,10.3390/rs11101235,"abstract, key"
+Satellite flood and rice mapping,Mosleh,2,2014,Development of a Remote Sensing-Based “Boro” Rice Mapping System,Remote Sensing,10.3390/rs6031938,abstract
+Satellite flood and rice mapping,Pekel,4,2016,High-resolution mapping of global surface water and its long-term changes,Nature,10.1038/nature20584,title only
+NDVI and yield,Mosleh,3,2016,Development of a remote sensing-based rice yield forecasting model,Spanish Journal of Agricultural Research,10.5424/sjar/2016143-8347,abstract
+NDVI and yield,Alam,5,2019,Boro Rice Yield Estimation Model Using Modis Ndvi Data for Bangladesh,IGARSS 2019 - 2019 IEEE International Geoscience and Remote Sensing Symposium,10.1109/igarss.2019.8899084,abstract
+Indices and spatial methods,Saisana,3,2005,Uncertainty and Sensitivity Analysis Techniques as Tools for the Quality Assessment of Composite Indicators,Journal of the Royal Statistical Society Series A: Statistics in Society,10.1111/j.1467-985x.2005.00350.x,title only
+Indices and spatial methods,Tate,1,2012,Social vulnerability indices: a comparative assessment using uncertainty and sensitivity analysis,Natural Hazards,10.1007/s11069-012-0152-2,title only
+Indices and spatial methods,Burgass,4,2017,Navigating uncertainty in environmental composite indicators,Ecological Indicators,10.1016/j.ecolind.2016.12.034,title only
+Indices and spatial methods,Hinkel,1,2011,“Indicators of vulnerability and adaptive capacity”: Towards a clarification of the science–policy interface,Global Environmental Change,10.1016/j.gloenvcha.2010.08.002,title only
+Indices and spatial methods,Anselin,1,1995,Local Indicators of Spatial Association—LISA,Geographical Analysis,10.1111/j.1538-4632.1995.tb00338.x,title only
+Inference and design,Conley,1,1999,GMM estimation with cross sectional dependence,Journal of Econometrics,10.1016/s0304-4076(98)00084-0,title only
+Inference and design,Driscoll,2,1998,Consistent Covariance Matrix Estimation with Spatially Dependent Panel Data,Review of Economics and Statistics,10.1162/003465398557825,title only
+Inference and design,Cameron,3,2008,Bootstrap-Based Improvements for Inference with Clustered Errors,Review of Economics and Statistics,10.1162/rest.90.3.414,title only
+Inference and design,MacKinnon,2,2016,Wild Bootstrap Inference for Wildly Different Cluster Sizes,Journal of Applied Econometrics,10.1002/jae.2508,abstract
+Inference and design,MacKinnon,2,2018,The wild bootstrap for few (treated) clusters,The Econometrics Journal,10.1111/ectj.12107,abstract
+Inference and design,MacKinnon,2,2020,Randomization inference for difference-in-differences with few treated clusters,Journal of Econometrics,10.1016/j.jeconom.2020.04.024,abstract
+Inference and design,Conley,2,2011,Inference with “Difference in Differences” with a Small Number of Policy Changes,Review of Economics and Statistics,10.1162/REST_a_00049,abstract
+Inference and design,Arkhangelsky,5,2021,Synthetic Difference-in-Differences,American Economic Review,10.1257/aer.20190159,abstract
+Inference and design,Abadie,1,2021,"Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects",Journal of Economic Literature,10.1257/jel.20191450,title only
+Inference and design,Hsiang,1,2016,Climate Econometrics,,10.3386/w22181,title only
+Inference and design,Blanc,2,2017,The Use of Panel Models in Assessments of Climate Impacts on           Agriculture,Review of Environmental Economics and Policy,10.1093/reep/rex016,title only
+Inference and design,Auffhammer,4,2013,Using Weather Data and Climate Model Output in Economic Analyses of Climate Change,Review of Environmental Economics and Policy,10.1093/reep/ret016,title only
+Inference and design,Silva,2,2006,The Log of Gravity,The Review of Economics and Statistics,10.1162/rest.88.4.641,abstract
+Inference and design,Benjamini,2,1995,Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing,Journal of the Royal Statistical Society Series B: Statistical Methodology,10.1111/j.2517-6161.1995.tb02031.x,abstract
+Inference and design,Barrios,4,2010,"Clustering, Spatial Correlations and Randomization Inference",,10.3386/w15760,abstract
+Adaptation,Bairagi,4,2021,"Flood-tolerant rice improves climate resilience, profitability, and household consumption in Bangladesh",Food Policy,10.1016/j.foodpol.2021.102183,abstract
+Adaptation,Islam,5,2021,Factors affecting farmers’ willingness to adopt crop insurance to manage disaster risk: evidence from Bangladesh,International Food and Agribusiness Management Review,10.22434/ifamr2019.0190,abstract

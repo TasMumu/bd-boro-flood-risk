@@ -1,0 +1,8 @@
+{
+ "checks": 18,
+ "failed": [],
+ "stable_mask_mha": 4.69854118807227,
+ "r_mask_year": 0.9139684641921738,
+ "r_mask_stable": 0.9094633889554713,
+ "n_panel": 960
+}

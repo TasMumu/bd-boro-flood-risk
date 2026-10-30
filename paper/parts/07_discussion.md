@@ -1,0 +1,25 @@
+# 6. Discussion
+
+## 6.1 What can and cannot be claimed
+
+One claim is well supported as a description of a single event. In the 2017 flood, the loss in BBS statistics appeared in harvested area and production, and almost none in yield. Three designs agree on this, in both flood records. A satellite measure that uses no BBS data places the loss in the same districts, and published damage figures are of the same order.
+
+The broader claim, that flash floods generally reduce Boro through area, is not established. Under a rule fixed in advance it is only suggestive. The estimate rests on 2016 and 2017, the 2016 and 2022 floods left no fall in area, and the two flood records differ about five-fold in their main estimates. We report that plainly because a single significant estimate of about 22 % per 10 points would have told a stronger and less accurate story. This also bears on how flood effects are read elsewhere: with few events and a few treated districts, an estimate from a large panel can be one event in disguise.
+
+## 6.2 Why area and not yield
+
+The likely reason is how the statistics are built. Yield is estimated from crop cuts on harvested fields [@bbs2026], so a destroyed field leaves the harvested area and never enters the yield estimate. Since Boro is planted before flash floods arrive, a same-season fall in harvested area means crop lost and not a planting decision. Crops that survive are measured as usual, which fits a yield effect near zero. The small positive yield effect with JRC could mean that weaker fields are lost first, but the evidence for this is thin.
+
+This does not contradict Li et al. (2025), who report yield losses from submergence worldwide. Li et al. and this study measure different things in different statistical systems. Whether crop that is totally lost appears in yield or area depends on how each country's data are collected. Similarly, national data may fail to show flood effects at all [@lesk2016], because a loss such as 2017 is confined to a few districts. Our results differ from the Kansas wheat findings [@obembe2021] and resemble those on harvested ratios [@cui2020], which suggests that the answer depends on the crop, hazard and data system.
+
+## 6.3 Implications
+
+**Disaster assessment.** Yield alone is a poor signal of the largest flood losses in this system. Sunamganj lost {{ f(abs(E17.loc['Sunamganj', 'production_t_chg_pct']), 0) }} % of its production in 2017 with no visible change in yield. Assessments should track harvested area and production alongside yield, and research on Bangladesh's rice should not treat stable yields as evidence of low flood risk. Harvested area is the variable that carried the signal here, but BBS reports only harvested and not planted area. A routine estimate of planted area before the flood window would show directly what share of the crop was lost.
+
+**Satellite monitoring.** Greenness-based crop loss located the 2017 damage without official data, as earlier work found for the same event [@ahmed2017], and similar methods have been used elsewhere [@rahman2020a; @qamer2023]. It is useful for rapid assessment, but the 2016 mismatch shows that it should not be read as loss without information on harvest progress. NDVI alone should not be used to infer yield shocks in a district.
+
+**Timing and adaptation.** If water before harvest is what matters, then the most direct response is to finish harvesting before the flood window. Earlier sowing and short-duration varieties are already recommended for this reason [@hossain2023], though farmers face barriers to adopting them [@baishakhy2023]. The exploratory timing result supports this direction but does not establish it. Flood-tolerant rice has improved outcomes in north-west Bangladesh [@bairagi2021], but that evidence does not transfer directly to Boro in the haor, where the threat comes at maturity. Interest in crop insurance exists [@islam2021], and our results suggest that a payout tied to district yield would not have been triggered in 2017. Any index for the haor should be based on area or on satellite-observed loss.
+
+## 6.4 Limitations
+
+The study covers 15 years and few large flash floods, and one event dominates, so the findings describe these events and do not give a general law. Floods are not randomly assigned. BBS harvested area comes from official estimates, which we checked with independent evidence only partly, and only for large events. The Boro mask relies on a fixed NDVI rule and a static cropland map, is not validated with field data, and has noisy yearly totals. Sentinel-1 has fewer scenes before 2017, and optical records such as JRC can miss short floods that radar observes [@uddin2019; @twele2016]. Flood fractions in the main models cover whole districts, and the required rice-only check weakened the estimates. Satellite crop loss cannot separate destruction from early harvest. Cold-stress thresholds are provisional. The risk index omits adaptive capacity and salinity [@dasgupta2017], so it is a partial picture, and its rank ranges are wide. It should guide where to look more closely, and should not be used as an allocation rule.

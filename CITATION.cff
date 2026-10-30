@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software or the data it produces, please cite it as below."
+title: "bd-boro-flood-risk: flood exposure, harvested area and yield of Boro rice across Bangladesh's 64 districts, 2011-2025"
+type: software
+authors:
+  - family-names: Mumu
+    given-names: Tasnim Ahmad
+    affiliation: "Department of Agronomy and Agricultural Extension, University of Rajshahi"
+    orcid: "https://orcid.org/0009-0006-8346-9622"
+  - family-names: Karim
+    given-names: Rezaul
+    affiliation: "Department of Statistics and Data Science, University of Rajshahi"
+version: "1.0.0-dev"
+repository-code: "https://github.com/TasMumu/bd-boro-flood-risk"
+license: MIT
+abstract: >-
+  Code, documented notebooks and outputs for a study of whether flash floods reduce
+  Boro rice through harvested area rather than yield in Bangladesh, using the Gold
+  panel of bd-boro-data-framework (10.5281/zenodo.23795046), flood fractions from
+  Sentinel-1 and JRC, and a satellite measure of crop loss.
+keywords:
+  - flood loss
+  - flash flood
+  - Boro rice
+  - harvested area
+  - Sentinel-1
+  - Bangladesh
+# Add "date-released" and the Zenodo DOI (identifiers) once a release has been archived.

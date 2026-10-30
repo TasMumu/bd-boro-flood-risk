@@ -1,0 +1,25 @@
+# Built locally
+logs/
+paper/_render/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv*/
+venv/
+.env
+
+# Search records that hold other authors' abstracts; docs/literature/search.py and
+# search_round2.py regenerate them
+docs/literature/candidates.csv
+docs/literature/candidates_round2.csv
+docs/literature/doi_checks.csv
+
+# Paywalled papers, if saved here for reading
+docs/literature/papers/
+
+# Editors and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

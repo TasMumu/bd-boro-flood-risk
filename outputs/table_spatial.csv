@@ -1,0 +1,5 @@
+neighbours,moran_i,z,p,hh_005,hh_fdr
+Contiguity,0.45081310471318503,5.953277829532099,0.0001,"['Habiganj', 'Kishoreganj', 'Moulvibazar', 'Netrokona', 'Sunamganj', 'Sylhet']","['Habiganj', 'Sunamganj', 'Sylhet']"
+4 nearest,0.41888099333318374,5.765962590632101,0.0001,"['Habiganj', 'Moulvibazar', 'Netrokona', 'Sunamganj', 'Sylhet']","['Habiganj', 'Moulvibazar', 'Sunamganj', 'Sylhet']"
+6 nearest,0.3127411521969079,5.401493767518175,0.0002,"['Habiganj', 'Moulvibazar', 'Netrokona', 'Sunamganj', 'Sylhet']","['Habiganj', 'Moulvibazar', 'Sunamganj', 'Sylhet']"
+100 km band,0.3233367164947395,6.070450915448714,0.0008,"['Habiganj', 'Moulvibazar', 'Netrokona', 'Sunamganj', 'Sylhet']","['Habiganj', 'Moulvibazar', 'Sunamganj', 'Sylhet']"
