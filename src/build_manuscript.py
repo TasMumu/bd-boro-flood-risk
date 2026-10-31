@@ -32,6 +32,12 @@ IDX = pd.read_csv(OUT / "table_index.csv", index_col=0)
 SP = pd.read_csv(OUT / "table_spatial.csv")
 NAT = pd.read_csv(OUT / "table_mask_national.csv")
 P1E = pd.read_csv(FRAMEWORK / "v2" / "outputs" / "tables" / "table_event_2017.csv").set_index("district")
+DMG = pd.read_csv(ROOT / "data" / "bbs_reported_damage.csv").set_index(["harvest_year", "district"])
+_ch = pd.read_csv(OUT / "table_chandpur_2017.csv")
+CH, CH2 = _ch[_ch.edition == 2017].set_index("type"), _ch[_ch.edition == 2018].set_index("type")
+CAL = (pd.read_csv(ROOT / "data" / "bronze" / "calibration_mask.csv").filter(regex=r"^p|harvest_year").groupby("harvest_year").sum().mean() / 1e4).to_dict()
+NATA = P.groupby("harvest_year").area_ha.sum().to_dict()
+FDR_ALL = sorted(set.intersection(*[set(eval(x)) for x in SP.hh_fdr]))
 EARLY = pd.read_csv(OUT / "table_early_window.csv")
 TIM = pd.read_csv(OUT / "table_flood_timing.csv", index_col=0)
 HAOR = ["Sunamganj", "Habiganj", "Netrokona", "Kishoreganj", "Sylhet", "Moulvibazar", "Brahmanbaria"]
@@ -77,7 +83,7 @@ def table_sources():
         ["Boro area, yield, production", "BBS yearbooks, from the panel of Mumu and Karim (2026b)", "64 districts", "2011–2025"],
         ["Flood, Sentinel-1", "COPERNICUS/S1_GRD, VV, −18 dB", "Analysed at 60 m", "Harvest years 2015–2025"],
         ["Flood, JRC", "Global Surface Water v1.4, monthly", "30 m", "Harvest years 2011–2021"],
-        ["Boro mask, crop loss, NDVI", "MODIS MOD13Q1 v061, WorldCover v200 cropland", "250 m", "2011–2025"],
+        ["Boro mask, greenness loss, NDVI", "MODIS MOD13Q1 v061, WorldCover v200 cropland", "250 m", "2011–2025"],
         ["Weather", "ERA5-Land daily aggregates", "0.1°", "2011–2025"]],
         columns=["Variable", "Source", "Resolution", "Period"]))
 
@@ -152,7 +158,7 @@ def table_ndvi():
 def table_event():
     d = E17.head(8)
     rows = [[n, f(100 * r.s1_flash_flood), f(100 * r.jrc_flash_flood), f(100 * r.loss_share), f(r.area_ha_chg_pct), f(r.yield_t_ha_chg_pct), f(r.production_t_chg_pct)] for n, r in d.iterrows()]
-    return md_table(pd.DataFrame(rows, columns=["District", "Sentinel-1 flood (%)", "JRC flood (%)", "Satellite crop loss (%)", "BBS area (%)", "BBS yield (%)", "BBS production (%)"]))
+    return md_table(pd.DataFrame(rows, columns=["District", "Sentinel-1 flood (%)", "JRC flood (%)", "Satellite greenness loss (%)", "BBS harvested area (%)", "BBS yield (%)", "BBS production (%)"]))
 
 
 def table_design():
@@ -176,8 +182,8 @@ def table_timing():
     rows = []
     for t in (2015, 2016, 2017, 2018, 2022):
         r = TIM.loc[t]
-        rows.append([str(t), f(r.s1_early_wd), f(r.s1_late_wd), f(r.jrc_early_wd) if pd.notna(r.jrc_early_wd) else "–", f(r.jrc_late_wd) if pd.notna(r.jrc_late_wd) else "–", f(r.loss_share), f(hy("Harvested area", t))])
-    return md_table(pd.DataFrame(rows, columns=["Harvest year", "Sentinel-1 early (%)", "Sentinel-1 late (%)", "JRC early (%)", "JRC late (%)", "Satellite crop loss (%)", "BBS area against 2015 (%)"]))
+        rows.append([str(t), f(r.s1_early_wd), f(r.s1_late_wd), f(r.jrc_early_wd) if pd.notna(r.jrc_early_wd) else "–", f(r.jrc_late_wd) if pd.notna(r.jrc_late_wd) else "–", f(r.loss_share), f(hy("Harvested area", t)), f(DMG.loc[(t, "Bangladesh"), "loss_t"], 0) if (t, "Bangladesh") in DMG.index else "–"])
+    return md_table(pd.DataFrame(rows, columns=["Harvest year", "Sentinel-1 early (%)", "Sentinel-1 late (%)", "JRC early (%)", "JRC late (%)", "Satellite greenness loss (%)", "BBS harvested area against 2015 (%)", "BBS reported production loss (t)"]))
 
 
 def table_mask():
@@ -192,7 +198,7 @@ def table_datachecks():
     for old, new in names.items():
         d["check"] = d.check.str.replace(old, new, regex=False)
     d["check"] = d.check.map(lambda t: t[0].upper() + t[1:])
-    return md_table(pd.DataFrame([[minus(r.check.replace("the archived Paper 1 panel", "the archived panel").replace("Paper 1's", "the panel's")), minus(r.observed), r.status.capitalize()] for r in d.itertuples()], columns=["Check", "Observed", "Result"]))
+    return md_table(pd.DataFrame([[minus(r.check.replace("the archived Paper 1 panel", "the archived panel").replace("satellite crop loss", "satellite greenness loss").replace("Satellite crop loss", "Satellite greenness loss").replace("Paper 1's", "the panel's")), minus(r.observed), r.status.capitalize()] for r in d.itertuples()], columns=["Check", "Observed", "Result"]))
 
 
 def table_search():
@@ -200,6 +206,38 @@ def table_search():
     d["theme"] = d.theme.str.replace(r"^[A-G] ", "", regex=True).map(lambda t: "Targeted search" if t == "Round 2" else t[0].upper() + t[1:])
     d = d.groupby("theme", sort=False).agg(q=("query", lambda s: "; ".join(s)), hits=("retrieved", "sum")).reset_index()
     return md_table(pd.DataFrame([[r.theme, r.q, r.hits] for r in d.itertuples()], columns=["Theme", "Search strings", "Records retrieved"]))
+
+
+def table_damage():
+    rows, tot = [], [0, 0, 0, 0]
+    ref = P[P.harvest_year.isin([2015, 2018])].groupby("district")[["area_ha", "production_t"]].mean()
+    now = P[P.harvest_year == 2017].set_index("district")[["area_ha", "production_t"]]
+    d = DMG.xs(2017).drop("Bangladesh").sort_values("total_ha", ascending=False)
+    for n, r in d.iterrows():
+        a, b = ref.loc[n, "area_ha"] - now.loc[n, "area_ha"], ref.loc[n, "production_t"] - now.loc[n, "production_t"]
+        rows.append([n, f(r.total_ha, 0), f(a, 0), f(r.loss_t, 0), f(b, 0)])
+        tot = [tot[0] + r.total_ha, tot[1] + a, tot[2] + r.loss_t, tot[3] + b]
+    rows.append(["Six districts"] + [f(x, 0) for x in tot])
+    return md_table(pd.DataFrame(rows, columns=["District", "BBS damaged area (ha)", "Fall in BBS harvested area (ha)", "BBS production loss (t)", "Fall in BBS production (t)"]))
+
+
+def table_magnitude():
+    rows = [["Main model", f(eff("Sentinel-1", "Harvested area").pct), f(eff("JRC", "Harvested area").pct)]]
+    for c, lab in (("Districts under 15,000 ha left out", "Districts with a small Boro base left out"), ("Poisson model", "Poisson model, weighting by area")):
+        rows.append([lab, f(chk(c, "Sentinel-1").pct), f(chk(c, "JRC").pct)])
+    return md_table(pd.DataFrame(rows, columns=["Specification", "Sentinel-1 (%)", "JRC (%)"]))
+
+
+def table_required_summary():
+    d = CK[CK.required.astype(bool) & (CK.outcome == "Harvested area")].copy()
+    groups = {"event": "Leave out a flood year", "district": "Leave out a district", "placebo": "Placebos", "measure": "Measurement", "coverage": "Sentinel-1 coverage"}
+    rows = []
+    for k, lab in groups.items():
+        x = d[d.kind == k]
+        fail = x[x.passed.astype(str) != "True"]
+        rows.append([lab, len(x), int((x.passed.astype(str) == "True").sum()), "; ".join(f"{r.check} ({r.source})" for r in fail.itertuples()) or "None"])
+    rows.append(["All required checks", len(d), int((d.passed.astype(str) == "True").sum()), ""])
+    return md_table(pd.DataFrame(rows, columns=["Type", "Checks", "Passed", "Failed"]))
 
 
 def hy(o, y):
@@ -330,7 +368,7 @@ def render(text):
               SA=eff("Sentinel-1", "Harvested area"), SY=eff("Sentinel-1", "Yield"), SPR=eff("Sentinel-1", "Production"),
               JA=eff("JRC", "Harvested area"), JY=eff("JRC", "Yield"), JPR=eff("JRC", "Production"),
               MSA=eff("Sentinel-1", "Harvested area", "monsoon"), MJA=eff("JRC", "Harvested area", "monsoon"), MJY=eff("JRC", "Yield", "monsoon"), MSY=eff("Sentinel-1", "Yield", "monsoon"),
-              P1E=P1E, V=R["verdict_q1"], RP=R["reported_2017"], SAT=R["satellite_check"], YV=X["yield_view"], XI=X["index"])
+              P1E=P1E, DMG=DMG, CH=CH, CH2=CH2, CAL=CAL, NATA=NATA, FDR_ALL=FDR_ALL, V=R["verdict_q1"], RP=R["reported_2017"], SAT=R["satellite_check"], YV=X["yield_view"], XI=X["index"])
 
     def ev(m):
         e = m.group(1).strip()

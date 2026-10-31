@@ -27,6 +27,42 @@
   "title": "Yearbook of Agricultural Statistics-2025 (37th series)",
   "publisher": "Statistics and Informatics Division, Ministry of Planning, Dhaka"
  },
+ "bbs2017": {
+  "type": "report",
+  "authors": [
+   {
+    "family": "Bangladesh Bureau of Statistics",
+    "given": ""
+   }
+  ],
+  "year": 2017,
+  "title": "Yearbook of Agricultural Statistics-2016 (28th series)",
+  "publisher": "Statistics and Informatics Division, Ministry of Planning, Dhaka"
+ },
+ "bbs2018": {
+  "type": "report",
+  "authors": [
+   {
+    "family": "Bangladesh Bureau of Statistics",
+    "given": ""
+   }
+  ],
+  "year": 2018,
+  "title": "Yearbook of Agricultural Statistics-2017 (29th series)",
+  "publisher": "Statistics and Informatics Division, Ministry of Planning, Dhaka"
+ },
+ "bbs2023": {
+  "type": "report",
+  "authors": [
+   {
+    "family": "Bangladesh Bureau of Statistics",
+    "given": ""
+   }
+  ],
+  "year": 2023,
+  "title": "Yearbook of Agricultural Statistics-2022 (34th series)",
+  "publisher": "Statistics and Informatics Division, Ministry of Planning, Dhaka"
+ },
  "gadm2022": {
   "type": "dataset",
   "authors": [

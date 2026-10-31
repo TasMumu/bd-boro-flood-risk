@@ -1,6 +1,6 @@
 # 7. Conclusion
 
-Using printed BBS statistics for all 64 districts and a written analysis plan, we asked whether flash floods reduce Boro rice through harvested area rather than yield. For the 2017 flood the answer is clearly yes: haor area and production fell by about a third, yield barely moved, and independent evidence supports the loss. As a general rule the answer is only suggestive, because the estimates rest on 2016 and 2017, and other large floods left no fall in area. Flood timing is the likely reason, but that evidence is exploratory and rests on one event. The practical lesson is that yield alone can miss the largest flood losses in this system, so flood assessment and risk indices should also use harvested area and production.
+Using printed BBS statistics for all 64 districts and a written analysis plan, we asked whether flash floods reduce Boro rice through harvested area rather than yield. For the 2017 flood the evidence is strong: haor harvested area and production fell by about a third, yield barely moved, and BBS's damage reports and other evidence support the loss. For a general relationship the evidence is only suggestive, because the estimates rest on 2016 and 2017, their size is unstable, and the 2016 and 2022 flood years showed no comparable fall in harvested area. Flood timing is one possible reason, but that remains a hypothesis resting on one event. The practical lesson is that yield alone can miss large flood losses in this system, so flood assessment and risk indices should also use harvested area and production.
 
 # CRediT authorship contribution statement
 
@@ -39,6 +39,10 @@ Table A.2. National area of the yearly Boro mask, against BBS and published maps
 Table A.3. The {{ D['checks'] }} data checks run before any model, from `outputs/validation_variables.csv`.
 
 {{ table_datachecks }}
+
+Table A.4. Required checks of the harvested-area effect, by type.
+
+{{ table_required_summary }}
 
 # Appendix B. Literature search
 

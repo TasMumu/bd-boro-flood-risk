@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-STEPS = ["extract_variables.py", "build_dataset.py", "run_models.py", "run_index.py", "make_figures.py", "build_manuscript.py"]
+STEPS = ["extract_variables.py", "extract_bbs_damage.py", "build_dataset.py", "run_models.py", "run_index.py", "make_figures.py", "build_manuscript.py"]
 for s in STEPS:
     print("===", s, flush=True)
     subprocess.run([sys.executable, str(ROOT / "src" / s)], check=True, cwd=ROOT)

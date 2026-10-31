@@ -249,3 +249,13 @@ the verdict:
 - This plan has no public timestamp from before the results. It entered git in the first
   commit (54ca10f, 2026-10-31 02:48 +0600), together with the results, so that commit cannot
   prove the order. The paper says so, and it must not be described as preregistered.
+
+**After the second external review, 31 October 2026:**
+
+- BBS's own damage reports for 2016, 2017 and 2022 were added from the yearbooks. They were not in
+  this plan, and they do not change the verdict.
+- The yearbook's methods do not say that crop cuts are on harvested fields, or how a destroyed field
+  is treated, so the paper now states what the source says and treats the rest as a hypothesis.
+- "Satellite crop loss" is renamed "satellite greenness loss", because it is not confirmed destruction.
+- Chandpur's 2017 area appears to repeat its HYV area as hybrid area in the yearbooks. It is kept as
+  printed, and reported.

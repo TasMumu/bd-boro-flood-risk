@@ -53,7 +53,7 @@ def save(fig, name):
 
 
 # %% [markdown]
-# ## Figure 1: where floods fall, and what the satellite saw in 2017
+# ## Figure 1: where floods fall, and the fall in greenness in 2017
 #
 # The left map shows mean flash flood on Boro land. The right map shows the share of Boro land
 # with a sharp fall in greenness in 2017, which uses no BBS data.
@@ -63,7 +63,7 @@ m = sh.merge(p.groupby("district").agg(a=("jrc_flash_boro", "mean"), b=("s1_flas
 m = m.merge(p[p.harvest_year == 2017][["district", "loss_share"]], on="district")
 fig, axs = plt.subplots(1, 2, figsize=(6.9, 3.9))
 for ax, col, title, lab in ((axs[0], "flood", "(a) Mean flash flood on Boro land", "Share of Boro land (%)"),
-                            (axs[1], "loss_share", "(b) Satellite crop loss, 2017", "Share of Boro land (%)")):
+                            (axs[1], "loss_share", "(b) Satellite greenness loss, 2017", "Share of Boro land (%)")):
     d = m.assign(v=m[col] * 100)
     d.plot(column="v", ax=ax, cmap=SEQ, edgecolor=SURF, linewidth=0.3, vmin=0, legend=True,
            legend_kwds=dict(shrink=0.7, label=lab, pad=0.01))
@@ -132,7 +132,7 @@ save(fig, "fig3_by_year.png")
 # %% [markdown]
 # ## Figure 4: the 2017 flood across all districts
 #
-# Panel (a) sets satellite crop loss against BBS harvested area. Panel (b) sets the flood
+# Panel (a) sets satellite greenness loss against BBS harvested area. Panel (b) sets the flood
 # against BBS yield. Changes are from the mean of 2015 and 2018.
 
 # %%
@@ -148,10 +148,10 @@ OFFSET = {"Kishoreganj": (-8, -11), "Moulvibazar": (-14, 7), "Netrokona": (-16, 
 for r in h.nlargest(6, "loss_share").itertuples():
     ax.annotate(r.district, (r.loss_share * 100, r.area_ha_chg_pct), xytext=OFFSET[r.district], textcoords="offset points", fontsize=7, color=MUTED)
 ax.set_ylim(-80, 75)
-ax.set_xlabel("Satellite crop loss, share of Boro land (%)")
+ax.set_xlabel("Satellite greenness loss, share of Boro land (%)")
 ax.set_ylabel("Change in BBS harvested area (%)")
 ax.legend(loc="upper right")
-panel_label(ax, "(a) Satellite loss against BBS area")
+panel_label(ax, "(a) Greenness loss against BBS harvested area")
 ax = axs[1]
 ax.axhline(0, color=MUTED, lw=0.8)
 ax.scatter(o.s1_flash_flood * 100, o.yield_t_ha_chg_pct, s=16, color="#c9c8c1", linewidths=0)

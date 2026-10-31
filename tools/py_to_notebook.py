@@ -2,6 +2,7 @@
 the code that was run, with its documentation as markdown cells.
 usage: python tools/py_to_notebook.py"""
 import re
+import sys
 from pathlib import Path
 
 import nbformat as nbf
@@ -9,7 +10,7 @@ import nbformat as nbf
 ROOT = Path(__file__).resolve().parents[1]
 ORDER = [("extract_variables.py", "01_Extract_Variables.ipynb"), ("build_dataset.py", "02_Build_Panel.ipynb"),
          ("run_models.py", "03_Flood_Models.ipynb"), ("run_index.py", "04_Risk_Index.ipynb"),
-         ("make_figures.py", "05_Figures.ipynb")]
+         ("make_figures.py", "05_Figures.ipynb"), ("extract_bbs_damage.py", "06_BBS_Damage.ipynb")]
 
 
 def convert(src, dst):
@@ -29,5 +30,5 @@ def convert(src, dst):
 
 (ROOT / "notebooks").mkdir(exist_ok=True)
 for s, d in ORDER:
-    if (ROOT / "src" / s).exists():
+    if (ROOT / "src" / s).exists() and (len(sys.argv) == 1 or d in sys.argv[1:]):
         convert(ROOT / "src" / s, ROOT / "notebooks" / d)
