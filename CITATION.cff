@@ -14,11 +14,18 @@ version: "1.0.0"
 date-released: "2026-10-31"
 repository-code: "https://github.com/TasMumu/bd-boro-flood-risk"
 license: MIT
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23829199"
+    description: "The archived release"
+  - type: doi
+    value: "10.5281/zenodo.23829198"
+    description: "All archived versions"
 abstract: >-
   Code, documented notebooks and outputs for a study of whether flash floods reduce
   Boro rice through harvested area rather than yield in Bangladesh, using the Gold
   panel of bd-boro-data-framework (10.5281/zenodo.23795046), flood fractions from
-  Sentinel-1 and JRC, and a satellite measure of crop loss.
+  Sentinel-1 and JRC, and a satellite measure of greenness loss.
 keywords:
   - flood loss
   - flash flood

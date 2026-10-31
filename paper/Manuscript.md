@@ -24,7 +24,7 @@ Flood losses to crops are often measured through yield, but official yield comes
 
 # Software and data availability
 
-- Code, notebooks and outputs: https://github.com/TasMumu/bd-boro-flood-risk [authors: add the Zenodo DOI of the archived release]
+- Code, notebooks and outputs: https://github.com/TasMumu/bd-boro-flood-risk; the version described here is archived on Zenodo at https://doi.org/10.5281/zenodo.23829199
 - Data: the panel archived at https://doi.org/10.5281/zenodo.23795046 (Mumu and Karim, 2026b). The Earth Engine extracts used here are included with the code
 - Software: Python 3.13 with the packages listed in the code repository, and Google Earth Engine for the new extracts
 
@@ -453,7 +453,7 @@ During the preparation of this work the authors used Claude (Anthropic) to assis
 
 # Data availability
 
-The panel is archived at https://doi.org/10.5281/zenodo.23795046. The derived data remain subject to the terms of their sources. The BBS yearbook PDFs and the GADM v4.1 boundaries (GADM, 2022) are not redistributed and must be obtained from the Bangladesh Bureau of Statistics and gadm.org. Code, notebooks, the analysis plan and the Earth Engine extracts for this paper are in the repository given in the Software and data availability section.
+The panel is archived at https://doi.org/10.5281/zenodo.23795046. The derived data remain subject to the terms of their sources. The BBS yearbook PDFs and the GADM v4.1 boundaries (GADM, 2022) are not redistributed and must be obtained from the Bangladesh Bureau of Statistics and gadm.org. Code, notebooks, the analysis plan and the Earth Engine extracts for this paper are in the repository given in the Software and data availability section and archived at https://doi.org/10.5281/zenodo.23829199.
 
 # References
 

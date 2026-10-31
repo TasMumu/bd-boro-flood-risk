@@ -1,5 +1,7 @@
 # bd-boro-flood-risk
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23829199.svg)](https://doi.org/10.5281/zenodo.23829199)
+
 Code, notebooks, outputs and manuscript for "Does yield hide flood losses? Harvested
 area, flood timing and Boro rice in Bangladesh's 64 districts, 2011–2025" by Tasnim
 Ahmad Mumu and Rezaul Karim.
@@ -44,6 +46,12 @@ plan has no public timestamp from before the results, so this is not a preregist
 
 Each notebook is generated from the matching script by `tools/py_to_notebook.py`, so the
 two cannot differ. Running the notebooks gave results identical to running the scripts.
+
+## Citation
+
+The release described in the manuscript is archived on Zenodo at https://doi.org/10.5281/zenodo.23829199, and
+https://doi.org/10.5281/zenodo.23829198 always resolves to the latest archived version. Citation
+metadata is in `CITATION.cff`.
 
 ## Licence
 
