@@ -10,7 +10,7 @@ In Bangladesh, floods are not simply harmful. Districts more prone to flooding h
 
 ## 2.3 The gap
 
-These studies differ in what they show. Climate studies describe yield responses, damage studies describe single events, and adaptation studies describe how farmers respond, so few bear directly on whether a loss appears in harvested area or in yield. Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records, screened on titles and abstracts (Appendix B). A recent study addresses monsoon flood disasters and crop production in Bangladesh [@rahman2025].
+These studies differ in what they show. Climate studies describe yield responses, damage studies describe single events, and adaptation studies describe how farmers respond, so few bear directly on whether a loss appears in harvested area or in yield. Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records, screened on titles and abstracts (Appendix B). A recent study addresses monsoon flood disasters and crop production in Bangladesh [@rahman2025]; our main question concerns flash floods before harvest.
 
 Table 1. Closest studies compared with this paper, classified from their titles and abstracts. "Not stated" means not stated there, and does not mean that a study lacked the feature.
 

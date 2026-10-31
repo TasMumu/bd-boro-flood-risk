@@ -445,7 +445,7 @@ for key, s in SPECS.items():
                        pd.get_dummies(base_df.harvest_year, dtype=float, drop_first=True).add_prefix("y")], axis=1)
         D = sm.add_constant(D.astype(float))
         r = sm.GLM(base_df[level].astype(float), D, family=sm.families.Poisson()).fit(cov_type="cluster", cov_kwds=dict(groups=base_df.district.astype("category").cat.codes))
-        add("Poisson model", "reported", False, key, yl, dict(b=float(r.params[fl]), p_cluster=float(r.pvalues[fl]), p_dk=np.nan, n=int(r.nobs)), main[key][yl]["flash"], None)
+        add("Poisson model", "reported", False, key, yl, dict(b=float(r.params[fl]), se_cluster=float(r.bse[fl]), p_cluster=float(r.pvalues[fl]), p_dk=np.nan, n=int(r.nobs)), main[key][yl]["flash"], None)
 ck = pd.DataFrame(checks)
 ck.to_csv(OUT / "table_checks.csv", index=False)
 print(ck[["check", "source", "outcome", "pct", "p_cluster", "p_dk", "p_conley", "p_ri", "passed"]].round(3).to_string())

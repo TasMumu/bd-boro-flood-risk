@@ -54,7 +54,7 @@ In Bangladesh, floods are not simply harmful. Districts more prone to flooding h
 
 ## 2.3 The gap
 
-These studies differ in what they show. Climate studies describe yield responses, damage studies describe single events, and adaptation studies describe how farmers respond, so few bear directly on whether a loss appears in harvested area or in yield. Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records, screened on titles and abstracts (Appendix B). A recent study addresses monsoon flood disasters and crop production in Bangladesh (Rahman et al., 2025).
+These studies differ in what they show. Climate studies describe yield responses, damage studies describe single events, and adaptation studies describe how farmers respond, so few bear directly on whether a loss appears in harvested area or in yield. Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records, screened on titles and abstracts (Appendix B). A recent study addresses monsoon flood disasters and crop production in Bangladesh (Rahman et al., 2025); our main question concerns flash floods before harvest.
 
 Table 1. Closest studies compared with this paper, classified from their titles and abstracts. "Not stated" means not stated there, and does not mean that a study lacked the feature.
 
@@ -72,7 +72,7 @@ Table 1. Closest studies compared with this paper, classified from their titles 
 
 ## 3.1 Panel
 
-The analysis uses the panel built and tested in the framework paper (Mumu and Karim, 2026a) and archived separately (Mumu and Karim, 2026b): 960 district-years for all 64 districts and harvest years 2011–2025, where harvest year t is the crop sown in November of t−1 and harvested in April–May of t. Boro harvested area, yield and production are values printed in the BBS yearbooks, each with its edition and page, and no value is modelled or filled. Weather comes from ERA5-Land (Muñoz-Sabater et al., 2021). Flood fractions come from the monthly surface water record of the Joint Research Centre (JRC) (Pekel et al., 2016) and from Sentinel-1 radar (Torres et al., 2012), and are kept as separate records. Table 2 lists the sources. The seven haor districts are Sunamganj, Habiganj, Netrokona, Kishoreganj, Sylhet, Moulvibazar and Brahmanbaria, a list fixed before the models were run. They produced 17.5 % of Boro over the period.
+The analysis uses the panel built and tested in the framework paper (Mumu and Karim, 2026a) and archived separately (Mumu and Karim, 2026b): 960 district-years for all 64 districts and harvest years 2011–2025, where harvest year t is the crop sown in November of t−1 and harvested in April–May of t. Boro harvested area, yield and production are values printed in the BBS yearbooks, each with its edition and page, and no value is modelled or filled. Weather comes from ERA5-Land (Muñoz-Sabater et al., 2021; Copernicus Climate Change Service, 2019). Flood fractions come from the monthly surface water record of the Joint Research Centre (JRC) (Pekel et al., 2016) and from Sentinel-1 radar (Torres et al., 2012), and are kept as separate records. Table 2 lists the sources. The seven haor districts are Sunamganj, Habiganj, Netrokona, Kishoreganj, Sylhet, Moulvibazar and Brahmanbaria, a list fixed before the models were run. They produced 17.5 % of Boro over the period.
 
 Table 2. Data sources.
 
@@ -88,7 +88,7 @@ Flash flood is the share of district area under water in April or May of year t 
 
 ## 3.2 How BBS measures Boro
 
-BBS estimates Boro in three steps (Bangladesh Bureau of Statistics, 2026). Area comes from sample clusters of plots, visited four times a year and expanded to districts by a ratio estimator. Yield comes from crop cuts of 20 m^2^ on sample plots in fields growing the crop. Production is area multiplied by yield, so it adds no information beyond those two, and the agreement between area, yield and production effects below is arithmetic. The methods describe area under the crop, while the yearbook's crop reports call the same figure harvested area, and we follow that term. The methods do not say how a destroyed field is treated. BBS also estimates flood damage separately, and reports it by district in some years (Section 5.4).
+BBS estimates Boro in three steps (Bangladesh Bureau of Statistics, 2026, Sections 1.2.5–1.2.9, pp. 4–6). Area comes from sample clusters of plots, visited four times a year and expanded to districts by a ratio estimator. Yield comes from crop cuts of 20 m^2^ on sample plots in fields growing the crop. Production is area multiplied by yield, so it adds no information beyond those two, and the agreement between area, yield and production effects below is arithmetic. The methods describe area under the crop, while the yearbook's crop reports call the same figure harvested area, and we follow that term. The methods do not say how a destroyed field is treated. BBS also estimates flood damage separately, and reports it by district in some years (Section 5.4).
 
 ## 3.3 Relation to the framework paper
 
@@ -215,7 +215,7 @@ Fig. 4. The 2017 flood across all 64 districts. Panel (a) sets satellite greenne
 
 ![](figures/fig4_event_2017.png){width=100%}
 
-Two non-haor districts stand out in Fig. 4a, with large changes in BBS area and almost no satellite loss. Patuakhali fell by 43 %, but from a base of under 2,000 ha. Chandpur rose by 67 %: its 2017 area is 110,467 ha, against 64,424 ha in 2015 and 67,733 ha in 2018. This appears to be a duplication in the source: the yearbooks print the same 136,046 acres for both HYV and hybrid Boro, while hybrid area was 12,856 acres the year before and 15,730 acres the year after. We keep the value as printed, and leaving out Chandpur changes little (Table A.1). No check on printed values can detect such a case, because it is repeated in two editions and included in the national total. Both districts show that BBS area can move for reasons other than flood, by as much as the flood signal.
+Two non-haor districts stand out in Fig. 4a, with large changes in BBS area and almost no satellite loss. Patuakhali fell by 43 %, but from a base of under 2,000 ha. Chandpur rose by 67 %: its 2017 area is 110,467 ha, against 64,424 ha in 2015 and 67,733 ha in 2018. This appears to be a duplication in the source: the yearbooks print the same 136,046 acres for both HYV and hybrid Boro (Bangladesh Bureau of Statistics, 2018, pp. 72–74), while hybrid area was 12,856 acres the year before and 15,730 acres the year after. We keep the value as printed, and leaving out Chandpur changes little (Table A.1). None of the framework's checks detected it, because it is repeated in two editions and included in the national total; a check on year-to-year jumps, or on the HYV and hybrid components, would flag it. Both districts show that BBS area can move for reasons other than flood, by as much as the flood signal.
 
 Synthetic control gave the same pattern. The estimated 2017 area gaps were −70.4 % in Sunamganj, −29.3 % in Kishoreganj, −17.4 % in Sylhet, −13.2 % in Netrokona and −8.5 % in Habiganj, while yield gaps stayed within 3.9 % (Table 6). The planned test was not met: no gap ranked in the top 5 % relative to its pre-flood fit. With five years to match and many donors, the pre-flood fit is almost perfect, so this ratio is unstable. An exploratory test on the gap's size alone ranks Sunamganj at p = 0.017 and Kishoreganj at p = 0.052, and the other three above 0.1.
 
@@ -236,9 +236,9 @@ Table 6. Synthetic control for the five most flooded districts. Placebo rank p i
 
 ## 5.4 Other evidence on the 2017 loss
 
-BBS's own reports show how the loss was recorded. The yearbook for 2016–17 states that flash flood fully damaged Boro on 296,701 ha (Bangladesh Bureau of Statistics, 2018), and its national Boro area fell by 296,697 ha from the year before. The same report attributes a higher yield to management. Its damage table, for floods in March and April, lists six haor districts (Table 7), where the reported damaged area is close to the fall in BBS harvested area, and its production loss of 865,696 t is close to the 0.88 million t in the literature (Hossain et al., 2023). These reports come from the same agency, so they do not independently confirm the area series, but they show that in 2017 destroyed crop was recorded as lost area and not as lower yield. For the 2016 flood, BBS reported far less: a production loss of 97,592 t, with 28,927 ha damaged in its table and 40,198 ha fully damaged in its crop report (Bangladesh Bureau of Statistics, 2017). That fits the absence of a fall in area in 2016. For 2022 it reported Boro damage only in Netrokona: 3,920 ha and 21,305 t (Bangladesh Bureau of Statistics, 2023). So the two flood years without a fall in harvested area are also years in which BBS reported little Boro damage. Even so, Sunamganj's reported damage in 2016 (23,411 ha) exceeds its fall in harvested area that year, so reported damage does not always appear in the area series.
+BBS's own reports show how the loss was recorded. The yearbook for 2016–17 states that flash flood fully damaged Boro on 296,701 ha (Bangladesh Bureau of Statistics, 2018, p. 68), and its national Boro area fell by 296,697 ha from the year before. The same report attributes a higher yield to management. Its damage table for floods in March and April (Table 4.2.11, p. 349) lists six haor districts (Table 7), where the reported damaged area is close to the fall in BBS harvested area, and its production loss of 865,696 t is close to the 0.88 million t in the literature (Hossain et al., 2023). These reports come from the same agency, so they do not independently confirm the area series, but they show that in 2017 destroyed crop was recorded as lost area and not as lower yield. For the 2016 flood, BBS reported far less: a production loss of 97,592 t, with 28,927 ha damaged in its table (Table 4.2.10, p. 348 of the same yearbook) and 40,198 ha fully damaged in its crop report (Bangladesh Bureau of Statistics, 2017, p. 68). That fits the absence of a fall in area in 2016. For 2022 it reported Boro damage only in Netrokona: 3,920 ha and 21,305 t (Bangladesh Bureau of Statistics, 2023, Table 4.2.8, p. 422). So the two flood years without a fall in harvested area are also years in which BBS reported little Boro damage. Even so, Sunamganj's reported damage in 2016 (23,411 ha) exceeds its fall in harvested area that year, so reported damage does not always appear in the area series.
 
-Table 7. BBS reported damage and the fall in BBS harvested area and production in 2017, against the mean of 2015 and 2018.
+Table 7. BBS reported damage and the fall in BBS harvested area and production in 2017, against the mean of 2015 and 2018. The last row gives the damage totals printed in the yearbook. The printed district losses add to 865,698 t, and the areas above add to 232,820 ha after rounding.
 
 | District | BBS damaged area (ha) | Fall in BBS harvested area (ha) | BBS production loss (t) | Fall in BBS production (t) |
 |----------------|-----------|-------------|--------------|--------------|
@@ -248,7 +248,7 @@ Table 7. BBS reported damage and the fall in BBS harvested area and production i
 | Sylhet | 20,362 | 17,419 | 57,840 | 59,328 |
 | Netrokona | 16,575 | 33,998 | 66,611 | 145,082 |
 | Moulvibazar | 8,863 | 12,456 | 30,834 | 39,786 |
-| Six districts | 232,819 | 268,764 | 865,698 | 1,026,230 |
+| Six districts | 232,819 | 268,764 | 865,696 | 1,026,230 |
 
 The satellite measure uses no BBS data, and it passed its planned test. Each 10 points of flood raised satellite greenness loss by 7.5 points with Sentinel-1 (Driscoll–Kraay p = 0.001) and 6.2 points with JRC (p = 0.005), and greenness loss lowered BBS harvested area (p = 0.041) but not yield (p = 0.226). In 2017, greenness loss reached 63 % of Boro land in Sunamganj and 59 % in Sylhet, and at most 4.4 % outside the haor (Fig. 1b, Fig. 4a). This supports the location and scale of the loss, but it does not prove that every flagged pixel was flood-damaged, and the 2016 mismatch (Section 5.6) limits its use as a general measure of crop loss.
 
@@ -400,7 +400,7 @@ A yield-only view gives a different picture. Sunamganj ranks 25th of 64 on yield
 
 ## 6.1 What can and cannot be claimed
 
-One claim is strongly supported as a description of a single event. In the 2017 flood, the loss in BBS statistics appeared in harvested area and production, and almost none in yield. The three designs agree in direction, in both flood records, although the planned synthetic-control test failed and the JRC estimate depends on 2017. BBS's own damage reports, a satellite measure that uses no BBS data and published figures point to the same districts and to losses of similar scale, and BBS reported far less Boro damage in 2016 and 2022, when no comparable fall appears. This is strong evidence consistent with flood-related crop destruction, although no single comparison proves that the whole fall in area was caused by the flood.
+One claim is strongly supported as a description of a single event. In the 2017 flood, the loss in BBS statistics appeared in harvested area and production, and almost none in yield. The dose-response model in both records, the year-by-year comparison and synthetic control agree in direction, although the planned synthetic-control test failed and the JRC estimate depends on 2017. BBS's own damage reports, a satellite measure that uses no BBS data and published figures point to the same districts and to losses of similar scale, and BBS reported far less Boro damage in 2016 and 2022, when no comparable fall appears. This is strong evidence consistent with flood-related crop destruction, although no single comparison proves that the whole fall in area was caused by the flood.
 
 The broader claim, that flash floods generally reduce Boro through area, is not established. Under the plan's rule the evidence is suggestive, and the estimate rests on 2016 and 2017. Two questions need to be kept apart: whether flood exposure is associated with lost harvested area, and whether the size of that loss is stable. The first has support, particularly for 2017. The second is much weaker (Table 15): the Sentinel-1 estimate falls by a third or more when small districts are left out or larger districts get more weight, and it then lies closer to JRC. This bears on how flood effects are read elsewhere: with few events and a few treated districts, an estimate from a large panel can be one event in disguise.
 
@@ -414,7 +414,7 @@ Table 15. The harvested-area effect per 10 points of flood under three specifica
 
 ## 6.2 Why area and not yield
 
-The likely reason is how the statistics are built. BBS estimates yield from crop cuts on plots in fields growing the crop, and area separately (Bangladesh Bureau of Statistics, 2026). Its report for 2016–17 describes flash flood as fully damaging crop on 296,701 ha, its national area fell by the same amount, and it attributes higher yield to management (Bangladesh Bureau of Statistics, 2018). So in 2017 destroyed crop left the area estimate, and the yield estimate reflects the crop that remained. Since Boro is planted before flash floods arrive, a same-season fall in harvested area means crop lost and not a planting decision. The yearbooks do not state this as a general rule, and it cannot be assumed for every year: in 2016, reported damage is not fully visible in area. The small positive yield effect with JRC could mean that weaker fields are lost first, but the evidence for this is thin.
+The likely reason is how the statistics are built. BBS estimates yield from crop cuts on plots in fields growing the crop, and area separately (Bangladesh Bureau of Statistics, 2026). Its report for 2016–17 describes flash flood as fully damaging crop on 296,701 ha, its national area fell by the same amount, and it attributes higher yield to management (Bangladesh Bureau of Statistics, 2018, p. 68). So in 2017 destroyed crop left the area estimate, and the yield estimate reflects the crop that remained. Since Boro is planted before flash floods arrive, a same-season fall in harvested area means crop lost and not a planting decision. The yearbooks do not state this as a general rule, and it cannot be assumed for every year: in 2016, reported damage is not fully visible in area. The small positive yield effect with JRC could mean that weaker fields are lost first, but the evidence for this is thin.
 
 This does not contradict Li et al. (2025), who report yield losses from submergence worldwide. Li et al. and this study measure different things in different statistical systems. Whether crop that is totally lost appears in yield or area depends on how each country's data are collected. Similarly, national data may fail to show flood effects at all (Lesk et al., 2016), because a loss such as 2017 is confined to a few districts. Our results differ from the Kansas wheat findings (Obembe et al., 2021) and resemble those on harvested ratios (Cui, 2020), which suggests that the answer depends on the crop, hazard and data system.
 
@@ -453,7 +453,7 @@ During the preparation of this work the authors used Claude (Anthropic) to assis
 
 # Data availability
 
-The panel is archived at https://doi.org/10.5281/zenodo.23795046. The derived data remain subject to the terms of their sources. The BBS yearbook PDFs and the GADM v4.1 boundaries (GADM, 2022) are not redistributed and must be obtained from the Bangladesh Bureau of Statistics and gadm.org. Code, notebooks, the analysis plan and the Earth Engine extracts for this paper are in the repository given in the Software and data availability section and archived at https://doi.org/10.5281/zenodo.23829199.
+The panel is archived at https://doi.org/10.5281/zenodo.23795046. The derived data remain subject to the terms of their sources. Contains modified Copernicus Sentinel data (2014–2025) and modified Copernicus Climate Change Service information (2026). The BBS yearbook PDFs and the GADM v4.1 boundaries (GADM, 2022) are not redistributed and must be obtained from the Bangladesh Bureau of Statistics and gadm.org. Code, notebooks, the analysis plan and the Earth Engine extracts for this paper are in the repository given in the Software and data availability section and archived at https://doi.org/10.5281/zenodo.23829199.
 
 # References
 
@@ -497,6 +497,8 @@ Conley, T.G., 1999. GMM estimation with cross sectional dependence. Journal of E
 
 Conley, T.G., Taber, C.R., 2011. Inference with “Difference in Differences” with a Small Number of Policy Changes. Review of Economics and Statistics 93 (1), 113–125. https://doi.org/10.1162/REST_a_00049
 
+Copernicus Climate Change Service, 2019. ERA5-Land hourly data from 1950 to present. Copernicus Climate Change Service (C3S) Climate Data Store (CDS). https://doi.org/10.24381/cds.e2161bac
+
 Cui, X., 2020. Beyond Yield Response: Weather Shocks and Crop Abandonment. Journal of the Association of Environmental and Resource Economists 7 (5), 901–932. https://doi.org/10.1086/709859
 
 Dasgupta, S., Hossain, M.M., Huq, M., Wheeler, D., 2018. Climate Change, Salinization and High-Yield Rice Production in Coastal Bangladesh. Agricultural and Resource Economics Review 47 (1), 66–89. https://doi.org/10.1017/age.2017.14
@@ -523,11 +525,11 @@ Hsiang, S., 2016. Climate Econometrics. Annual Review of Resource Economics 8 (1
 
 Islam, D.I., Rahman, A., Sarker, M.S.R., Luo, J., Liang, H., 2021. Factors affecting farmers’ willingness to adopt crop insurance to manage disaster risk: evidence from Bangladesh. International Food and Agribusiness Management Review 24 (3), 463–480. https://doi.org/10.22434/ifamr2019.0190
 
-Jagadish, S., Craufurd, P.Q., Wheeler, T.R., 2007. High temperature stress and spikelet fertility in rice (Oryza sativa L.). Journal of Experimental Botany 58 (7), 1627–1635. https://doi.org/10.1093/jxb/erm003
+Jagadish, S.V.K., Craufurd, P.Q., Wheeler, T.R., 2007. High temperature stress and spikelet fertility in rice (Oryza sativa L.). Journal of Experimental Botany 58 (7), 1627–1635. https://doi.org/10.1093/jxb/erm003
 
 Kamruzzaman, M., Shaw, R., 2018. Flood and Sustainable Agriculture in the Haor Basin of Bangladesh: A Review Paper. Universal Journal of Agricultural Research 6 (1), 40–49. https://doi.org/10.13189/ujar.2018.060106
 
-Khan, M., Mia, M.Y., Hossain, M.R., 2012. Impacts of Flood on Crop Production in Haor Areas of Two Upazillas in Kishoregonj. Journal of Environmental Science and Natural Resources 5 (1), 193–198. https://doi.org/10.3329/jesnr.v5i1.11581
+Khan, M.N.H., Mia, M.Y., Hossain, M.R., 2012. Impacts of Flood on Crop Production in Haor Areas of Two Upazillas in Kishoregonj. Journal of Environmental Science and Natural Resources 5 (1), 193–198. https://doi.org/10.3329/jesnr.v5i1.11581
 
 Lesk, C., Rowhani, P., Ramankutty, N., 2016. Influence of extreme weather disasters on global crop production. Nature 529 (7584), 84–87. https://doi.org/10.1038/nature16467
 
@@ -666,7 +668,7 @@ Table A.4. Required checks of the harvested-area effect, by type.
 |-------------------------|----------|----------|--------------------------|
 | Leave out a flood year | 5 | 4 | Leave out 2017 (JRC) |
 | Leave out a district | 8 | 7 | Leave out Sunamganj (JRC) |
-| Placebos | 4 | 3 | Next year's flash flood (placebo) (Sentinel-1) |
+| Placebos | 4 | 3 | Next year's flash flood (Sentinel-1) |
 | Measurement | 4 | 3 | Rice land only (JRC) |
 | Sentinel-1 coverage | 1 | 1 | None |
 | All required checks | 22 | 18 |  |

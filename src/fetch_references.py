@@ -27,7 +27,7 @@ DOIS = {
     "abadie2021": "10.1257/jel.20191450", "hsiang2016": "10.1146/annurev-resource-100815-095343", "blanc2017": "10.1093/reep/rex016", "auffhammer2013": "10.1093/reep/ret016",
     "santos2006": "10.1162/rest.88.4.641", "benjamini1995": "10.1111/j.2517-6161.1995.tb02031.x", "bairagi2021": "10.1016/j.foodpol.2021.102183",
     "islam2021": "10.22434/ifamr2019.0190", "didan2021": "10.5067/MODIS/MOD13Q1.061", "zanaga2022": "10.5281/zenodo.7254221",
-    "munozsabater2021": "10.5194/essd-13-4349-2021", "torres2012": "10.1016/j.rse.2011.05.028", "gorelick2017": "10.1016/j.rse.2017.06.031",
+    "munozsabater2021": "10.5194/essd-13-4349-2021", "c3s2019": "10.24381/cds.e2161bac", "torres2012": "10.1016/j.rse.2011.05.028", "gorelick2017": "10.1016/j.rse.2017.06.031",
     "jagadish2007": "10.1093/jxb/erm003", "twele2016": "10.1080/01431161.2016.1192304", "moran1950": "10.1093/biomet/37.1-2.17",
     "mumu2026b": "10.5281/zenodo.23795046",
 }
@@ -90,7 +90,7 @@ TITLE_FIX = {"hasan2016": "Assessment of climate change impacts on Aman and Boro
 
 def tidy(name):
     """Names sent to the registry in capitals: JEFF becomes Jeff, while initials stay as they are."""
-    return " ".join(t.title() if t.isupper() and len(t) > 2 and "." not in t else t for t in name.split())
+    return " ".join(t.title() if t.isupper() and len(t) > 2 and "." not in t and set(t) & set("AEIOU") else t for t in name.split())
 
 
 refs = dict(MANUAL)

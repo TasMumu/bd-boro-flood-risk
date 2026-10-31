@@ -147,6 +147,8 @@ ax.scatter(h.loss_share * 100, h.area_ha_chg_pct, s=26, color=COL["Harvested are
 OFFSET = {"Kishoreganj": (-8, -11), "Moulvibazar": (-14, 7), "Netrokona": (-16, -11), "Habiganj": (4, 5), "Sylhet": (-8, 7), "Sunamganj": (-36, 7)}
 for r in h.nlargest(6, "loss_share").itertuples():
     ax.annotate(r.district, (r.loss_share * 100, r.area_ha_chg_pct), xytext=OFFSET[r.district], textcoords="offset points", fontsize=7, color=MUTED)
+for r in o[o.district.isin(["Chandpur", "Patuakhali"])].itertuples():
+    ax.annotate(r.district, (r.loss_share * 100, r.area_ha_chg_pct), xytext=(6, -2), textcoords="offset points", fontsize=7, color=MUTED)
 ax.set_ylim(-80, 75)
 ax.set_xlabel("Satellite greenness loss, share of Boro land (%)")
 ax.set_ylabel("Change in BBS harvested area (%)")
@@ -174,8 +176,8 @@ ck = pd.read_csv(OUT / "table_checks.csv")
 m = pd.read_csv(OUT / "table_main.csv")
 order = ["Leave out 2016", "Leave out 2017", "Leave out 2022", "Leave out Sunamganj", "Leave out Kishoreganj", "Leave out Sylhet", "Leave out Netrokona",
          "Rice land only", "January-February baseline, early window", "Scene counts as controls",
-         "Division-by-year effects", "District linear trends", "Neighbours' flood, own effect"]
-fig, axs = plt.subplots(1, 2, figsize=(6.9, 4.0), sharey=True, constrained_layout=True)
+         "Division-by-year effects", "District linear trends", "Neighbours' flood, own effect", "Districts under 15,000 ha left out", "Poisson model"]
+fig, axs = plt.subplots(1, 2, figsize=(6.9, 4.5), sharey=True, constrained_layout=True)
 for ax, o in zip(axs, ("Harvested area", "Yield")):
     if o == "Yield":
         ax.axvspan(-2, 2, color="#f0efe9", zorder=0)
@@ -196,7 +198,7 @@ for ax, o in zip(axs, ("Harvested area", "Yield")):
     ax.set_xlabel("Effect per 10 points of flood (%)")
     panel_label(ax, o)
 axs[0].set_yticks(range(len(order) + 1))
-axs[0].set_yticklabels(["Main model"] + [c.replace("January-February baseline, early window", "Jan–Feb baseline, early window") for c in order], fontsize=7)
+axs[0].set_yticklabels(["Main model"] + [c.replace("January-February baseline, early window", "Jan–Feb baseline, early window").replace("Districts under 15,000 ha left out", "Small Boro base left out") for c in order], fontsize=7)
 axs[0].invert_yaxis()
 a = axs[0].scatter([], [], marker="o", s=15, color=MUTED, label="Sentinel-1")
 b = axs[0].scatter([], [], marker="s", s=15, color=SURF, edgecolor=MUTED, label="JRC")

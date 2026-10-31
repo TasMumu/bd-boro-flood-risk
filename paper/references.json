@@ -193,7 +193,7 @@
   "authors": [
    {
     "family": "Khan",
-    "given": "Mnh"
+    "given": "MNH"
    },
    {
     "family": "Mia",
@@ -1609,6 +1609,19 @@
   "pages": "4349-4383",
   "publisher": "Copernicus GmbH"
  },
+ "c3s2019": {
+  "type": "dataset",
+  "doi": "10.24381/cds.e2161bac",
+  "authors": [
+   {
+    "family": "Copernicus Climate Change Service",
+    "given": ""
+   }
+  ],
+  "year": 2019,
+  "title": "ERA5-Land hourly data from 1950 to present",
+  "publisher": "Copernicus Climate Change Service (C3S) Climate Data Store (CDS)"
+ },
  "torres2012": {
   "type": "journal-article",
   "doi": "10.1016/j.rse.2011.05.028",
@@ -1749,7 +1762,7 @@
   "authors": [
    {
     "family": "Jagadish",
-    "given": "Svk"
+    "given": "SVK"
    },
    {
     "family": "Craufurd",

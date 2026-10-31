@@ -209,15 +209,16 @@ def table_search():
 
 
 def table_damage():
-    rows, tot = [], [0, 0, 0, 0]
+    rows, fall = [], [0, 0]
     ref = P[P.harvest_year.isin([2015, 2018])].groupby("district")[["area_ha", "production_t"]].mean()
     now = P[P.harvest_year == 2017].set_index("district")[["area_ha", "production_t"]]
     d = DMG.xs(2017).drop("Bangladesh").sort_values("total_ha", ascending=False)
     for n, r in d.iterrows():
         a, b = ref.loc[n, "area_ha"] - now.loc[n, "area_ha"], ref.loc[n, "production_t"] - now.loc[n, "production_t"]
         rows.append([n, f(r.total_ha, 0), f(a, 0), f(r.loss_t, 0), f(b, 0)])
-        tot = [tot[0] + r.total_ha, tot[1] + a, tot[2] + r.loss_t, tot[3] + b]
-    rows.append(["Six districts"] + [f(x, 0) for x in tot])
+        fall = [fall[0] + a, fall[1] + b]
+    t = DMG.loc[(2017, "Bangladesh")]
+    rows.append(["Six districts", f(t.total_ha, 0), f(fall[0], 0), f(t.loss_t, 0), f(fall[1], 0)])
     return md_table(pd.DataFrame(rows, columns=["District", "BBS damaged area (ha)", "Fall in BBS harvested area (ha)", "BBS production loss (t)", "Fall in BBS production (t)"]))
 
 
@@ -235,7 +236,7 @@ def table_required_summary():
     for k, lab in groups.items():
         x = d[d.kind == k]
         fail = x[x.passed.astype(str) != "True"]
-        rows.append([lab, len(x), int((x.passed.astype(str) == "True").sum()), "; ".join(f"{r.check} ({r.source})" for r in fail.itertuples()) or "None"])
+        rows.append([lab, len(x), int((x.passed.astype(str) == "True").sum()), "; ".join(f"{r.check.replace(' (placebo)', '')} ({r.source})" for r in fail.itertuples()) or "None"])
     rows.append(["All required checks", len(d), int((d.passed.astype(str) == "True").sum()), ""])
     return md_table(pd.DataFrame(rows, columns=["Type", "Checks", "Passed", "Failed"]))
 
@@ -345,6 +346,11 @@ def author_year(md):
                 groups.append((n, [y]))
         return "(" + "; ".join(f"{n}, {', '.join(ys)}" for n, ys in groups) + ")"
 
+    def locate(m):
+        n, y = lab(m.group(1))
+        return f"({n}, {y}, {m.group(2)})"
+
+    md = re.sub(r"\[@([\w-]+), ([^\]]+)\]", locate, md)
     md = re.sub(r"\[(@[\w-]+(?:\s*;\s*@[\w-]+)*)\]", paren, md)
     md = re.sub(r"(?<![\w.])@([a-z][\w-]*\d{4}[a-z]?)\b", lambda m: "{} ({})".format(*lab(m.group(1))) if m.group(1) in refs else m.group(0), md)
     seen = {}
