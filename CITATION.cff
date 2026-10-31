@@ -10,7 +10,8 @@ authors:
   - family-names: Karim
     given-names: Rezaul
     affiliation: "Department of Statistics and Data Science, University of Rajshahi"
-version: "1.0.0-dev"
+version: "1.0.0"
+date-released: "2026-10-31"
 repository-code: "https://github.com/TasMumu/bd-boro-flood-risk"
 license: MIT
 abstract: >-
@@ -25,4 +26,3 @@ keywords:
   - harvested area
   - Sentinel-1
   - Bangladesh
-# Add "date-released" and the Zenodo DOI (identifiers) once a release has been archived.
