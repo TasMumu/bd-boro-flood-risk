@@ -13,7 +13,8 @@ panel is read and never changed, and its checksum is confirmed at the start of e
 In the 2017 flood, haor harvested area fell by about a third while yield barely moved,
 and independent evidence supports the loss. As a general rule the effect is only
 suggestive: it rests on 2016 and 2017, and other large floods left no fall in area.
-The verdict comes from a rule fixed in `docs/analysis_plan.md` before the models were run.
+The verdict comes from a rule written in `docs/analysis_plan.md` before the models were run. The
+plan has no public timestamp from before the results, so this is not a preregistered study.
 
 ## Contents
 

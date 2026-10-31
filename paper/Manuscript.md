@@ -18,28 +18,28 @@ Tasnim Ahmad Mumu^a^, Rezaul Karim^b,\*^
 
 # Abstract
 
-Flood losses to crops are often measured through yield, but official yield is estimated on harvested fields, so a destroyed field may leave no trace in it. We tested this for Boro rice in Bangladesh, using a validated panel of 64 districts for 2011–2025, flood fractions from Sentinel-1 and JRC, and an analysis plan fixed in advance. In the 2017 flash flood, harvested area in the seven haor districts fell by 31 % relative to other districts, while yield changed by −0.9 %. In Sunamganj, area fell by 72 % and yield by 0.8 %. A satellite crop-loss measure and published damage figures support these losses. The general result was only suggestive under the plan's rule: the area effect per 10 points of flood was −21.6 % with Sentinel-1 and −4.7 % with JRC, and it disappeared without 2016 and 2017. The 2016 and 2022 floods left no fall in area. An exploratory analysis suggests that timing matters, but rests on 2017. Yield alone can therefore miss the largest losses, so damage assessment should also track harvested area and production.
+Flood losses to crops are often measured through yield, but official yield is estimated on harvested fields, so a destroyed field may leave no trace in it. We tested this for Boro rice in Bangladesh, using a validated panel of 64 districts for 2011–2025, flood fractions from Sentinel-1 and JRC, and a written analysis plan. In the 2017 flash flood, harvested area in the seven haor districts fell by 31 % relative to other districts, while yield changed by −0.9 %. In Sunamganj, area fell by 72 % and yield by 0.8 %. A satellite crop-loss measure and published damage figures support these losses. The general result was only suggestive under the plan's rule: the area effect per 10 points of flood was −21.6 % with Sentinel-1 and −4.7 % with JRC, and it disappeared without 2016 and 2017. The 2016 and 2022 floods left no fall in area. An exploratory analysis suggests that timing matters, but rests on 2017. Yield alone can therefore miss the largest losses, so damage assessment should also track harvested area and production.
 
 **Keywords:** flood loss; flash flood; Boro rice; harvested area; crop yield statistics; Bangladesh
 
 # Software and data availability
 
-- Code, notebooks and outputs: https://github.com/TasMumu/bd-boro-flood-risk [authors: make the repository public, archive a release and give its DOI here before submission]
-- Data: the panel of Mumu and Karim (2026), archived at https://doi.org/10.5281/zenodo.23795046. The Earth Engine extracts used here are included with the code
+- Code, notebooks and outputs: https://github.com/TasMumu/bd-boro-flood-risk [authors: add the Zenodo DOI of the archived release]
+- Data: the panel archived at https://doi.org/10.5281/zenodo.23795046 (Mumu and Karim, 2026b). The Earth Engine extracts used here are included with the code
 - Software: Python 3.13 with the packages listed in the code repository, and Google Earth Engine for the new extracts
 
 
 # 1. Introduction
 
-Assessing what a flood costs a farming region depends on what is measured. Most research on weather and crops has focused on yield (Cui, 2020; Wei and Davis, 2022), and yield is the natural outcome when a flood reduces grain per hectare. But a flood can also destroy a crop outright. If official yield is measured only on fields that were harvested, a destroyed field does not lower the yield estimate. It simply leaves the harvested area. Disaster assessments and research that look at yield alone could then miss the losses that matter most.
+Assessing what a flood costs a farming region depends on what is measured. Most research on weather and crops has focused on yield (Cui, 2020; Wei et al., 2023), and yield is the natural outcome when a flood reduces grain per hectare. But a flood can also destroy a crop outright. If official yield is measured only on fields that were harvested, a destroyed field does not lower the yield estimate. It simply leaves the harvested area. Disaster assessments and research that look at yield alone could then miss the losses that matter most.
 
-The evidence on this point is mixed, and the answer appears to depend on the setting. Globally, drought reduced cereal production through both area and yield, extreme heat mainly through yield, and no effect of floods could be identified in national data (Lesk et al., 2016). A recent global study reports that submergence for more than a week reduces annual rice yield by 4.3 % (Li et al., 2025). In the United States, harvested ratios fall under extreme heat (Cui, 2020), and area-related disruptions explain at least as much maize production instability as yield (Wei and Davis, 2022). In Kansas wheat, however, losses came from yield and not from abandonment (Obembe et al., 2021). For rice, typhoons reduced provincial production in a Philippine panel (Blanc and Strobl, 2016).
+The evidence on this point is mixed, and the answer appears to depend on the setting. Globally, drought reduced cereal production through both area and yield, extreme heat mainly through yield, and no effect of floods could be identified in national data (Lesk et al., 2016). A recent global study reports that submergence for more than a week reduces annual rice yield by 4.3 % (Li et al., 2025). In the United States, harvested ratios fall under extreme heat (Cui, 2020), and shocks in planted and harvested area coincided with more than half of the production shocks across seven crops, although yield contributed more for some of them (Wei et al., 2023). In Kansas wheat, however, losses came from yield and not from abandonment (Obembe et al., 2021). For rice, typhoons reduced provincial production in a Philippine panel (Blanc and Strobl, 2016).
 
 Boro rice in Bangladesh is a useful test. It is the country's main rice crop, grown in the dry season and harvested from April to May. In the haor wetlands of the north-east, early flash floods can destroy the standing crop shortly before harvest (Kamruzzaman and Shaw, 2018; Rashid and Yasmeen, 2018), and the 2017 flood alone was reported to have cost 0.88 million tonnes of Boro (Hossain et al., 2023). The Bangladesh Bureau of Statistics (BBS) estimates yield as production per harvested hectare, from crop cuts on harvested fields (Bangladesh Bureau of Statistics, 2026), so the reporting explanation can be tested directly: if destroyed fields leave no trace in yield, a flood should appear in area and production but not in yield.
 
-We asked five questions. Do flash floods reduce Boro production through harvested area rather than yield? Do monsoon floods, which come before planting, act differently? Are flood effects concentrated in the haor? Why does the vegetation index NDVI not explain yield within a district? And where is risk concentrated, and how stable is that ranking?
+We asked five questions. Q1: do flash floods reduce Boro production through harvested area rather than yield? Q2: do monsoon floods, which come before planting, act differently? Q3: are flood effects concentrated in the haor? Q4: does the vegetation index NDVI explain yield within a district? Q5: where is risk concentrated, and how stable is that ranking?
 
-The analysis makes three contributions. It uses a validated panel of all 64 districts, with values printed by BBS and no modelled yields (Mumu and Karim, 2026). It checks official statistics against evidence independent of them, namely two flood records, a satellite measure of crop loss, and published damage figures. And its questions, models and pass rules were fixed before the models were run, so that a weak result is reported as weak. That turned out to matter: the area effect is clear for the 2017 flood, but the evidence for a general rule is only suggestive.
+The analysis makes three contributions. It uses a validated panel of all 64 districts, with values printed by BBS and no modelled yields (Mumu and Karim, 2026a). It checks official statistics against evidence independent of them, namely two flood records, a satellite measure of crop loss, and published damage figures. And its questions, models and pass rules were written down before the models were run, so that a weak result is reported as weak (Section 4.1 gives the limits of this claim). That turned out to matter: the area effect is clear for the 2017 flood, but the evidence for a general rule is only suggestive.
 
 
 # 2. Background
@@ -54,7 +54,7 @@ In Bangladesh, floods are not simply harmful. Districts more prone to flooding h
 
 ## 2.3 The gap
 
-Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records and on abstracts rather than full texts. One recent paper on monsoon floods and crop production in Bangladesh (Rahman et al., 2025) could be read only in part.
+Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records, screened on titles and abstracts (Appendix B). A recent study addresses monsoon flood disasters and crop production in Bangladesh (Rahman et al., 2025).
 
 Table 1. Closest studies compared with this paper.
 
@@ -72,13 +72,13 @@ Table 1. Closest studies compared with this paper.
 
 ## 3.1 Panel
 
-The analysis uses the Gold panel of Mumu and Karim (2026): 960 district-years for all 64 districts and harvest years 2011–2025, where harvest year t is the crop sown in November of t−1 and harvested in April–May of t. Boro harvested area, yield and production are values printed in the BBS yearbooks, each with its edition and page, and no value is modelled or filled. Weather comes from ERA5-Land (Muñoz-Sabater et al., 2021). Flood fractions come from the monthly surface water record of the Joint Research Centre (JRC) (Pekel et al., 2016) and from Sentinel-1 radar (Torres et al., 2012), and are kept as separate records. Table 2 lists the sources. The seven haor districts are Sunamganj, Habiganj, Netrokona, Kishoreganj, Sylhet, Moulvibazar and Brahmanbaria, a list fixed before the models were run. They produced 17.5 % of Boro over the period.
+The analysis uses the panel built and tested in the framework paper (Mumu and Karim, 2026a) and archived separately (Mumu and Karim, 2026b): 960 district-years for all 64 districts and harvest years 2011–2025, where harvest year t is the crop sown in November of t−1 and harvested in April–May of t. Boro harvested area, yield and production are values printed in the BBS yearbooks, each with its edition and page, and no value is modelled or filled. Weather comes from ERA5-Land (Muñoz-Sabater et al., 2021). Flood fractions come from the monthly surface water record of the Joint Research Centre (JRC) (Pekel et al., 2016) and from Sentinel-1 radar (Torres et al., 2012), and are kept as separate records. Table 2 lists the sources. The seven haor districts are Sunamganj, Habiganj, Netrokona, Kishoreganj, Sylhet, Moulvibazar and Brahmanbaria, a list fixed before the models were run. They produced 17.5 % of Boro over the period.
 
 Table 2. Data sources.
 
 | Variable | Source | Resolution | Period |
 |--------------------------|--------------------------|-------------------|--------------------------|
-| Boro area, yield, production | BBS yearbooks, through the Paper 1 panel | 64 districts | 2011–2025 |
+| Boro area, yield, production | BBS yearbooks, from the panel of Mumu and Karim (2026b) | 64 districts | 2011–2025 |
 | Flood, Sentinel-1 | COPERNICUS/S1_GRD, VV, −18 dB | Analysed at 60 m | Harvest years 2015–2025 |
 | Flood, JRC | Global Surface Water v1.4, monthly | 30 m | Harvest years 2011–2021 |
 | Boro mask, crop loss, NDVI | MODIS MOD13Q1 v061, WorldCover v200 cropland | 250 m | 2011–2025 |
@@ -86,7 +86,11 @@ Table 2. Data sources.
 
 Flash flood is the share of district area under water in April or May of year t and not in January–March of t. Monsoon flood is the share under water in June–October of t−1 and not in January–March of t−1. JRC ends in December 2021 and Sentinel-1 begins in October 2014, so the main models use harvest years 2011–2021 for JRC and 2016–2025 for Sentinel-1.
 
-## 3.2 New variables
+## 3.2 Relation to the framework paper
+
+The framework paper describes how the panel was built and tested, and uses the 2017 flood and a simple index only as brief examples (Mumu and Karim, 2026a). This paper asks a different question, and adds new variables, three designs and independent checks. Two differences need explaining. For Sunamganj in 2017, the framework paper reports −71.5 % area and −0.1 % yield against the mean of 2015–2016. Here the baseline is the mean of 2015 and 2018, giving −72.4 % and −0.8 %, because 2016 was itself a flood year. The risk index also differs. The framework paper's illustrative index has five equally weighted components with whole-district JRC flood. Ours has seven components grouped as exposure and sensitivity, flood on Boro land from both records, and stage-specific heat and cold, and it is tested under many combinations of choices, so the two top tens differ.
+
+## 3.3 New variables
 
 New variables were computed in Google Earth Engine (Gorelick et al., 2017). Every extract was tested for completeness, and no value was filled.
 
@@ -98,22 +102,22 @@ New variables were computed in Google Earth Engine (Gorelick et al., 2017). Ever
 
 **Other variables.** We also computed flood fractions at water thresholds of −16 and −20 dB, Sentinel-1 scene counts, hot days above 35 °C from mid-March to April (Jagadish et al., 2007), and days below 20 °C from mid-February to March. The cold threshold is provisional. Adaptive capacity is not covered, because no published district series was assembled, and nothing was estimated in its place.
 
-## 3.3 Data checks
+## 3.4 Data checks
 
-All 18 checks passed. The new code recomputed the published flood fractions of the panel, and the largest difference was below 10^−9^, so the variants are computed by verified code. The panel's checksum matches the archived version.
+All 18 checks passed (Table A.3). The new code recomputed the published flood fractions of the panel, and the largest difference was below 10^−9^, so the variants are computed by verified code. The panel's checksum matches the archived version.
 
 
 # 4. Methods
 
 ## 4.1 Analysis plan
 
-Questions, models, pass rules and the bound for a negligible yield effect were fixed in a written plan before any new model was run. The basic models in the framework paper (Mumu and Karim, 2026) had been seen and count as exploratory. Two changes were made before the outcome models were run, based on flood and mask data and BBS area between districts: flood fractions on rice land use a stable mask built here, because the yearly mask proved noisy and published rice maps do not cover the period; and Sentinel-1 early and late windows use half-month medians, because a single monthly median diluted a flood arriving midway. After the planned results were seen, we added the analyses in Section 5.6 and one extra synthetic-control test. These are labelled as exploratory, and they do not change the verdict.
+Questions, models, pass rules and the bound for a negligible yield effect were written in a plan before any new model was run. The plan was not registered with a public timestamp. It entered version control together with the results, in the first commit of the repository (54ca10f, 31 October 2026), so readers cannot verify the order independently, and this study should not be read as preregistered. The plan and its log of changes are in the repository. The basic models in the framework paper (Mumu and Karim, 2026a) had been seen and count as exploratory. Two changes were made before the outcome models were run, based on flood and mask data and BBS area between districts: flood fractions on rice land use a stable mask built here, because the yearly mask proved noisy and published rice maps do not cover the period; and Sentinel-1 early and late windows use half-month medians, because a single monthly median diluted a flood arriving midway. After the planned results were seen, we added the analyses in Section 5.6, one extra synthetic-control test, a variant without districts with a small Boro base, and a variant without Chandpur. These are labelled as exploratory, and they do not change the verdict.
 
 ## 4.2 Flood models
 
 For district i in harvest year t, each outcome Y (harvested area, yield or production) is modelled as
 
-$$\ln Y_{it} = \beta F_{it} + \gamma M_{it} + \mathbf{x}_{it}'\boldsymbol{\delta} + \alpha_i + \tau_t + \varepsilon_{it},$$
+$$\ln Y_{it} = \beta F_{it} + \gamma M_{it} + \mathbf{x}^{\prime}_{it}\boldsymbol{\delta} + \alpha_i + \tau_t + \varepsilon_{it},$$
 
 where F is flash flood and M monsoon flood, both per 10 points of district area, **x** holds mean temperature, precipitation and hot days, and α and τ are district and year effects. Since production is area times yield, the area and yield effects must add up to the production effect; the largest gap was below 0.0001 log points. Effects are reported in per cent. This is the standard panel approach to weather effects (Hsiang, 2016; Blanc and Schlenker, 2017; Auffhammer et al., 2013). Results are estimates under the stated assumptions: floods are not randomly assigned, and we avoid causal language.
 
@@ -123,7 +127,7 @@ Flash floods were studied in three ways that must point the same way: the dose-r
 
 ## 4.4 Uncertainty
 
-Few districts are treated and they are atypical, a setting in which clustered errors and the wild bootstrap can fail, and randomisation inference has limits (Conley and Taber, 2011; MacKinnon and Webb, 2017, 2018, 2020). So no single method was relied on. Every main estimate is reported with errors clustered by district, Driscoll–Kraay errors (Driscoll and Kraay, 1998), Conley spatial errors (Conley, 1999) with a 100 km cut-off and two years of serial correlation, and randomisation inference that reassigns whole flood years across the panel, keeping each flood's real spatial pattern. With T years, one event alone cannot reach a p-value below 1/T, about 0.10 here, and two events below about 0.01.
+Few districts are treated and they are atypical, a setting in which clustered errors and the wild bootstrap can fail, and randomisation inference has limits (Conley and Taber, 2011; MacKinnon and Webb, 2017, 2018, 2020). So no single method was relied on. Every main estimate is reported with errors clustered by district, Driscoll–Kraay errors (Driscoll and Kraay, 1998), Conley spatial errors (Conley, 1999) with a 100 km cut-off and two years of serial correlation, and randomisation inference that reassigns whole flood years across the panel, keeping each flood's real spatial pattern. With T years, one event alone cannot reach a p-value below 1/T, about 0.10 here, and two events below about 0.01. These limits apply only when one or two years carry all the variation. Because the flood pattern of every year is permuted, smaller p-values are possible when several years contribute, as in Table 4.
 
 ## 4.5 How results were judged
 
@@ -140,7 +144,7 @@ The risk index combines exposure (flash and monsoon flood on Boro land, heat at 
 
 ## 5.1 Few events carry the flash-flood estimates
 
-Flash floods are concentrated in a few places and years (Fig. 1, Fig. 2). Sentinel-1 has 704 district-years but only about 11 effective observations (Table 3). Seven districts carry nearly all the variation, and two years carry most of it, so the flash-flood analysis is really a study of a few events. Monsoon floods are spread much more widely. Sentinel-1 also has a coverage break: scenes per haor district more than double after 2016 (Fig. 2b), which matters because 2016 is a key flood year.
+Flash floods are concentrated in a few places and years (Fig. 1, Fig. 2). Sentinel-1 has 704 district-years but only about 11 effective observations (Table 3). Effective observations are the inverse of the sum of squared shares of the flood variation left after removing district and year means, so they fall as a few district-years dominate. Seven districts carry nearly all the variation, and two years carry most of it, so the flash-flood analysis is really a study of a few events. Monsoon floods are spread much more widely. Sentinel-1 also has a coverage break: scenes per haor district more than double after 2016 (Fig. 2b), which matters because 2016 is a key flood year.
 
 Fig. 1. Flash flood and satellite crop loss. Panel (a) shows mean flash flood on Boro land. Panel (b) shows the share of Boro land with a sharp fall in greenness in 2017.
 
@@ -150,7 +154,7 @@ Fig. 2. How few events carry the estimates. Panel (a) shows each year's share of
 
 ![](figures/fig2_design.png){width=100%}
 
-Table 3. Where the flood variation comes from.
+Table 3. Where the flood variation comes from. Effective observations are defined in the text.
 
 | Flood variable | District-years | Effective observations | From the seven haor districts (%) | From 2016 and 2017 (%) |
 |--------------------------|------------------|----------------|-------------|--------|
@@ -203,6 +207,8 @@ Fig. 4. The 2017 flood across all 64 districts. Panel (a) sets satellite crop lo
 
 ![](figures/fig4_event_2017.png){width=100%}
 
+Two non-haor districts stand out in Fig. 4a, with large changes in BBS area and almost no satellite loss. Patuakhali fell by 43 %, but from a base of under 2,000 ha. Chandpur rose by 67 %: its 2017 area is 110,467 ha, against 64,424 ha in 2015 and 67,733 ha in 2018. That value is as printed in the yearbook, and we found no flood or satellite explanation for it. Both cases show that BBS area can move for reasons other than flood, by as much as the flood signal.
+
 Synthetic control gave the same pattern. The estimated 2017 area gaps were −70.4 % in Sunamganj, −29.3 % in Kishoreganj, −17.4 % in Sylhet, −13.2 % in Netrokona and −8.5 % in Habiganj, while yield gaps stayed within 3.9 % (Table 6). The planned test was not met: no gap ranked in the top 5 % relative to its pre-flood fit. With five years to match and many donors, the pre-flood fit is almost perfect, so this ratio is unstable. An exploratory test on the gap's size alone ranks Sunamganj at p = 0.017 and Kishoreganj at p = 0.052, and the other three above 0.1.
 
 Table 6. Synthetic control for the five most flooded districts. Placebo rank p is the planned test.
@@ -222,13 +228,13 @@ Table 6. Synthetic control for the five most flooded districts. Placebo rank p i
 
 ## 5.4 Evidence independent of BBS
 
-The satellite measure uses no BBS data, and it passed its planned test. Each 10 points of flood raised satellite crop loss by 7.5 points with Sentinel-1 and 6.2 points with JRC, and satellite loss lowered BBS area (Driscoll–Kraay p = 0.041) but not yield (p = 0.226). In 2017, satellite loss reached 63 % of Boro land in Sunamganj and 59 % in Sylhet, and stayed below 4 % outside the haor (Fig. 1b, Fig. 4a).
+The satellite measure uses no BBS data, and it passed its planned test. Each 10 points of flood raised satellite crop loss by 7.5 points with Sentinel-1 (Driscoll–Kraay p = 0.001) and 6.2 points with JRC (p = 0.005), and satellite loss lowered BBS area (p = 0.041) but not yield (p = 0.226). In 2017, satellite loss reached 63 % of Boro land in Sunamganj and 59 % in Sylhet, and at most 4.4 % outside the haor (Fig. 1b, Fig. 4a).
 
 Published damage figures are also of the same order. Against the mean of 2015 and 2018, BBS shows a production loss of 1.08 million t in the seven haor districts in 2017, compared with 0.88 million t reported for the haor regions (Hossain et al., 2023). For Sunamganj, BBS implies 142,482 ha and 520,428 t lost, compared with 149,224 ha affected and 393,855 t damaged in a published estimate (Mondal et al., 2021).
 
 ## 5.5 Checks and verdict
 
-The required checks gave a mixed picture (Table 7, Fig. 5). All leave-out checks passed for Sentinel-1, and the flood-after-harvest placebo passed in both records. Next year's flood, however, failed for Sentinel-1 (11.6 %, clustered p = 0.033), possibly because haor area was high in 2016, just before the 2017 flood. For JRC, the effect disappeared without 2017 (0.6 %) or Sunamganj (−1.5 %), and was not significant on rice land only. Most importantly, without both 2016 and 2017 no effect remained in either record (0.1 % and −0.1 %). Flood size also mattered: only the largest group, 20 % or more of a district, showed clear losses (−31.9 % with Sentinel-1, from 5 district-years, and −15.7 % with JRC, from 8; Fig. 6).
+The required checks gave a mixed picture (Table 7, Fig. 5). Because the main Sentinel-1 sample starts in 2016, the planned check without 2015–2016 is the same model as leaving out 2016, so it is counted once. All leave-out checks passed for Sentinel-1, and the flood-after-harvest placebo passed in both records. Next year's flood, however, failed for Sentinel-1 (11.6 %, clustered p = 0.033), possibly because haor area was high in 2016, just before the 2017 flood. For JRC, the effect disappeared without 2017 (0.6 %) or Sunamganj (−1.5 %), and was not significant on rice land only. Most importantly, without both 2016 and 2017 no effect remained in either record (0.1 % and −0.1 %). Flood size also mattered: only the largest group, 20 % or more of a district, showed clear losses (−31.9 % with Sentinel-1, from 5 district-years, and −15.7 % with JRC, from 8; Fig. 6). The size of the Sentinel-1 estimate also partly reflects small districts. Leaving out the six districts with a small Boro base gave −13.8 % with Sentinel-1 and −6.2 % with JRC, and a Poisson model, which weights by area, gave −10.9 % and −5.3 % (Table A.1). The two records are closer in both cases.
 
 Table 7. Required checks of the area effect. Effects are per 10 points of flood.
 
@@ -255,18 +261,17 @@ Table 7. Required checks of the area effect. Effects are per 10 points of flood.
 | Rice land only | JRC | −2.5 | 0.220 | 0.233 | Fail |
 | January–February baseline, early window | Sentinel-1 | −14.0 | 0.077 | < 0.001 | Pass |
 | January–February baseline, early window | JRC | −19.5 | 0.036 | < 0.001 | Pass |
-| Sentinel-1 without 2015–2016 | Sentinel-1 | −16.7 | 0.005 | < 0.001 | Pass |
 | Scene counts as controls | Sentinel-1 | −21.5 | 0.020 | < 0.001 | Pass |
 
 Fig. 5. How the flash-flood estimates hold up. Each row reruns the main model with one change. Intervals are 95 %, clustered by district. The shaded band marks ±2 %.
 
 ![](figures/fig5_checks.png){width=100%}
 
-Fig. 6. Normal and extreme floods, against the group below 1 %. Bins with few district-years are uncertain.
+Fig. 6. Normal and extreme floods, against the group below 1 %. Intervals are 95 %, clustered by district. Under each label, n gives the district-years in the bin, Sentinel-1 first.
 
 ![](figures/fig6_bins.png){width=100%}
 
-Under the rule fixed in advance, the answer to the main question is **suggestive**, not supported. The significance rule held for Sentinel-1 but not for JRC, 19 of 23 required checks passed, and the planned synthetic-control test failed. Direction and design agreed throughout. For Q3, concentration in the haor could not be tested properly: outside it, Sentinel-1 flood reached 5 % in only 1.8 % of district-years, so any slope there is an extrapolation, and no haor interaction survived false discovery rate correction.
+Under the plan's rule, the answer to Q1 is **suggestive**, not supported. The significance rule held for Sentinel-1 but not for JRC, 18 of 22 required checks passed, and the planned synthetic-control test failed. Direction and design agreed throughout. For Q3, concentration in the haor could not be tested properly: outside it, Sentinel-1 flood reached 5 % in only 1.8 % of district-years, so any slope there is an extrapolation, and no haor interaction survived false discovery rate correction.
 
 ## 5.6 Flood timing (exploratory)
 
@@ -287,21 +292,21 @@ Table 8. Flood timing in the haor districts. Flood and loss are mean shares; BBS
 Table 9. Early-window effects per 10 points (exploratory). RI is randomisation inference.
 
 | Flood record | Outcome | Sample | Effect per 10 points (%) | Clustered p | Driscoll–Kraay p | Conley p | RI p |
-|-------------|-----------------|---------------|----------|-------------|------------------|----------|----------|
-| Sentinel-1 | Harvested area | All years | −14.0 | 0.077 | < 0.001 | 0.043 | 0.092 |
-| Sentinel-1 | Harvested area | Without 2017 | 9.9 | 0.085 | 0.009 | 0.068 | 0.161 |
-| Sentinel-1 | Harvested area | Without 2016 | −9.6 | 0.127 | < 0.001 | 0.104 | 0.059 |
-| Sentinel-1 | Yield | All years | −1.7 | 0.117 | 0.067 | 0.096 | 0.761 |
-| Sentinel-1 | Yield | Without 2017 | 6.9 | 0.078 | 0.017 | 0.013 | 0.010 |
-| Sentinel-1 | Yield | Without 2016 | −3.2 | 0.047 | 0.045 | 0.029 | 0.321 |
-| JRC | Harvested area | All years | −19.5 | 0.036 | < 0.001 | 0.011 | < 0.001 |
-| JRC | Harvested area | Without 2017 | −2.5 | 0.455 | 0.486 | 0.455 | 0.651 |
-| JRC | Harvested area | Without 2016 | −24.3 | 0.054 | < 0.001 | 0.008 | 0.001 |
-| JRC | Yield | All years | 0.3 | 0.791 | 0.737 | 0.763 | 0.789 |
+|-------------|-----------------|---------------|----------|-------------|------------------|----------|--------|
+| Sentinel-1 | Harvested area | All years | −14.0 | 0.077 | < 0.001 | 0.043 | 0.079 |
+| Sentinel-1 | Harvested area | Without 2017 | 9.9 | 0.085 | 0.009 | 0.068 | 0.178 |
+| Sentinel-1 | Harvested area | Without 2016 | −9.6 | 0.127 | < 0.001 | 0.104 | 0.061 |
+| Sentinel-1 | Yield | All years | −1.7 | 0.117 | 0.067 | 0.096 | 0.751 |
+| Sentinel-1 | Yield | Without 2017 | 6.9 | 0.078 | 0.017 | 0.013 | 0.009 |
+| Sentinel-1 | Yield | Without 2016 | −3.2 | 0.047 | 0.045 | 0.029 | 0.334 |
+| JRC | Harvested area | All years | −19.5 | 0.036 | < 0.001 | 0.011 | 0.001 |
+| JRC | Harvested area | Without 2017 | −2.5 | 0.455 | 0.486 | 0.455 | 0.641 |
+| JRC | Harvested area | Without 2016 | −24.3 | 0.054 | < 0.001 | 0.008 | 0.004 |
+| JRC | Yield | All years | 0.3 | 0.791 | 0.737 | 0.763 | 0.795 |
 | JRC | Yield | Without 2017 | 1.4 | 0.364 | 0.448 | 0.384 | 0.411 |
-| JRC | Yield | Without 2016 | 0.0 | 0.972 | 0.970 | 0.971 | 0.980 |
+| JRC | Yield | Without 2016 | 0.0 | 0.972 | 0.970 | 0.971 | 0.982 |
 
-## 5.7 Monsoon floods
+## 5.7 Monsoon floods (Q2)
 
 Monsoon floods gave no clear result (Table 10). JRC pointed to more area (5.7 % per 10 points) and Sentinel-1 to less (−4.9 %), and neither was significant. With JRC, flooded years in every bin had higher yields than years below 1 % (Fig. 6a), consistent with earlier work (Banerjee, 2010; Asada et al., 2005), but Sentinel-1 showed nothing similar. The expected harm from extreme monsoon floods did not appear in either record. None of these tests survived correction.
 
@@ -316,38 +321,40 @@ Table 10. Monsoon-flood effects per 10 points of district area.
 | JRC | Yield | 0.4 | 0.690 | 0.616 | 0.649 | 0.655 |
 | JRC | Production | 6.1 | 0.064 | 0.103 | 0.053 | 0.074 |
 
-## 5.8 NDVI
+## 5.8 NDVI (Q4)
 
-NDVI tracked differences between districts and the shared rise in yield, but not year-to-year departures within a district (Table 11). Over January–April, the correlation with yield was 0.46 between districts and 0.42 within districts, and fell to −0.07 once year effects were removed. No window gave a significant effect, including peak greenness (Mosleh et al., 2016), and the result did not depend on how much of a district is rice land (0.05 and 0.06). NDVI-based yield estimates at national or division level (Mosleh et al., 2016; Alam et al., 2019) may therefore capture broad differences and trends, not shocks to a district.
+NDVI tracked differences between districts and the shared rise in yield, but not year-to-year departures within a district (Table 11). Over January–April, the correlation with yield was 0.46 between districts and 0.42 within districts, and fell to −0.07 once year effects were removed. No window gave a significant effect, including peak greenness (Mosleh et al., 2016), and the result did not depend on how much of a district is rice land (a correlation of 0.05 in districts with more rice land and 0.06 in those with less). NDVI-based yield estimates at national or division level (Mosleh et al., 2016; Alam et al., 2019) may therefore capture broad differences and trends, not shocks to a district.
 
 Table 11. NDVI and Boro yield.
 
 | NDVI window | Between districts | Within districts | Within, year effects removed | Effect on log yield per 0.1 NDVI | Clustered p | Randomisation p |
 |--------------------------|-------------|-------------|-----------|----------|-------------|-----------------|
-| January-April | 0.46 | 0.42 | −0.07 | −0.027 | 0.289 | 0.214 |
-| February to mid-March | 0.52 | 0.29 | 0.05 | 0.016 | 0.095 | 0.181 |
+| January–April | 0.46 | 0.42 | −0.07 | −0.027 | 0.289 | 0.211 |
+| February to mid-March | 0.52 | 0.29 | 0.05 | 0.016 | 0.095 | 0.202 |
 | Late March to early April | 0.15 | 0.33 | 0.04 | 0.012 | 0.217 | 0.263 |
 
-## 5.9 Risk index and spatial patterns
+## 5.9 Risk index and spatial patterns (Q5)
 
-The haor dominates the index: 6 of the top ten districts are in the haor, led by Sunamganj (Table 12, Fig. 7). The ranking is not stable, however. Across 6,018 combinations, the median correlation with the base ranking was 0.66, the median district stayed in its risk tier in 35 % of cases, and no district was in the top ten in at least 90 % of them. Two results need care. Patuakhali and Barguna rank high because Boro expanded there from a very small base, which appears as instability but is not loss. Hill districts such as Rangamati have so little rice land that their flood shares are unreliable.
+The haor dominates the index: 6 of the top ten districts are in the haor, led by Sunamganj (Table 12, Fig. 7). Six districts with a mean Boro area below 15,000 ha are flagged, a threshold set after the first results: Patuakhali, Barguna, Rangamati, Bandarban, Khagrachhari and Jhalokati. Their high ranks are not reliable. Hill districts such as Rangamati have so little rice land that their flood shares rest on few pixels, and Patuakhali and Barguna rank high because Boro expanded there from a very small base, which appears as instability but is not loss. Without these six, all 7 haor districts are in the top ten.
+
+The ranking is not stable, however. Across 6,018 combinations, the median correlation with the base ranking was 0.66, the median district stayed in its risk tier in 35 % of cases, and no district was in the top ten in at least 90 % of them.
 
 Table 12. The ten highest-ranked districts, with rank range and stability across all combinations.
 
-| Rank | District | Haor | Rank range, 5th–95th percentile | In top ten (%) | Same tier (%) |
-|--------|--------------|--------|--------------|-------|--------|
-| 1 | Sunamganj | Yes | 1–36 | 88 | 89 |
-| 2 | Sylhet | Yes | 2–58 | 77 | 78 |
-| 3 | Patuakhali | No | 1–52 | 59 | 65 |
-| 4 | Barguna | No | 2–53 | 56 | 61 |
-| 5 | Kishoreganj | Yes | 2–30 | 78 | 81 |
-| 6 | Moulvibazar | Yes | 2–24 | 88 | 89 |
-| 7 | Rangamati | No | 1–14 | 86 | 93 |
-| 8 | Habiganj | Yes | 4–34 | 67 | 72 |
-| 9 | Meherpur | No | 2–51 | 34 | 42 |
-| 10 | Netrokona | Yes | 5–46 | 60 | 65 |
+| Rank | District | Haor | Small Boro base | Rank range, 5th–95th percentile | In top ten (%) | Same tier (%) |
+|--------|--------------|--------|---------|--------------|-------|--------|
+| 1 | Sunamganj | Yes | No | 1–36 | 88 | 89 |
+| 2 | Sylhet | Yes | No | 2–58 | 77 | 78 |
+| 3 | Patuakhali | No | Yes | 1–52 | 59 | 65 |
+| 4 | Barguna | No | Yes | 2–53 | 56 | 61 |
+| 5 | Kishoreganj | Yes | No | 2–30 | 78 | 81 |
+| 6 | Moulvibazar | Yes | No | 2–24 | 88 | 89 |
+| 7 | Rangamati | No | Yes | 1–14 | 86 | 93 |
+| 8 | Habiganj | Yes | No | 4–34 | 67 | 72 |
+| 9 | Meherpur | No | No | 2–51 | 34 | 42 |
+| 10 | Netrokona | Yes | No | 5–46 | 60 | 65 |
 
-Fig. 7. Risk tier and rank under all combinations. Bars show the 5th to 95th percentile of rank, and dots the base ranking.
+Fig. 7. Risk tier and rank under all combinations. Hatched districts, starred in panel (b), have a small Boro base, so their high ranks are not reliable. Bars show the 5th to 95th percentile of rank, and dots the base ranking.
 
 ![](figures/fig7_index.png){width=100%}
 
@@ -369,9 +376,9 @@ A yield-only view gives a different picture. Sunamganj ranks 25th of 64 on yield
 
 ## 6.1 What can and cannot be claimed
 
-One claim is well supported as a description of a single event. In the 2017 flood, the loss in BBS statistics appeared in harvested area and production, and almost none in yield. Three designs agree on this, in both flood records. A satellite measure that uses no BBS data places the loss in the same districts, and published damage figures are of the same order.
+One claim is well supported as a description of a single event. In the 2017 flood, the loss in BBS statistics appeared in harvested area and production, and almost none in yield. The three designs agree in direction, in both flood records, although the planned synthetic-control test failed and the JRC estimate depends on 2017. A satellite measure that uses no BBS data places the loss in the same districts, and published damage figures are of the same order.
 
-The broader claim, that flash floods generally reduce Boro through area, is not established. Under a rule fixed in advance it is only suggestive. The estimate rests on 2016 and 2017, the 2016 and 2022 floods left no fall in area, and the two flood records differ about five-fold in their main estimates. We report that plainly because a single significant estimate of about 22 % per 10 points would have told a stronger and less accurate story. This also bears on how flood effects are read elsewhere: with few events and a few treated districts, an estimate from a large panel can be one event in disguise.
+The broader claim, that flash floods generally reduce Boro through area, is not established. Under the plan's rule it is only suggestive. The estimate rests on 2016 and 2017, the 2016 and 2022 floods left no fall in area, and the two flood records differ about five-fold in their main estimates, and about two-fold once small districts are set aside. We report that plainly because a single significant estimate of about 22 % per 10 points would have told a stronger and less accurate story. This also bears on how flood effects are read elsewhere: with few events and a few treated districts, an estimate from a large panel can be one event in disguise.
 
 ## 6.2 Why area and not yield
 
@@ -389,12 +396,12 @@ This does not contradict Li et al. (2025), who report yield losses from submerge
 
 ## 6.4 Limitations
 
-The study covers 15 years and few large flash floods, and one event dominates, so the findings describe these events and do not give a general law. Floods are not randomly assigned. BBS harvested area comes from official estimates, which we checked with independent evidence only partly, and only for large events. The Boro mask relies on a fixed NDVI rule and a static cropland map, is not validated with field data, and has noisy yearly totals. Sentinel-1 has fewer scenes before 2017, and optical records such as JRC can miss short floods that radar observes (Uddin et al., 2019; Twele et al., 2016). Flood fractions in the main models cover whole districts, and the required rice-only check weakened the estimates. Satellite crop loss cannot separate destruction from early harvest. Cold-stress thresholds are provisional. The risk index omits adaptive capacity and salinity (Dasgupta et al., 2018), so it is a partial picture, and its rank ranges are wide. It should guide where to look more closely, and should not be used as an allocation rule.
+The study covers 15 years and few large flash floods, and one event dominates, so the findings describe these events and do not give a general law. Floods are not randomly assigned. BBS harvested area comes from official estimates, which we checked with independent evidence only partly, and only for large events, and values such as Chandpur's in 2017 remain unexplained. The analysis plan has no public timestamp from before the results. The Boro mask relies on a fixed NDVI rule and a static cropland map, is not validated with field data, and has noisy yearly totals. Sentinel-1 has fewer scenes before 2017, and optical records such as JRC can miss short floods that radar observes (Uddin et al., 2019; Twele et al., 2016). Flood fractions in the main models cover whole districts, and the required rice-only check weakened the estimates. Satellite crop loss cannot separate destruction from early harvest. Cold-stress thresholds are provisional. The risk index omits adaptive capacity and salinity (Dasgupta et al., 2018), so it is a partial picture, and its rank ranges are wide. It should guide where to look more closely, and should not be used as an allocation rule.
 
 
 # 7. Conclusion
 
-Using printed BBS statistics for all 64 districts and an analysis plan fixed in advance, we asked whether flash floods reduce Boro rice through harvested area rather than yield. For the 2017 flood the answer is clearly yes: haor area and production fell by about a third, yield barely moved, and independent evidence supports the loss. As a general rule the answer is only suggestive, because the estimates rest on 2016 and 2017, and other large floods left no fall in area. Flood timing is the likely reason, but that evidence is exploratory and rests on one event. The practical lesson is that yield alone can miss the largest flood losses in this system, so flood assessment and risk indices should also use harvested area and production.
+Using printed BBS statistics for all 64 districts and a written analysis plan, we asked whether flash floods reduce Boro rice through harvested area rather than yield. For the 2017 flood the answer is clearly yes: haor area and production fell by about a third, yield barely moved, and independent evidence supports the loss. As a general rule the answer is only suggestive, because the estimates rest on 2016 and 2017, and other large floods left no fall in area. Flood timing is the likely reason, but that evidence is exploratory and rests on one event. The practical lesson is that yield alone can miss the largest flood losses in this system, so flood assessment and risk indices should also use harvested area and production.
 
 # CRediT authorship contribution statement
 
@@ -420,11 +427,11 @@ The panel is archived at https://doi.org/10.5281/zenodo.23795046. The derived da
 
 Abadie, A., 2021. Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects. Journal of Economic Literature 59 (2), 391–425. https://doi.org/10.1257/jel.20191450
 
-Ahmed, M., Rahaman, K., Kok, A., Hassan, Q., 2017. Remote Sensing-Based Quantification of the Impact of Flash Flooding on the Rice Production: A Case Study over Northeastern Bangladesh. Sensors 17 (10), 2347. https://doi.org/10.3390/s17102347
-
 Ahmed, M.R., 2024. How to Enhance Resilience Against the Adverse Effects of Climate Change: Evidence from Boro Rice Farmers in Northeast Bangladesh. Food and Energy Security 13 (6), e70028. https://doi.org/10.1002/fes3.70028
 
-Alam, M.S., Kalpoma, K.A.Z.I., Karim, M.S., Al Sefat, A., Kudoh, J.-i., 2019. Boro Rice Yield Estimation Model Using Modis Ndvi Data for Bangladesh. In: IGARSS 2019 - 2019 IEEE International Geoscience and Remote Sensing Symposium, 7330–7333. https://doi.org/10.1109/igarss.2019.8899084
+Ahmed, M., Rahaman, K., Kok, A., Hassan, Q., 2017. Remote Sensing-Based Quantification of the Impact of Flash Flooding on the Rice Production: A Case Study over Northeastern Bangladesh. Sensors 17 (10), 2347. https://doi.org/10.3390/s17102347
+
+Alam, M.S., Kalpoma, K., Karim, M.S., Al Sefat, A., Kudoh, J.-i., 2019. Boro rice yield estimation model using MODIS NDVI data for Bangladesh. In: IGARSS 2019 - 2019 IEEE International Geoscience and Remote Sensing Symposium, 7330–7333. https://doi.org/10.1109/igarss.2019.8899084
 
 Amin, M., Zhang, J., Yang, M., 2015. Effects of Climate Change on the Yield and Cropping Area of Major Food Crops: A Case of Bangladesh. Sustainability 7 (1), 898–915. https://doi.org/10.3390/su7010898
 
@@ -444,9 +451,9 @@ Bangladesh Bureau of Statistics, 2026. Yearbook of Agricultural Statistics-2025 
 
 Benjamini, Y., Hochberg, Y., 1995. Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. Journal of the Royal Statistical Society Series B: Statistical Methodology 57 (1), 289–300. https://doi.org/10.1111/j.2517-6161.1995.tb02031.x
 
-Blanc, E., Strobl, E., 2016. Assessing the Impact of Typhoons on Rice Production in the Philippines. Journal of Applied Meteorology and Climatology 55 (4), 993–1007. https://doi.org/10.1175/jamc-d-15-0214.1
+Blanc, E., Schlenker, W., 2017. The Use of Panel Models in Assessments of Climate Impacts on Agriculture. Review of Environmental Economics and Policy 11 (2), 258–279. https://doi.org/10.1093/reep/rex016
 
-Blanc, E., Schlenker, W., 2017. The Use of Panel Models in Assessments of Climate Impacts on           Agriculture. Review of Environmental Economics and Policy 11 (2), 258–279. https://doi.org/10.1093/reep/rex016
+Blanc, E., Strobl, E., 2016. Assessing the Impact of Typhoons on Rice Production in the Philippines. Journal of Applied Meteorology and Climatology 55 (4), 993–1007. https://doi.org/10.1175/jamc-d-15-0214.1
 
 Conley, T.G., 1999. GMM estimation with cross sectional dependence. Journal of Econometrics 92 (1), 1–45. https://doi.org/10.1016/s0304-4076(98)00084-0
 
@@ -468,21 +475,21 @@ Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., Moore, R., 201
 
 Guiteras, R., Jina, A., Mobarak, A.M., 2015. Satellites, Self-reports, and Submersion: Exposure to Floods in Bangladesh. American Economic Review 105 (5), 232–236. https://doi.org/10.1257/aer.p20151095
 
-Hasan, M.M., Sarker, M.A.R., GOW, J.E.F.F., 2016. Assessment of climate change impacts on aman and boro rice yields in bangladesh. Climate Change Economics 07 (03), 1650008. https://doi.org/10.1142/s2010007816500081
+Hasan, M.M., Sarker, M.A.R., Gow, J., 2016. Assessment of climate change impacts on Aman and Boro rice yields in Bangladesh. Climate Change Economics 07 (03), 1650008. https://doi.org/10.1142/s2010007816500081
 
 Hassan, S.M.K., 2019. Impacts of flooding on the rice production of Bangladesh: a panel data study. Thesis, Colorado State University. https://mountainscholar.org/handle/10217/197396.
 
 Hossain, M., Biswas, P., Islam, M.R., 2023. Cold-Tolerant and Short-Duration Rice (Oryza sativa L.) for Sustainable Food Security of the Flash Flood-Prone Haor Wetlands of Bangladesh. Sustainability 15 (24), 16873. https://doi.org/10.3390/su152416873
 
-Hsiang, S., 2016. Climate Econometrics. National Bureau of Economic Research. https://doi.org/10.3386/w22181
+Hsiang, S., 2016. Climate Econometrics. Annual Review of Resource Economics 8 (1), 43–75. https://doi.org/10.1146/annurev-resource-100815-095343
 
 Islam, D.I., Rahman, A., Sarker, M.S.R., Luo, J., Liang, H., 2021. Factors affecting farmers’ willingness to adopt crop insurance to manage disaster risk: evidence from Bangladesh. International Food and Agribusiness Management Review 24 (3), 463–480. https://doi.org/10.22434/ifamr2019.0190
 
-Jagadish, S.V.K., Craufurd, P.Q., Wheeler, T.R., 2007. High temperature stress and spikelet fertility in rice (Oryza sativa L.). Journal of Experimental Botany 58 (7), 1627–1635. https://doi.org/10.1093/jxb/erm003
+Jagadish, S., Craufurd, P.Q., Wheeler, T.R., 2007. High temperature stress and spikelet fertility in rice (Oryza sativa L.). Journal of Experimental Botany 58 (7), 1627–1635. https://doi.org/10.1093/jxb/erm003
 
 Kamruzzaman, M., Shaw, R., 2018. Flood and Sustainable Agriculture in the Haor Basin of Bangladesh: A Review Paper. Universal Journal of Agricultural Research 6 (1), 40–49. https://doi.org/10.13189/ujar.2018.060106
 
-Khan, M.N.H., Mia, M.Y., Hossain, M.R., 2012. Impacts of Flood on Crop Production in Haor Areas of Two Upazillas in Kishoregonj. Journal of Environmental Science and Natural Resources 5 (1), 193–198. https://doi.org/10.3329/jesnr.v5i1.11581
+Khan, M., Mia, M.Y., Hossain, M.R., 2012. Impacts of Flood on Crop Production in Haor Areas of Two Upazillas in Kishoregonj. Journal of Environmental Science and Natural Resources 5 (1), 193–198. https://doi.org/10.3329/jesnr.v5i1.11581
 
 Lesk, C., Rowhani, P., Ramankutty, N., 2016. Influence of extreme weather disasters on global crop production. Nature 529 (7584), 84–87. https://doi.org/10.1038/nature16467
 
@@ -502,7 +509,9 @@ Mosleh, M., Hassan, Q., 2014. Development of a Remote Sensing-Based “Boro” R
 
 Mosleh, M.K., Hassan, Q.K., Chowdhury, E.H., 2016. Development of a remote sensing-based rice yield forecasting model. Spanish Journal of Agricultural Research 14 (3), e0907. https://doi.org/10.5424/sjar/2016143-8347
 
-Mumu, T.A., Karim, R., 2026. bd-boro-data-framework: an open, tested data engineering framework for integrating official crop statistics with satellite and climate data, district-level Boro rice in Bangladesh. Zenodo. https://doi.org/10.5281/zenodo.23795046
+Mumu, T.A., Karim, R., 2026a. An open, tested data engineering framework for integrating official crop statistics with satellite and climate data: district-level Boro rice in Bangladesh. Manuscript submitted to Environmental Modelling & Software.
+
+Mumu, T.A., Karim, R., 2026b. bd-boro-data-framework: an open, tested data engineering framework for integrating official crop statistics with satellite and climate data, district-level Boro rice in Bangladesh. Zenodo. https://doi.org/10.5281/zenodo.23795046
 
 Muñoz-Sabater, J., Dutra, E., Agustí-Panareda, A., Albergel, C., Arduini, G., Balsamo, G., Boussetta, S., Choulga, M., Harrigan, S., Hersbach, H., et al., 2021. ERA5-Land: a state-of-the-art global reanalysis dataset for land applications. Earth System Science Data 13 (9), 4349–4383. https://doi.org/10.5194/essd-13-4349-2021
 
@@ -514,9 +523,9 @@ Pekel, J.-F., Cottam, A., Gorelick, N., Belward, A.S., 2016. High-resolution map
 
 Qamer, F.M., Abbas, S., Ahmad, B., Hussain, A., Salman, A., Muhammad, S., Nawaz, M., Shrestha, S., Iqbal, B., Thapa, S., 2023. A framework for multi-sensor satellite data to evaluate crop production losses: the case study of 2022 Pakistan floods. Scientific Reports 13 (1), 4240. https://doi.org/10.1038/s41598-023-30347-y
 
-Rahman, M.A., Kang, S., Nagabhatla, N., Macnee, R., 2017. Impacts of temperature and rainfall variation on rice productivity in major ecosystems of Bangladesh. Agriculture & Food Security 6 (1), 10. https://doi.org/10.1186/s40066-017-0089-5
-
 Rahman, M.S., Di, L., 2020. A Systematic Review on Case Studies of Remote-Sensing-Based Flood Crop Loss Assessment. Agriculture 10 (4), 131. https://doi.org/10.3390/agriculture10040131
+
+Rahman, M.A., Kang, S., Nagabhatla, N., Macnee, R., 2017. Impacts of temperature and rainfall variation on rice productivity in major ecosystems of Bangladesh. Agriculture & Food Security 6 (1), 10. https://doi.org/10.1186/s40066-017-0089-5
 
 Rahman, M.S., Di, L., Yu, E., Lin, L., Yu, Z., 2021. Remote Sensing Based Rapid Assessment of Flood Crop Damage Using Novel Disaster Vegetation Damage Index (DVDI). International Journal of Disaster Risk Science 12 (1), 90–110. https://doi.org/10.1007/s13753-020-00305-7
 
@@ -526,11 +535,11 @@ Rashid, M.M., Yasmeen, R., 2018. Cold Injury and Flash Flood Damage in Boro Rice
 
 Saisana, M., Saltelli, A., Tarantola, S., 2005. Uncertainty and Sensitivity Analysis Techniques as Tools for the Quality Assessment of Composite Indicators. Journal of the Royal Statistical Society Series A: Statistics in Society 168 (2), 307–323. https://doi.org/10.1111/j.1467-985X.2005.00350.x
 
+Santos Silva, J.M.C., Tenreyro, S., 2006. The Log of Gravity. The Review of Economics and Statistics 88 (4), 641–658. https://doi.org/10.1162/rest.88.4.641
+
 Sarker, M.A.R., Alam, K., Gow, J., 2014. Assessing the effects of climate change on rice yields: An econometric investigation using Bangladeshi panel data. Economic Analysis and Policy 44 (4), 405–416. https://doi.org/10.1016/j.eap.2014.11.004
 
 Shew, A.M., Ghosh, A., 2019. Identifying Dry-Season Rice-Planting Patterns in Bangladesh Using the Landsat Archive. Remote Sensing 11 (10), 1235. https://doi.org/10.3390/rs11101235
-
-Silva, J.M.C.S., Tenreyro, S., 2006. The Log of Gravity. The Review of Economics and Statistics 88 (4), 641–658. https://doi.org/10.1162/rest.88.4.641
 
 Singha, M., Dong, J., Zhang, G., Xiao, X., 2019. High resolution paddy rice maps in cloud-prone Bangladesh and Northeast India using Sentinel-1 data. Scientific Data 6 (1), 26. https://doi.org/10.1038/s41597-019-0036-3
 
@@ -542,13 +551,13 @@ Twele, A., Cao, W., Plank, S., Martinis, S., 2016. Sentinel-1-based flood mappin
 
 Uddin, K., Matin, M.A., Meyer, F.J., 2019. Operational Flood Mapping Using Multi-Temporal Sentinel-1 SAR Images: A Case Study from Bangladesh. Remote Sensing 11 (13), 1581. https://doi.org/10.3390/rs11131581
 
-Wei, D., Davis, K., 2022. Majority of production shocks for major US crops explained by fluctuations in planted and harvested area.. https://doi.org/10.1002/essoar.10510446.1
+Wei, D., Gephart, J.A., Iizumi, T., Ramankutty, N., Davis, K.F., 2023. Key role of planted and harvested area fluctuations in US crop production shocks. Nature Sustainability 6 (10), 1177–1185. https://doi.org/10.1038/s41893-023-01152-2
 
 Zanaga, D., Van De Kerchove, R., Daems, D., De Keersmaecker, W., Brockmann, C., Kirches, G., Wevers, J., Cartus, O., Santoro, M., Fritz, S., et al., 2022. ESA WorldCover 10 m 2021 v200. Zenodo. https://doi.org/10.5281/zenodo.7254221
 
 # Appendix A. Supplementary tables
 
-Table A.1. Other variants of the area effect, reported without a pass rule. The Poisson model (Silva and Tenreyro, 2006) gives more weight to large districts.
+Table A.1. Other variants of the area effect, reported without a pass rule. The Poisson model (Santos Silva and Tenreyro, 2006) gives more weight to large districts.
 
 | Variant | Flood record | Area effect (%) | Clustered p | Driscoll–Kraay p |
 |--------------------------|-------------|----------|-------------|------------------|
@@ -558,6 +567,10 @@ Table A.1. Other variants of the area effect, reported without a pass rule. The 
 | District linear trends | JRC | −5.0 | 0.107 | 0.162 |
 | Poisson model | Sentinel-1 | −10.9 | < 0.001 | – |
 | Poisson model | JRC | −5.3 | < 0.001 | – |
+| Districts under 15,000 ha left out | Sentinel-1 | −13.8 | 0.001 | 0.004 |
+| Districts under 15,000 ha left out | JRC | −6.2 | 0.012 | 0.073 |
+| Leave out Chandpur | Sentinel-1 | −21.3 | 0.023 | < 0.001 |
+| Leave out Chandpur | JRC | −4.4 | 0.106 | 0.152 |
 | Flash flood only, 2015–2025 | Sentinel-1 | −20.7 | 0.018 | < 0.001 |
 | Water threshold −16 dB | Sentinel-1 | −20.0 | 0.035 | < 0.001 |
 | Water threshold −20 dB | Sentinel-1 | −28.8 | 0.001 | < 0.001 |
@@ -585,3 +598,43 @@ Table A.2. National area of the yearly Boro mask, against BBS and published maps
 | 2023 | 3.95 | 4.85 | – |
 | 2024 | 3.36 | 4.88 | – |
 | 2025 | 4.45 | 4.89 | – |
+
+Table A.3. The 18 data checks run before any model, from `outputs/validation_variables.csv`.
+
+| Check | Observed | Result |
+|--------------------------|--------------------------|----------|
+| Gold panel matches the archived panel | 5cbaeb1edaef | Pass |
+| Boro mask and crop loss: 64 districts in every year, no missing value | 960 rows | Pass |
+| Weather: 64 districts in every year, no missing value | 960 rows | Pass |
+| NDVI windows: 64 districts in every year, no missing value | 960 rows | Pass |
+| Sentinel-1 scene counts: 64 districts in every year, no missing value | 704 rows | Pass |
+| Sentinel-1 flood: 64 districts in every year, no missing value | 704 rows | Pass |
+| JRC flood: 64 districts in every year, no missing value | 704 rows | Pass |
+| Sentinel-1 thresholds: 64 districts in every year, no missing value | 704 rows | Pass |
+| S1_flash_wd reproduces the panel's s1_flash_flood | max difference 1.11e-16, n=704 | Pass |
+| S1_monsoon_wd reproduces the panel's s1_monsoon_flood | max difference 1.11e-16, n=640 | Pass |
+| Jrc_flash_wd reproduces the panel's jrc_flash_flood | max difference 4.08e-10, n=704 | Pass |
+| Jrc_monsoon_wd reproduces the panel's jrc_monsoon_flood | max difference 7.75e-10, n=704 | Pass |
+| All fractions lie between 0 and 1 | 0.0000 to 1.0000 | Pass |
+| Boro land never exceeds district area | largest share 0.74 | Pass |
+| Sentinel-1 scenes exist in every district-year | minimum 5 in Apr-May | Pass |
+| Satellite crop loss is observed on most Boro land | minimum valid share 0.67 | Pass |
+| Yearly mask agrees with BBS area between districts | r = 0.914 | Pass |
+| Stable mask agrees with BBS area between districts | r = 0.909 | Pass |
+
+# Appendix B. Literature search
+
+The search used one database, OpenAlex, on 31 October 2026, with the 52 search strings in Table B.1 and up to 40 records for each of the first 38 strings and 25 for the other 14. This gave 1,870 records, of which 1,383 were unique and 1,232 had an abstract. Screening used titles and abstracts: 421 records concerned Bangladesh or the haor and crops, 182 of them also concerned flooding, and 5 of those also mentioned cultivated or harvested area. Hassan (2019) was found by a separate web search. The core list of 57 papers was confirmed on Crossref. Journals published in Bangladesh are indexed less completely, and keyword screening can miss papers that use other words. The search scripts are in the repository.
+
+Table B.1. Search strings by theme.
+
+| Theme | Search strings | Records retrieved |
+|--------------------------|--------------------------|-------------|
+| Haor and Boro flooding | haor flash flood Boro rice; flash flood rice Bangladesh damage; Boro rice flood loss Bangladesh; haor basin remote sensing flood; 2017 flash flood Bangladesh haor; haor agriculture climate vulnerability; pre-monsoon flood Bangladesh rice; flood damage rice production Bangladesh district | 320 |
+| Area versus yield | harvested area yield decomposition extreme weather crop production; flood impact crop production harvested area yield; weather shocks harvested area abandonment panel; extreme weather disasters global crop production; climate variability harvested area versus yield; flood crop loss panel fixed effects; crop yield harvested area response flood | 280 |
+| Climate and yield in Bangladesh | climate change rice yield Bangladesh panel; Boro rice yield temperature Bangladesh; heat stress Boro rice Bangladesh; district level rice yield climate Bangladesh; climate rice production Bangladesh econometric | 200 |
+| Flood mapping and crop loss from satellites | Sentinel-1 flood mapping Bangladesh; Sentinel-1 flood rice damage assessment; satellite crop loss flood NDVI change rice; remote sensing flood damage cropland rice; JRC Global Surface Water flood agriculture; SAR water threshold flood mapping rice paddy | 240 |
+| Vulnerability indices and spatial methods | agricultural vulnerability index Bangladesh; composite indicator uncertainty sensitivity analysis; social vulnerability index uncertainty sensitivity; spatial autocorrelation crop yield LISA; climate vulnerability exposure sensitivity adaptive capacity agriculture Bangladesh | 200 |
+| NDVI and yield | NDVI rice yield Bangladesh; NDVI yield relationship within field interannual irrigated rice; satellite crop yield estimation smallholder district statistics | 120 |
+| Adaptation | short duration Boro rice variety flash flood haor; flood early warning haor farmers; crop insurance flood Bangladesh rice; submergence tolerant rice Bangladesh adoption | 160 |
+| Targeted search | effects of flood on agricultural productivity in Bangladesh; satellites self-reports submersion floods Bangladesh; flood rice Bangladesh difference-in-differences; flood exposure agricultural production Bangladesh district panel; Boro production loss 2017 flash flood district statistics; flash flood early monsoon haor rice production estimate; Boro rice mapping Bangladesh satellite annual; rice area mapping Bangladesh Sentinel-1 MODIS; annual paddy rice map South Asia 10 m; pre-monsoon flood Meghna basin trend haor frequency; flood positive effect dry season rice residual moisture sediment Bangladesh; India district flood rice yield panel; flood harvested area rice Vietnam Thailand Philippines panel; typhoon rice production harvested area panel | 350 |

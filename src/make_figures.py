@@ -98,8 +98,8 @@ axs[0].grid(axis="x", visible=False)
 axs[0].legend(loc="upper right")
 panel_label(axs[0], "(a) Flash-flood variation by year")
 h = p[p.district.isin(HAOR) & p.harvest_year.ge(2015)].groupby("harvest_year")[["s1_scenes_dry", "s1_scenes_flash"]].mean()
-axs[1].plot(h.index, h.s1_scenes_dry, color="#2a78d6", lw=2, marker="o", ms=4, label="January-March")
-axs[1].plot(h.index, h.s1_scenes_flash, color="#eb6834", lw=2, marker="o", ms=4, label="April-May")
+axs[1].plot(h.index, h.s1_scenes_dry, color="#2a78d6", lw=2, marker="o", ms=4, label="January–March")
+axs[1].plot(h.index, h.s1_scenes_flash, color="#eb6834", lw=2, marker="o", ms=4, label="April–May")
 axs[1].set_ylabel("Scenes per haor district")
 axs[1].set_ylim(0, None)
 axs[1].legend(loc="lower right")
@@ -150,7 +150,7 @@ for r in h.nlargest(6, "loss_share").itertuples():
 ax.set_ylim(-80, 75)
 ax.set_xlabel("Satellite crop loss, share of Boro land (%)")
 ax.set_ylabel("Change in BBS harvested area (%)")
-ax.legend(loc="lower left")
+ax.legend(loc="upper right")
 panel_label(ax, "(a) Satellite loss against BBS area")
 ax = axs[1]
 ax.axhline(0, color=MUTED, lw=0.8)
@@ -173,7 +173,7 @@ save(fig, "fig4_event_2017.png")
 ck = pd.read_csv(OUT / "table_checks.csv")
 m = pd.read_csv(OUT / "table_main.csv")
 order = ["Leave out 2016", "Leave out 2017", "Leave out 2022", "Leave out Sunamganj", "Leave out Kishoreganj", "Leave out Sylhet", "Leave out Netrokona",
-         "Rice land only", "January-February baseline, early window", "Sentinel-1 without 2015-2016", "Scene counts as controls",
+         "Rice land only", "January-February baseline, early window", "Scene counts as controls",
          "Division-by-year effects", "District linear trends", "Neighbours' flood, own effect"]
 fig, axs = plt.subplots(1, 2, figsize=(6.9, 4.0), sharey=True, constrained_layout=True)
 for ax, o in zip(axs, ("Harvested area", "Yield")):
@@ -196,17 +196,18 @@ for ax, o in zip(axs, ("Harvested area", "Yield")):
     ax.set_xlabel("Effect per 10 points of flood (%)")
     panel_label(ax, o)
 axs[0].set_yticks(range(len(order) + 1))
-axs[0].set_yticklabels(["Main model"] + [c.replace("January-February baseline, early window", "Jan-Feb baseline, early window") for c in order], fontsize=7)
+axs[0].set_yticklabels(["Main model"] + [c.replace("January-February baseline, early window", "Jan–Feb baseline, early window") for c in order], fontsize=7)
 axs[0].invert_yaxis()
-axs[0].scatter([], [], marker="o", s=15, color=MUTED, label="Sentinel-1")
-axs[0].scatter([], [], marker="s", s=15, color=SURF, edgecolor=MUTED, label="JRC")
-axs[0].legend(loc="upper right", borderaxespad=0.1)
+a = axs[0].scatter([], [], marker="o", s=15, color=MUTED, label="Sentinel-1")
+b = axs[0].scatter([], [], marker="s", s=15, color=SURF, edgecolor=MUTED, label="JRC")
+fig.legend(handles=[a, b], loc="outside upper right", ncol=2)
 save(fig, "fig5_checks.png")
 
 # %% [markdown]
 # ## Figure 6: normal and extreme floods
 #
-# Effects are against the group below 1 %. Bins with few district-years are uncertain.
+# Effects are against the group below 1 %, with 95 % clustered intervals. District-years per
+# bin are shown under each label, Sentinel-1 first, because the largest bins hold very few.
 
 # %%
 b = pd.read_csv(OUT / "table_flood_bins.csv")
@@ -218,10 +219,12 @@ for ax, fl, title in zip(axs, ("monsoon", "flash"), ("(a) Monsoon flood", "(b) F
         for src, mk, off in (("Sentinel-1", "o", -0.12), ("JRC", "s", 0.12)):
             d = b[(b.flood == fl) & (b.outcome == o) & (b.source == src)].set_index("bin").reindex(order_bins)
             x = np.arange(3) + off + (i - 0.5) * 0.12
-            ax.plot(x, d.pct, color=COL[o], lw=1.1, alpha=0.5)
+            lo, hi = 100 * (np.exp(d.b - 1.96 * d.se) - 1), 100 * (np.exp(d.b + 1.96 * d.se) - 1)
+            ax.vlines(x, lo, hi, color=COL[o], lw=1.0, alpha=0.7)
             ax.scatter(x, d.pct, marker=mk, s=18, color=COL[o] if src == "Sentinel-1" else SURF, edgecolor=COL[o], linewidth=0.9, zorder=3, label=f"{o}, {src}")
+    n = {s: b[(b.flood == fl) & (b.outcome == "Yield") & (b.source == s)].set_index("bin").n_in_bin for s in ("Sentinel-1", "JRC")}
     ax.set_xticks(range(3))
-    ax.set_xticklabels(["1-5 %", "5-20 %", "20 % or more"])
+    ax.set_xticklabels([f"{lab}\nn = {n['Sentinel-1'][k]}, {n['JRC'][k]}" for k, lab in zip(order_bins, ("1–5 %", "5–20 %", "20 % or more"))])
     ax.grid(axis="x", visible=False)
     panel_label(ax, title)
 axs[0].set_ylabel("Effect against floods below 1 % (%)")
@@ -232,7 +235,8 @@ save(fig, "fig6_bins.png")
 # ## Figure 7: risk index and how stable it is
 #
 # Panel (a) maps the risk tier, with haor districts outlined. Panel (b) shows each of the top
-# 15 districts' rank across every combination of choices.
+# 15 districts' rank across every combination of choices. Hatched districts, starred in
+# panel (b), have a small Boro base, so their shares and instability are unreliable.
 
 # %%
 ix = pd.read_csv(OUT / "table_index.csv").rename(columns={"Unnamed: 0": "district"})
@@ -243,6 +247,8 @@ fig, axs = plt.subplots(1, 2, figsize=(6.9, 3.9), gridspec_kw=dict(width_ratios=
 ax = axs[0]
 m.assign(v=6 - m.tier).plot(column="v", ax=ax, cmap=SEQ, edgecolor=SURF, linewidth=0.3, categorical=False, vmin=1, vmax=5,
                             legend=True, legend_kwds=dict(shrink=0.6, ticks=[1, 2, 3, 4, 5], label="Risk tier (5 = highest)"))
+m[m.small_base].plot(ax=ax, facecolor="none", edgecolor=SURF, hatch="/////", linewidth=0)
+m[m.small_base].boundary.plot(ax=ax, color=MUTED, linewidth=0.5)
 m[m.district.isin(HAOR)].boundary.plot(ax=ax, color=INK, linewidth=0.8)
 ax.set_axis_off()
 panel_label(ax, "(a) Risk tier")
@@ -252,7 +258,7 @@ y = np.arange(len(t))
 ax.hlines(y, t.rank_p05, t.rank_p95, color="#8fb8e8", lw=3)
 ax.scatter(t["rank"], y, s=16, color=INK, zorder=3)
 ax.set_yticks(y)
-ax.set_yticklabels(t.district, fontsize=7)
+ax.set_yticklabels([d + " *" if s else d for d, s in zip(t.district, t.small_base)], fontsize=7)
 ax.grid(axis="y", visible=False)
 ax.set_xlabel("Rank (1 = highest risk)")
 panel_label(ax, "(b) Rank under all choices")

@@ -26,7 +26,28 @@
   "spearman_median": 0.6589514652014651,
   "spearman_p05": 0.37721382783882784,
   "tier_stability_median": 0.3496178132269857,
-  "haor_in_top10": 6
+  "haor_in_top10": 6,
+  "small_base": [
+   "Patuakhali",
+   "Barguna",
+   "Rangamati",
+   "Bandarban",
+   "Khagrachhari",
+   "Jhalokati"
+  ],
+  "top10_large": [
+   "Sunamganj",
+   "Sylhet",
+   "Kishoreganj",
+   "Moulvibazar",
+   "Habiganj",
+   "Meherpur",
+   "Netrokona",
+   "Brahmanbaria",
+   "Chuadanga",
+   "Chapai Nawabganj"
+  ],
+  "haor_in_top10_large": 7
  },
  "yield_view": {
   "spearman": 0.6123168498168498,

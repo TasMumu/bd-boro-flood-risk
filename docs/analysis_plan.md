@@ -239,3 +239,13 @@ the verdict:
 - The early-window effect with and without 2016 and 2017, and a table of flood timing.
 - A synthetic-control test on the size of the gap alone. The planned ratio test failed, and
   the pre-flood fit is almost perfect, so that ratio is unstable.
+
+**After external review, 31 October 2026:**
+
+- The check "Sentinel-1 without 2015-2016" is the same model as leaving out 2016, because
+  the main sample starts in 2016, so it is counted once: 18 of 22 required checks pass.
+- Districts with a mean Boro area below 15,000 ha are flagged in the index, and a variant
+  without them is reported, as is a variant without Chandpur.
+- This plan has no public timestamp from before the results. It entered git in the first
+  commit (54ca10f, 2026-10-31 02:48 +0600), together with the results, so that commit cannot
+  prove the order. The paper says so, and it must not be described as preregistered.

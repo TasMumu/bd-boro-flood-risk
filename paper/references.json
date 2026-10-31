@@ -1,4 +1,20 @@
 {
+ "mumu2026a": {
+  "type": "report",
+  "authors": [
+   {
+    "family": "Mumu",
+    "given": "Tasnim Ahmad"
+   },
+   {
+    "family": "Karim",
+    "given": "Rezaul"
+   }
+  ],
+  "year": "2026a",
+  "title": "An open, tested data engineering framework for integrating official crop statistics with satellite and climate data: district-level Boro rice in Bangladesh",
+  "publisher": "Manuscript submitted to Environmental Modelling & Software"
+ },
  "bbs2026": {
   "type": "report",
   "authors": [
@@ -141,7 +157,7 @@
   "authors": [
    {
     "family": "Khan",
-    "given": "MNH"
+    "given": "Mnh"
    },
    {
     "family": "Mia",
@@ -336,15 +352,15 @@
   "doi": "10.4157/grj.78.783",
   "authors": [
    {
-    "family": "ASADA",
+    "family": "Asada",
     "given": "Haruhisa"
    },
    {
-    "family": "MATSUMOTO",
+    "family": "Matsumoto",
     "given": "Jun"
    },
    {
-    "family": "RAHMAN",
+    "family": "Rahman",
     "given": "Rezaur"
    }
   ],
@@ -465,20 +481,20 @@
   "doi": "10.1142/s2010007816500081",
   "authors": [
    {
-    "family": "HASAN",
-    "given": "M. MEHEDI"
+    "family": "Hasan",
+    "given": "M. Mehedi"
    },
    {
-    "family": "SARKER",
-    "given": "Md. ABDUR RASHID"
+    "family": "Sarker",
+    "given": "Md. Abdur Rashid"
    },
    {
-    "family": "GOW",
-    "given": "JEFF"
+    "family": "Gow",
+    "given": "Jeff"
    }
   ],
   "year": 2016,
-  "title": "ASSESSMENT OF CLIMATE CHANGE IMPACTS ON AMAN AND BORO RICE YIELDS IN BANGLADESH",
+  "title": "Assessment of climate change impacts on Aman and Boro rice yields in Bangladesh",
   "container": "Climate Change Economics",
   "volume": "07",
   "issue": "03",
@@ -635,26 +651,38 @@
   "pages": "e0252067",
   "publisher": "Public Library of Science (PLoS)"
  },
- "wei2022": {
-  "type": "posted-content",
-  "doi": "10.1002/essoar.10510446.1",
+ "wei2023": {
+  "type": "journal-article",
+  "doi": "10.1038/s41893-023-01152-2",
   "authors": [
    {
     "family": "Wei",
     "given": "Dongyang"
    },
    {
+    "family": "Gephart",
+    "given": "Jessica A."
+   },
+   {
+    "family": "Iizumi",
+    "given": "Toshichika"
+   },
+   {
+    "family": "Ramankutty",
+    "given": "Navin"
+   },
+   {
     "family": "Davis",
-    "given": "Kyle"
+    "given": "Kyle Frankel"
    }
   ],
-  "year": 2022,
-  "title": "Majority of production shocks for major US crops explained by fluctuations in planted and harvested area",
-  "container": "",
-  "volume": null,
-  "issue": null,
-  "pages": null,
-  "publisher": "Wiley"
+  "year": 2023,
+  "title": "Key role of planted and harvested area fluctuations in US crop production shocks",
+  "container": "Nature Sustainability",
+  "volume": "6",
+  "issue": "10",
+  "pages": "1177-1185",
+  "publisher": "Springer Science and Business Media LLC"
  },
  "blanc2016": {
   "type": "journal-article",
@@ -943,8 +971,8 @@
     "given": "Md. Samiul"
    },
    {
-    "family": "KALPOMA",
-    "given": "KAZI"
+    "family": "Kalpoma",
+    "given": "Kazi"
    },
    {
     "family": "Karim",
@@ -960,7 +988,7 @@
    }
   ],
   "year": 2019,
-  "title": "Boro Rice Yield Estimation Model Using Modis Ndvi Data for Bangladesh",
+  "title": "Boro rice yield estimation model using MODIS NDVI data for Bangladesh",
   "container": "IGARSS 2019 - 2019 IEEE International Geoscience and Remote Sensing Symposium",
   "volume": null,
   "issue": null,
@@ -1208,8 +1236,8 @@
   "publisher": "American Economic Association"
  },
  "hsiang2016": {
-  "type": "report",
-  "doi": "10.3386/w22181",
+  "type": "journal-article",
+  "doi": "10.1146/annurev-resource-100815-095343",
   "authors": [
    {
     "family": "Hsiang",
@@ -1218,11 +1246,11 @@
   ],
   "year": 2016,
   "title": "Climate Econometrics",
-  "container": "",
-  "volume": null,
-  "issue": null,
-  "pages": null,
-  "publisher": "National Bureau of Economic Research"
+  "container": "Annual Review of Resource Economics",
+  "volume": "8",
+  "issue": "1",
+  "pages": "43-75",
+  "publisher": "Annual Reviews"
  },
  "blanc2017": {
   "type": "journal-article",
@@ -1279,8 +1307,8 @@
   "doi": "10.1162/rest.88.4.641",
   "authors": [
    {
-    "family": "Silva",
-    "given": "J. M. C. Santos"
+    "family": "Santos Silva",
+    "given": "J. M. C."
    },
    {
     "family": "Tenreyro",
@@ -1685,7 +1713,7 @@
   "authors": [
    {
     "family": "Jagadish",
-    "given": "SVK"
+    "given": "Svk"
    },
    {
     "family": "Craufurd",
@@ -1738,19 +1766,19 @@
   "doi": "10.1093/biomet/37.1-2.17",
   "authors": [
    {
-    "family": "MORAN",
+    "family": "Moran",
     "given": "P. A. P."
    }
   ],
   "year": 1950,
-  "title": "NOTES ON CONTINUOUS STOCHASTIC PHENOMENA",
+  "title": "Notes on continuous stochastic phenomena",
   "container": "Biometrika",
   "volume": "37",
   "issue": "1-2",
   "pages": "17-23",
   "publisher": "Oxford University Press (OUP)"
  },
- "mumu2026": {
+ "mumu2026b": {
   "type": "software",
   "doi": "10.5281/zenodo.23795046",
   "authors": [
@@ -1763,7 +1791,7 @@
     "given": "Rezaul"
    }
   ],
-  "year": 2026,
+  "year": "2026b",
   "title": "bd-boro-data-framework: an open, tested data engineering framework for integrating official crop statistics with satellite and climate data, district-level Boro rice in Bangladesh",
   "publisher": "Zenodo"
  }

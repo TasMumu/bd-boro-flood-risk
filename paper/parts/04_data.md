@@ -2,7 +2,7 @@
 
 ## 3.1 Panel
 
-The analysis uses the Gold panel of @mumu2026: {{ f(D['n_panel'], 0) }} district-years for all 64 districts and harvest years 2011–2025, where harvest year t is the crop sown in November of t−1 and harvested in April–May of t. Boro harvested area, yield and production are values printed in the BBS yearbooks, each with its edition and page, and no value is modelled or filled. Weather comes from ERA5-Land [@munozsabater2021]. Flood fractions come from the monthly surface water record of the Joint Research Centre (JRC) [@pekel2016] and from Sentinel-1 radar [@torres2012], and are kept as separate records. Table 2 lists the sources. The seven haor districts are Sunamganj, Habiganj, Netrokona, Kishoreganj, Sylhet, Moulvibazar and Brahmanbaria, a list fixed before the models were run. They produced {{ f(100 * P[P.district.isin(HAOR)].production_t.sum() / P.production_t.sum(), 1) }} % of Boro over the period.
+The analysis uses the panel built and tested in the framework paper [@mumu2026a] and archived separately [@mumu2026b]: {{ f(D['n_panel'], 0) }} district-years for all 64 districts and harvest years 2011–2025, where harvest year t is the crop sown in November of t−1 and harvested in April–May of t. Boro harvested area, yield and production are values printed in the BBS yearbooks, each with its edition and page, and no value is modelled or filled. Weather comes from ERA5-Land [@munozsabater2021]. Flood fractions come from the monthly surface water record of the Joint Research Centre (JRC) [@pekel2016] and from Sentinel-1 radar [@torres2012], and are kept as separate records. Table 2 lists the sources. The seven haor districts are Sunamganj, Habiganj, Netrokona, Kishoreganj, Sylhet, Moulvibazar and Brahmanbaria, a list fixed before the models were run. They produced {{ f(100 * P[P.district.isin(HAOR)].production_t.sum() / P.production_t.sum(), 1) }} % of Boro over the period.
 
 Table 2. Data sources.
 
@@ -10,7 +10,11 @@ Table 2. Data sources.
 
 Flash flood is the share of district area under water in April or May of year t and not in January–March of t. Monsoon flood is the share under water in June–October of t−1 and not in January–March of t−1. JRC ends in December 2021 and Sentinel-1 begins in October 2014, so the main models use harvest years 2011–2021 for JRC and 2016–2025 for Sentinel-1.
 
-## 3.2 New variables
+## 3.2 Relation to the framework paper
+
+The framework paper describes how the panel was built and tested, and uses the 2017 flood and a simple index only as brief examples [@mumu2026a]. This paper asks a different question, and adds new variables, three designs and independent checks. Two differences need explaining. For Sunamganj in 2017, the framework paper reports {{ f(P1E.loc['Sunamganj', 'area_change_pct']) }} % area and {{ f(P1E.loc['Sunamganj', 'yield_change_pct']) }} % yield against the mean of 2015–2016. Here the baseline is the mean of 2015 and 2018, giving {{ f(E17.loc['Sunamganj', 'area_ha_chg_pct']) }} % and {{ f(E17.loc['Sunamganj', 'yield_t_ha_chg_pct']) }} %, because 2016 was itself a flood year. The risk index also differs. The framework paper's illustrative index has five equally weighted components with whole-district JRC flood. Ours has seven components grouped as exposure and sensitivity, flood on Boro land from both records, and stage-specific heat and cold, and it is tested under many combinations of choices, so the two top tens differ.
+
+## 3.3 New variables
 
 New variables were computed in Google Earth Engine [@gorelick2017]. Every extract was tested for completeness, and no value was filled.
 
@@ -22,6 +26,6 @@ New variables were computed in Google Earth Engine [@gorelick2017]. Every extrac
 
 **Other variables.** We also computed flood fractions at water thresholds of −16 and −20 dB, Sentinel-1 scene counts, hot days above 35 °C from mid-March to April [@jagadish2007], and days below 20 °C from mid-February to March. The cold threshold is provisional. Adaptive capacity is not covered, because no published district series was assembled, and nothing was estimated in its place.
 
-## 3.3 Data checks
+## 3.4 Data checks
 
-All {{ D['checks'] }} checks passed. The new code recomputed the published flood fractions of the panel, and the largest difference was below 10^−9^, so the variants are computed by verified code. The panel's checksum matches the archived version.
+All {{ D['checks'] }} checks passed (Table A.3). The new code recomputed the published flood fractions of the panel, and the largest difference was below 10^−9^, so the variants are computed by verified code. The panel's checksum matches the archived version.

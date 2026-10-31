@@ -1,6 +1,6 @@
 # 7. Conclusion
 
-Using printed BBS statistics for all 64 districts and an analysis plan fixed in advance, we asked whether flash floods reduce Boro rice through harvested area rather than yield. For the 2017 flood the answer is clearly yes: haor area and production fell by about a third, yield barely moved, and independent evidence supports the loss. As a general rule the answer is only suggestive, because the estimates rest on 2016 and 2017, and other large floods left no fall in area. Flood timing is the likely reason, but that evidence is exploratory and rests on one event. The practical lesson is that yield alone can miss the largest flood losses in this system, so flood assessment and risk indices should also use harvested area and production.
+Using printed BBS statistics for all 64 districts and a written analysis plan, we asked whether flash floods reduce Boro rice through harvested area rather than yield. For the 2017 flood the answer is clearly yes: haor area and production fell by about a third, yield barely moved, and independent evidence supports the loss. As a general rule the answer is only suggestive, because the estimates rest on 2016 and 2017, and other large floods left no fall in area. Flood timing is the likely reason, but that evidence is exploratory and rests on one event. The practical lesson is that yield alone can miss the largest flood losses in this system, so flood assessment and risk indices should also use harvested area and production.
 
 # CRediT authorship contribution statement
 
@@ -35,3 +35,15 @@ Table A.1. Other variants of the area effect, reported without a pass rule. The 
 Table A.2. National area of the yearly Boro mask, against BBS and published maps.
 
 {{ table_mask }}
+
+Table A.3. The {{ D['checks'] }} data checks run before any model, from `outputs/validation_variables.csv`.
+
+{{ table_datachecks }}
+
+# Appendix B. Literature search
+
+The search used one database, OpenAlex, on 31 October 2026, with the 52 search strings in Table B.1 and up to 40 records for each of the first 38 strings and 25 for the other 14. This gave 1,870 records, of which 1,383 were unique and 1,232 had an abstract. Screening used titles and abstracts: 421 records concerned Bangladesh or the haor and crops, 182 of them also concerned flooding, and 5 of those also mentioned cultivated or harvested area. Hassan (2019) was found by a separate web search. The core list of 57 papers was confirmed on Crossref. Journals published in Bangladesh are indexed less completely, and keyword screening can miss papers that use other words. The search scripts are in the repository.
+
+Table B.1. Search strings by theme.
+
+{{ table_search }}

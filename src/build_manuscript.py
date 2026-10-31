@@ -31,6 +31,7 @@ Q3 = pd.read_csv(OUT / "table_haor_interaction.csv")
 IDX = pd.read_csv(OUT / "table_index.csv", index_col=0)
 SP = pd.read_csv(OUT / "table_spatial.csv")
 NAT = pd.read_csv(OUT / "table_mask_national.csv")
+P1E = pd.read_csv(FRAMEWORK / "v2" / "outputs" / "tables" / "table_event_2017.csv").set_index("district")
 EARLY = pd.read_csv(OUT / "table_early_window.csv")
 TIM = pd.read_csv(OUT / "table_flood_timing.csv", index_col=0)
 HAOR = ["Sunamganj", "Habiganj", "Netrokona", "Kishoreganj", "Sylhet", "Moulvibazar", "Brahmanbaria"]
@@ -73,7 +74,7 @@ def md_table(df):
 
 def table_sources():
     return md_table(pd.DataFrame([
-        ["Boro area, yield, production", "BBS yearbooks, through the Paper 1 panel", "64 districts", "2011–2025"],
+        ["Boro area, yield, production", "BBS yearbooks, from the panel of Mumu and Karim (2026b)", "64 districts", "2011–2025"],
         ["Flood, Sentinel-1", "COPERNICUS/S1_GRD, VV, −18 dB", "Analysed at 60 m", "Harvest years 2015–2025"],
         ["Flood, JRC", "Global Surface Water v1.4, monthly", "30 m", "Harvest years 2011–2021"],
         ["Boro mask, crop loss, NDVI", "MODIS MOD13Q1 v061, WorldCover v200 cropland", "250 m", "2011–2025"],
@@ -108,19 +109,19 @@ def table_synth():
 def table_checks():
     names = ["Leave out 2016", "Leave out 2017", "Leave out 2022", "Leave out Sunamganj", "Leave out Kishoreganj", "Leave out Sylhet", "Leave out Netrokona",
              "Next year's flash flood (placebo)", "Flood after harvest (placebo)", "Rice land only", "January-February baseline, early window",
-             "Sentinel-1 without 2015-2016", "Scene counts as controls"]
+             "Scene counts as controls"]
     rows = []
     for c in names:
         for src in ("Sentinel-1", "JRC"):
             x = CK[(CK.check == c) & (CK.source == src) & (CK.outcome == "Harvested area")]
             if len(x):
                 r = x.iloc[0]
-                rows.append([c.replace("January-February", "January–February").replace("2015-2016", "2015–2016"), src, f(r.pct), pv(r.p_cluster), pv(r.p_dk), "Pass" if r.passed else "Fail"])
+                rows.append([c.replace("January-February", "January–February"), src, f(r.pct), pv(r.p_cluster), pv(r.p_dk), "Pass" if r.passed else "Fail"])
     return md_table(pd.DataFrame(rows, columns=["Check", "Flood record", "Area effect (%)", "Clustered p", "Driscoll–Kraay p", "Result"]))
 
 
 def table_reported():
-    names = ["Division-by-year effects", "District linear trends", "Poisson model", "Flash flood only, 2015-2025", "Water threshold -16 dB", "Water threshold -20 dB",
+    names = ["Division-by-year effects", "District linear trends", "Poisson model", "Districts under 15,000 ha left out", "Leave out Chandpur", "Flash flood only, 2015-2025", "Water threshold -16 dB", "Water threshold -20 dB",
              "Neighbours' flood, own effect", "Neighbours' flood, spillover"]
     rows = []
     for c in names:
@@ -134,8 +135,8 @@ def table_reported():
 
 def table_top():
     d = IDX.head(10)
-    rows = [[i + 1, n, "Yes" if r.haor else "No", f"{f(r.rank_p05, 0)}–{f(r.rank_p95, 0)}", f(100 * r.top10_share, 0), f(100 * r.tier_stability, 0)] for i, (n, r) in enumerate(d.iterrows())]
-    return md_table(pd.DataFrame(rows, columns=["Rank", "District", "Haor", "Rank range, 5th–95th percentile", "In top ten (%)", "Same tier (%)"]))
+    rows = [[i + 1, n, "Yes" if r.haor else "No", "Yes" if r.small_base else "No", f"{f(r.rank_p05, 0)}–{f(r.rank_p95, 0)}", f(100 * r.top10_share, 0), f(100 * r.tier_stability, 0)] for i, (n, r) in enumerate(d.iterrows())]
+    return md_table(pd.DataFrame(rows, columns=["Rank", "District", "Haor", "Small Boro base", "Rank range, 5th–95th percentile", "In top ten (%)", "Same tier (%)"]))
 
 
 def table_spatial():
@@ -144,7 +145,7 @@ def table_spatial():
 
 
 def table_ndvi():
-    rows = [[r.window, f(r.between, 2), f(r.within_district, 2), f(r.within_two_way, 2), f(r.b, 3), pv(r.p_cluster), pv(r.p_ri)] for r in NDVI.itertuples()]
+    rows = [[r.window.replace("January-April", "January–April"), f(r.between, 2), f(r.within_district, 2), f(r.within_two_way, 2), f(r.b, 3), pv(r.p_cluster), pv(r.p_ri)] for r in NDVI.itertuples()]
     return md_table(pd.DataFrame(rows, columns=["NDVI window", "Between districts", "Within districts", "Within, year effects removed", "Effect on log yield per 0.1 NDVI", "Clustered p", "Randomisation p"]))
 
 
@@ -182,6 +183,23 @@ def table_timing():
 def table_mask():
     rows = [[str(int(r.harvest_year)), f(r.mask_mha, 2), f(r.bbs_mha, 2), f(r.shew_ghosh_mha, 2) if pd.notna(r.shew_ghosh_mha) else "–"] for r in NAT.itertuples()]
     return md_table(pd.DataFrame(rows, columns=["Harvest year", "Yearly mask (million ha)", "BBS harvested area (million ha)", "Shew and Ghosh (2019) (million ha)"]))
+
+
+def table_datachecks():
+    d = pd.read_csv(OUT / "validation_variables.csv")
+    names = {"modis:": "Boro mask and crop loss:", "weather:": "Weather:", "ndviwin:": "NDVI windows:", "scenes:": "Sentinel-1 scene counts:",
+             "s1:": "Sentinel-1 flood:", "jrc:": "JRC flood:", "s1thr:": "Sentinel-1 thresholds:"}
+    for old, new in names.items():
+        d["check"] = d.check.str.replace(old, new, regex=False)
+    d["check"] = d.check.map(lambda t: t[0].upper() + t[1:])
+    return md_table(pd.DataFrame([[minus(r.check.replace("the archived Paper 1 panel", "the archived panel").replace("Paper 1's", "the panel's")), minus(r.observed), r.status.capitalize()] for r in d.itertuples()], columns=["Check", "Observed", "Result"]))
+
+
+def table_search():
+    d = pd.read_csv(ROOT / "docs" / "literature" / "search_log.csv")
+    d["theme"] = d.theme.str.replace(r"^[A-G] ", "", regex=True).map(lambda t: "Targeted search" if t == "Round 2" else t[0].upper() + t[1:])
+    d = d.groupby("theme", sort=False).agg(q=("query", lambda s: "; ".join(s)), hits=("retrieved", "sum")).reset_index()
+    return md_table(pd.DataFrame([[r.theme, r.q, r.hits] for r in d.itertuples()], columns=["Theme", "Search strings", "Records retrieved"]))
 
 
 def hy(o, y):
@@ -231,7 +249,7 @@ def _initials(given):
 
 
 def _title(t):
-    t = _clean(t).rstrip(".")
+    t = re.sub(r"\s+", " ", _clean(t)).rstrip(".")
     return t.capitalize() if t.isupper() else t
 
 
@@ -296,7 +314,12 @@ def author_year(md):
         seen.setdefault(cite_label(refs[k]), []).append(k)
     clash = {k: v for k, v in seen.items() if len(v) > 1}
     assert not clash, f"ambiguous citations: {clash}"
-    order = sorted(cited, key=lambda k: (_sort_key(_family(refs[k]["authors"][0])), str(refs[k]["year"])))
+    def rank(k):
+        """Harvard order: one author, then two authors by the second name, then et al. by year."""
+        au = refs[k]["authors"]
+        group = min(len(au), 3)
+        return _sort_key(_family(au[0])), group, _sort_key(_family(au[1])) if group == 2 else "", str(refs[k]["year"]), _sort_key(refs[k]["title"])
+    order = sorted(cited, key=rank)
     print(len(cited), "references cited; not cited:", sorted(set(refs) - set(cited)))
     return md.replace("<<REFERENCES>>", "\n\n".join(harvard_entry(refs[k]) for k in order))
 
@@ -307,7 +330,7 @@ def render(text):
               SA=eff("Sentinel-1", "Harvested area"), SY=eff("Sentinel-1", "Yield"), SPR=eff("Sentinel-1", "Production"),
               JA=eff("JRC", "Harvested area"), JY=eff("JRC", "Yield"), JPR=eff("JRC", "Production"),
               MSA=eff("Sentinel-1", "Harvested area", "monsoon"), MJA=eff("JRC", "Harvested area", "monsoon"), MJY=eff("JRC", "Yield", "monsoon"), MSY=eff("Sentinel-1", "Yield", "monsoon"),
-              V=R["verdict_q1"], RP=R["reported_2017"], SAT=R["satellite_check"], YV=X["yield_view"], XI=X["index"])
+              P1E=P1E, V=R["verdict_q1"], RP=R["reported_2017"], SAT=R["satellite_check"], YV=X["yield_view"], XI=X["index"])
 
     def ev(m):
         e = m.group(1).strip()

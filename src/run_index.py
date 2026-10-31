@@ -35,6 +35,7 @@ from common import canon_district                        # noqa: E402
 OUT = ROOT / "outputs"
 RNG = np.random.default_rng(20261101)
 HAOR = ["Sunamganj", "Habiganj", "Netrokona", "Kishoreganj", "Sylhet", "Moulvibazar", "Brahmanbaria"]
+SMALL_HA = 15000
 R = {}
 p = pd.read_parquet(ROOT / "data" / "analysis_panel.parquet")
 
@@ -132,6 +133,8 @@ base_tier = np.ceil(res["rank"] / 64 * 5).astype(int)
 res["tier"] = base_tier
 res["tier_stability"] = tier.eq(base_tier, axis=0).mean(axis=1)
 res["haor"] = res.index.isin(HAOR)
+# Added after the first results: with little Boro, shares and instability are unreliable
+res["small_base"] = p.groupby("district").area_ha.mean().reindex(res.index) < SMALL_HA
 res = res.sort_values("rank")
 res.round(4).to_csv(OUT / "table_index.csv")
 print(res.head(12).round(3).to_string())
@@ -140,7 +143,9 @@ R["index"] = dict(combinations=int(rk.shape[1]), top10=res.head(10).index.tolist
                   spearman_median=float(rk.corrwith(base.rank(ascending=False), method="spearman").median()),
                   spearman_p05=float(rk.corrwith(base.rank(ascending=False), method="spearman").quantile(0.05)),
                   tier_stability_median=float(res.tier_stability.median()),
-                  haor_in_top10=int(res.head(10).haor.sum()))
+                  haor_in_top10=int(res.head(10).haor.sum()), small_base=res[res.small_base].index.tolist(),
+                  top10_large=res[~res.small_base].head(10).index.tolist(),
+                  haor_in_top10_large=int(res[~res.small_base].head(10).haor.sum()))
 
 # %% [markdown]
 # ## Would a yield-only view see the same risk?

@@ -79,7 +79,7 @@ rule can be assumed:
 | Li et al. (2025) | Global rice, 1980–2015 | Submergence for over a week reduces annual yield by 4.3 % |
 | Cui (2020) | US maize and soy | Harvested ratios fall above 35 °C; ignoring them misjudges losses by over 10 % |
 | Obembe et al. (2021) | Kansas wheat | Losses come from yield, not abandonment |
-| Wei and Davis (2022, preprint) | US maize | Area-related disruptions explain at least as much instability as yield |
+| Wei et al. (2023) | Seven US crops, 1978–2020 | Area shocks coincided with more than half of production shocks; yield contributed more for some crops |
 | Blanc and Strobl (2016) | Philippines, typhoons | Rice-field exposure in a spatial panel shows production loss |
 
 **Satellite evidence of crop loss.** Remote sensing of flood crop loss is well
@@ -120,7 +120,7 @@ alone.
 | The 2017 flood began on 27 March (Ahmed et al., 2017) | **The JRC baseline can count early flood water as dry-season water and subtract it.** New required check with a January–February baseline and a window starting in mid-March |
 | Cold matters at the reproductive stage (Rashid and Yasmeen, 2018) | Stage-specific cold moves from the seedling to the reproductive stage |
 | Rice-specific maps exist (Singha et al., 2019; Shew and Ghosh, 2019) | Test a Boro mask ahead of the general cropland mask, first checking the map year: a map from a flood year could miss the lost fields |
-| Harvested and planted area can behave differently (Cui, 2020; Wei and Davis, 2022) | BBS gives harvested area only, so add satellite pre-flood Boro area where possible, to estimate the share of planted area that was harvested |
+| Harvested and planted area can behave differently (Cui, 2020; Wei et al., 2023) | BBS gives harvested area only, so add satellite pre-flood Boro area where possible, to estimate the share of planted area that was harvested |
 | Findings differ across settings (Lesk, Li, Obembe) | The paper does not claim a general rule. It tests whether BBS records flood loss as area, given that yield comes from crop cuts on harvested fields |
 | Peak greenness comes in late March to early April (Mosleh et al., 2016) | Add this window to the NDVI analysis |
 | Inference is fragile with few treated districts | Keep all four methods, and check beforehand the smallest p-value randomisation inference can reach |

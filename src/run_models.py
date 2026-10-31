@@ -40,6 +40,7 @@ OUTCOMES = {"log_area": "Harvested area", "log_yield": "Yield", "log_prod": "Pro
 SPECS = {"s1": dict(label="Sentinel-1", years=(2016, 2025), flash="s1_flash_10", monsoon="s1_monsoon_10"),
          "jrc": dict(label="JRC", years=(2011, 2021), flash="jrc_flash_10", monsoon="jrc_monsoon_10")}
 RI_MAIN, RI_CHECK, CUTOFF_KM, SERIAL_LAGS, YIELD_BOUND = 9999, 1999, 100, 2, 0.02
+SMALL_HA = 15000                  # mean Boro area below which a district has a small base
 R = {}
 
 # %% [markdown]
@@ -349,7 +350,7 @@ for key, s in SPECS.items():
         for y, label in OUTCOMES.items():
             cl, dk = panel_fit(df, y, x, "cluster"), panel_fit(df, y, x, "dk")
             for c, lab in b:
-                rows.append(dict(source=s["label"], flood=name, outcome=label, bin=lab, n_in_bin=int(df[c].sum()), b=float(cl.params[c]),
+                rows.append(dict(source=s["label"], flood=name, outcome=label, bin=lab, n_in_bin=int(df[c].sum()), b=float(cl.params[c]), se=float(cl.std_errors[c]),
                                  pct=pct(float(cl.params[c])), p_cluster=float(cl.pvalues[c]), p_dk=float(dk.pvalues[c])))
 bins = pd.DataFrame(rows)
 bins.to_csv(OUT / "table_flood_bins.csv", index=False)
@@ -408,7 +409,6 @@ for key, s in SPECS.items():
         df = sample(s["years"], [early_r, late_r, mo] + CONTROLS + list(OUTCOMES))
         add("Early window on rice land", "measure", False, key, y, estimate(df, y, [early_r, late_r, mo] + CONTROLS, early_r), base, None)
         if key == "s1":
-            add("Sentinel-1 without 2015-2016", "coverage", True, key, y, estimate(base_df[base_df.harvest_year >= 2017], y, x, fl, ri=999), base, "sign")
             df = sample(s["years"], x + ["s1_scenes_flash_10", "s1_scenes_dry_10"] + list(OUTCOMES))
             add("Scene counts as controls", "coverage", True, key, y, estimate(df, y, x + ["s1_scenes_flash_10", "s1_scenes_dry_10"], fl), base, "sign")
             alt = sample((2015, 2025), [fl] + CONTROLS + list(OUTCOMES))
@@ -416,6 +416,10 @@ for key, s in SPECS.items():
             for c, lab in (("s1_flash_m16_wd_10", "-16 dB"), ("s1_flash_m20_wd_10", "-20 dB")):
                 df = sample(s["years"], [c, mo] + CONTROLS + list(OUTCOMES))
                 add(f"Water threshold {lab}", "reported", False, key, y, estimate(df, y, [c, mo] + CONTROLS, c), base, None)
+        # Added after the planned results: small districts and one unexplained value
+        big = base_df.groupby("district").area_ha.transform("mean") >= SMALL_HA
+        add("Districts under 15,000 ha left out", "reported", False, key, y, estimate(base_df[big], y, x, fl, ri=999), base, None)
+        add("Leave out Chandpur", "reported", False, key, y, estimate(base_df[base_df.district != "Chandpur"], y, x, fl, ri=999), base, None)
         # Regional shocks: division-by-year effects
         df = base_df.copy()
         dum = pd.get_dummies(df.division.astype(str) + "_" + df.harvest_year.astype(str), dtype=float, drop_first=True)

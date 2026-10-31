@@ -10,7 +10,7 @@ In Bangladesh, floods are not simply harmful. Districts more prone to flooding h
 
 ## 2.3 The gap
 
-Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records and on abstracts rather than full texts. One recent paper on monsoon floods and crop production in Bangladesh [@rahman2025] could be read only in part.
+Table 1 compares the closest studies with this one. We found no study that uses a multi-year district panel with satellite flood data to split Boro flash-flood losses into harvested area and yield. This rests on a documented search of 1,383 records, screened on titles and abstracts (Appendix B). A recent study addresses monsoon flood disasters and crop production in Bangladesh [@rahman2025].
 
 Table 1. Closest studies compared with this paper.
 
