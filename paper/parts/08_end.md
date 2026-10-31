@@ -20,7 +20,7 @@ During the preparation of this work the authors used Claude (Anthropic) to assis
 
 # Data availability
 
-The panel is archived at https://doi.org/10.5281/zenodo.23795046. The derived data remain subject to the terms of their sources. Contains modified Copernicus Sentinel data (2014–2025) and modified Copernicus Climate Change Service information (2026). The BBS yearbook PDFs and the GADM v4.1 boundaries [@gadm2022] are not redistributed and must be obtained from the Bangladesh Bureau of Statistics and gadm.org. Code, notebooks, the analysis plan and the Earth Engine extracts for this paper are in the repository given in the Software and data availability section and archived at https://doi.org/10.5281/zenodo.23829199.
+The panel is archived at https://doi.org/10.5281/zenodo.23795046. The derived data remain subject to the terms of their sources. Contains modified Copernicus Sentinel data (2014–2025) and modified Copernicus Climate Change Service information (2026). The BBS yearbook PDFs and the GADM v4.1 boundaries [@gadm2022] are not redistributed and must be obtained from the Bangladesh Bureau of Statistics and gadm.org. Code, notebooks, the analysis plan and the Earth Engine extracts for this paper are in the repository given in the Software and data availability section and archived at https://doi.org/10.5281/zenodo.23838852.
 
 # References
 

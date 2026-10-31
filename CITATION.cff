@@ -16,7 +16,7 @@ repository-code: "https://github.com/TasMumu/bd-boro-flood-risk"
 license: MIT
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.23829199"
+    value: "10.5281/zenodo.23838852"
     description: "The archived release"
   - type: doi
     value: "10.5281/zenodo.23829198"

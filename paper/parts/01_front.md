@@ -24,6 +24,6 @@ Flood losses to crops are often measured through yield, but official yield comes
 
 # Software and data availability
 
-- Code, notebooks and outputs: https://github.com/TasMumu/bd-boro-flood-risk; the version described here is archived on Zenodo at https://doi.org/10.5281/zenodo.23829199
+- Code, notebooks and outputs: https://github.com/TasMumu/bd-boro-flood-risk; the version described here is archived on Zenodo at https://doi.org/10.5281/zenodo.23838852
 - Data: the panel archived at https://doi.org/10.5281/zenodo.23795046 [@mumu2026b]. The Earth Engine extracts used here are included with the code
 - Software: Python 3.13 with the packages listed in the code repository, and Google Earth Engine for the new extracts
